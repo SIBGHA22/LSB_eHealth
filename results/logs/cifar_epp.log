@@ -1,0 +1,2235 @@
+MASTER ROOT: ~/Desktop/LSB_overnight/results/cifar_epp_matched | smoke test: False
+EPP ROOT: ~/Desktop/LSB_overnight/results/cifar_epp_matched/EPP_BCFL_MATCHED_V1
+EPP experiment fingerprint: a51ea12e9e92c28b
+Selected device: cuda {'gpu': 'NVIDIA RTX 4000 Ada Generation', 'arch': 'sm_89'}
+EPP V4 config validated | batch=64 | classes/client=8 | clean_clip=False | best-checkpoint=ON
+   num_clients  paper_accuracy  paper_precision  paper_recall  paper_f1  paper_convergence_epochs
+0           10            88.5             87.2          85.6      86.4                        20
+1           20            90.1             88.9          87.5      88.2                        18
+2           30            92.3             90.5          89.8      90.2                        15
+3           40            93.8             92.1          91.4      91.7                        12
+4           50            95.2             94.0          93.3      93.6                        10
+{'official_train': 50000, 'federated_train': 45000, 'validation': 5000, 'official_test': 10000, 'note': 'validation is used for best-round selection; official test remains untouched'}
+Model: WideResNet-16-4 GroupNorm
+Trainable parameters: 2748890
+            samples                                                            class_count                                   
+              count    mean        std     min     25%     50%     75%     max       count mean  std  min  25%  50%  75%  max
+num_clients                                                                                                                  
+10             10.0  4500.0  202.98221  4279.0  4358.5  4449.0  4659.0  4825.0        10.0  8.0  0.0  8.0  8.0  8.0  8.0  8.0
+   max_abs_error  quantization_tolerance  recovered  input_bytes  share_bytes  clients  elements
+0       0.000003                0.000005       True       327680       327680       10      4096
+matched EPP runs | seeds (42, 43, 44, 45, 46) | scenarios ['CLEAN'] | local epochs 4 | classes/client 8
+[19:16:41] EPP RUN START → epp_clean_n10_seed42 | clients=10 | epsilon=inf | attack=NONE | aggregation=AMA
+[19:16:41] EPP ROUND START → epp_clean_n10_seed42 | 1/50 | lr=0.050000
+[19:16:46]   local clients → 1/10 for epp_clean_n10_seed42 round 1
+[19:16:51]   local clients → 2/10 for epp_clean_n10_seed42 round 1
+[19:17:02]   local clients → 4/10 for epp_clean_n10_seed42 round 1
+[19:17:12]   local clients → 6/10 for epp_clean_n10_seed42 round 1
+[19:17:22]   local clients → 8/10 for epp_clean_n10_seed42 round 1
+[19:17:33]   local clients → 10/10 for epp_clean_n10_seed42 round 1
+[19:17:33]   ★ NEW BEST → round=1 val_acc=0.2442 val_loss=2.1081
+[19:17:33] EPP ROUND DONE → epp_clean_n10_seed42 | 1/50 | val_acc=0.2442 | val_f1=0.1929 | best=0.2442@1 | no_improve=0 | round=52.6s | ETA≈43.0 min
+[19:17:33] EPP ROUND START → epp_clean_n10_seed42 | 2/50 | lr=0.049950
+[19:17:38]   local clients → 1/10 for epp_clean_n10_seed42 round 2
+[19:17:44]   local clients → 2/10 for epp_clean_n10_seed42 round 2
+[19:17:55]   local clients → 4/10 for epp_clean_n10_seed42 round 2
+[19:18:05]   local clients → 6/10 for epp_clean_n10_seed42 round 2
+[19:18:15]   local clients → 8/10 for epp_clean_n10_seed42 round 2
+[19:18:25]   local clients → 10/10 for epp_clean_n10_seed42 round 2
+[19:18:26]   ★ NEW BEST → round=2 val_acc=0.3946 val_loss=1.7002
+[19:18:26] EPP ROUND DONE → epp_clean_n10_seed42 | 2/50 | val_acc=0.3946 | val_f1=0.3488 | best=0.3946@2 | no_improve=0 | round=52.2s | ETA≈41.9 min
+[19:18:26] EPP ROUND START → epp_clean_n10_seed42 | 3/50 | lr=0.049799
+[19:18:31]   local clients → 1/10 for epp_clean_n10_seed42 round 3
+[19:18:36]   local clients → 2/10 for epp_clean_n10_seed42 round 3
+[19:18:46]   local clients → 4/10 for epp_clean_n10_seed42 round 3
+[19:18:56]   local clients → 6/10 for epp_clean_n10_seed42 round 3
+[19:19:06]   local clients → 8/10 for epp_clean_n10_seed42 round 3
+[19:19:17]   local clients → 10/10 for epp_clean_n10_seed42 round 3
+[19:19:18]   ★ NEW BEST → round=3 val_acc=0.4650 val_loss=1.4851
+[19:19:18] EPP ROUND DONE → epp_clean_n10_seed42 | 3/50 | val_acc=0.4650 | val_f1=0.4249 | best=0.4650@3 | no_improve=0 | round=52.1s | ETA≈41.0 min
+[19:19:18] EPP ROUND START → epp_clean_n10_seed42 | 4/50 | lr=0.049548
+[19:19:23]   local clients → 1/10 for epp_clean_n10_seed42 round 4
+[19:19:28]   local clients → 2/10 for epp_clean_n10_seed42 round 4
+[19:19:38]   local clients → 4/10 for epp_clean_n10_seed42 round 4
+[19:19:49]   local clients → 6/10 for epp_clean_n10_seed42 round 4
+[19:19:59]   local clients → 8/10 for epp_clean_n10_seed42 round 4
+[19:20:10]   local clients → 10/10 for epp_clean_n10_seed42 round 4
+[19:20:10]   ★ NEW BEST → round=4 val_acc=0.5246 val_loss=1.3189
+[19:20:10] EPP ROUND DONE → epp_clean_n10_seed42 | 4/50 | val_acc=0.5246 | val_f1=0.4867 | best=0.5246@4 | no_improve=0 | round=52.4s | ETA≈40.1 min
+[19:20:10] EPP ROUND START → epp_clean_n10_seed42 | 5/50 | lr=0.049199
+[19:20:15]   local clients → 1/10 for epp_clean_n10_seed42 round 5
+[19:20:20]   local clients → 2/10 for epp_clean_n10_seed42 round 5
+[19:20:31]   local clients → 4/10 for epp_clean_n10_seed42 round 5
+[19:20:42]   local clients → 6/10 for epp_clean_n10_seed42 round 5
+[19:20:52]   local clients → 8/10 for epp_clean_n10_seed42 round 5
+[19:21:02]   local clients → 10/10 for epp_clean_n10_seed42 round 5
+[19:21:03]   ★ NEW BEST → round=5 val_acc=0.5858 val_loss=1.1405
+[19:21:03] EPP ROUND DONE → epp_clean_n10_seed42 | 5/50 | val_acc=0.5858 | val_f1=0.5485 | best=0.5858@5 | no_improve=0 | round=52.3s | ETA≈39.2 min
+[19:21:03] EPP ROUND START → epp_clean_n10_seed42 | 6/50 | lr=0.048752
+[19:21:07]   local clients → 1/10 for epp_clean_n10_seed42 round 6
+[19:21:13]   local clients → 2/10 for epp_clean_n10_seed42 round 6
+[19:21:23]   local clients → 4/10 for epp_clean_n10_seed42 round 6
+[19:21:33]   local clients → 6/10 for epp_clean_n10_seed42 round 6
+[19:21:43]   local clients → 8/10 for epp_clean_n10_seed42 round 6
+[19:21:54]   local clients → 10/10 for epp_clean_n10_seed42 round 6
+[19:21:55]   ★ NEW BEST → round=6 val_acc=0.6260 val_loss=1.0243
+[19:21:55] EPP ROUND DONE → epp_clean_n10_seed42 | 6/50 | val_acc=0.6260 | val_f1=0.5942 | best=0.6260@6 | no_improve=0 | round=52.2s | ETA≈38.4 min
+[19:21:55] EPP ROUND START → epp_clean_n10_seed42 | 7/50 | lr=0.048209
+[19:22:00]   local clients → 1/10 for epp_clean_n10_seed42 round 7
+[19:22:05]   local clients → 2/10 for epp_clean_n10_seed42 round 7
+[19:22:15]   local clients → 4/10 for epp_clean_n10_seed42 round 7
+[19:22:26]   local clients → 6/10 for epp_clean_n10_seed42 round 7
+[19:22:36]   local clients → 8/10 for epp_clean_n10_seed42 round 7
+[19:22:47]   local clients → 10/10 for epp_clean_n10_seed42 round 7
+[19:22:47]   ★ NEW BEST → round=7 val_acc=0.6708 val_loss=0.9191
+[19:22:47] EPP ROUND DONE → epp_clean_n10_seed42 | 7/50 | val_acc=0.6708 | val_f1=0.6389 | best=0.6708@7 | no_improve=0 | round=52.5s | ETA≈37.5 min
+[19:22:47] EPP ROUND START → epp_clean_n10_seed42 | 8/50 | lr=0.047574
+[19:22:53]   local clients → 1/10 for epp_clean_n10_seed42 round 8
+[19:22:58]   local clients → 2/10 for epp_clean_n10_seed42 round 8
+[19:23:08]   local clients → 4/10 for epp_clean_n10_seed42 round 8
+[19:23:18]   local clients → 6/10 for epp_clean_n10_seed42 round 8
+[19:23:28]   local clients → 8/10 for epp_clean_n10_seed42 round 8
+[19:23:39]   local clients → 10/10 for epp_clean_n10_seed42 round 8
+[19:23:40]   ★ NEW BEST → round=8 val_acc=0.6994 val_loss=0.8377
+[19:23:40] EPP ROUND DONE → epp_clean_n10_seed42 | 8/50 | val_acc=0.6994 | val_f1=0.6706 | best=0.6994@8 | no_improve=0 | round=52.2s | ETA≈36.6 min
+[19:23:40] EPP ROUND START → epp_clean_n10_seed42 | 9/50 | lr=0.046847
+[19:23:44]   local clients → 1/10 for epp_clean_n10_seed42 round 9
+[19:23:50]   local clients → 2/10 for epp_clean_n10_seed42 round 9
+[19:24:00]   local clients → 4/10 for epp_clean_n10_seed42 round 9
+[19:24:10]   local clients → 6/10 for epp_clean_n10_seed42 round 9
+[19:24:20]   local clients → 8/10 for epp_clean_n10_seed42 round 9
+[19:24:31]   local clients → 10/10 for epp_clean_n10_seed42 round 9
+[19:24:32]   ★ NEW BEST → round=9 val_acc=0.7104 val_loss=0.8135
+[19:24:32] EPP ROUND DONE → epp_clean_n10_seed42 | 9/50 | val_acc=0.7104 | val_f1=0.6892 | best=0.7104@9 | no_improve=0 | round=52.1s | ETA≈35.7 min
+[19:24:32] EPP ROUND START → epp_clean_n10_seed42 | 10/50 | lr=0.046033
+[19:24:37]   local clients → 1/10 for epp_clean_n10_seed42 round 10
+[19:24:42]   local clients → 2/10 for epp_clean_n10_seed42 round 10
+[19:24:52]   local clients → 4/10 for epp_clean_n10_seed42 round 10
+[19:25:02]   local clients → 6/10 for epp_clean_n10_seed42 round 10
+[19:25:13]   local clients → 8/10 for epp_clean_n10_seed42 round 10
+[19:25:23]   local clients → 10/10 for epp_clean_n10_seed42 round 10
+[19:25:24]   ★ NEW BEST → round=10 val_acc=0.7370 val_loss=0.7403
+[19:25:24] EPP ROUND DONE → epp_clean_n10_seed42 | 10/50 | val_acc=0.7370 | val_f1=0.7126 | best=0.7370@10 | no_improve=0 | round=52.0s | ETA≈34.8 min
+[19:25:24] RESUME SNAPSHOT → ~/Desktop/LSB_overnight/results/cifar_epp_matched/EPP_BCFL_REPRO_V4_Resume.zip | 19.5 MB
+[19:25:24] EPP ROUND START → epp_clean_n10_seed42 | 11/50 | lr=0.045135
+[19:25:30]   local clients → 1/10 for epp_clean_n10_seed42 round 11
+[19:25:35]   local clients → 2/10 for epp_clean_n10_seed42 round 11
+[19:25:45]   local clients → 4/10 for epp_clean_n10_seed42 round 11
+[19:25:56]   local clients → 6/10 for epp_clean_n10_seed42 round 11
+[19:26:06]   local clients → 8/10 for epp_clean_n10_seed42 round 11
+[19:26:16]   local clients → 10/10 for epp_clean_n10_seed42 round 11
+[19:26:16]   ★ NEW BEST → round=11 val_acc=0.7482 val_loss=0.7021
+[19:26:16] EPP ROUND DONE → epp_clean_n10_seed42 | 11/50 | val_acc=0.7482 | val_f1=0.7243 | best=0.7482@11 | no_improve=0 | round=52.2s | ETA≈34.0 min
+[19:26:16] EPP ROUND START → epp_clean_n10_seed42 | 12/50 | lr=0.044155
+[19:26:21]   local clients → 1/10 for epp_clean_n10_seed42 round 12
+[19:26:27]   local clients → 2/10 for epp_clean_n10_seed42 round 12
+[19:26:37]   local clients → 4/10 for epp_clean_n10_seed42 round 12
+[19:26:47]   local clients → 6/10 for epp_clean_n10_seed42 round 12
+[19:26:58]   local clients → 8/10 for epp_clean_n10_seed42 round 12
+[19:27:08]   local clients → 10/10 for epp_clean_n10_seed42 round 12
+[19:27:09]   ★ NEW BEST → round=12 val_acc=0.7628 val_loss=0.6818
+[19:27:09] EPP ROUND DONE → epp_clean_n10_seed42 | 12/50 | val_acc=0.7628 | val_f1=0.7446 | best=0.7628@12 | no_improve=0 | round=52.1s | ETA≈33.1 min
+[19:27:09] EPP ROUND START → epp_clean_n10_seed42 | 13/50 | lr=0.043100
+[19:27:13]   local clients → 1/10 for epp_clean_n10_seed42 round 13
+[19:27:19]   local clients → 2/10 for epp_clean_n10_seed42 round 13
+[19:27:29]   local clients → 4/10 for epp_clean_n10_seed42 round 13
+[19:27:39]   local clients → 6/10 for epp_clean_n10_seed42 round 13
+[19:27:50]   local clients → 8/10 for epp_clean_n10_seed42 round 13
+[19:28:00]   local clients → 10/10 for epp_clean_n10_seed42 round 13
+[19:28:01]   ★ NEW BEST → round=13 val_acc=0.7770 val_loss=0.6406
+[19:28:01] EPP ROUND DONE → epp_clean_n10_seed42 | 13/50 | val_acc=0.7770 | val_f1=0.7587 | best=0.7770@13 | no_improve=0 | round=52.4s | ETA≈32.2 min
+[19:28:01] EPP ROUND START → epp_clean_n10_seed42 | 14/50 | lr=0.041971
+[19:28:06]   local clients → 1/10 for epp_clean_n10_seed42 round 14
+[19:28:12]   local clients → 2/10 for epp_clean_n10_seed42 round 14
+[19:28:22]   local clients → 4/10 for epp_clean_n10_seed42 round 14
+[19:28:32]   local clients → 6/10 for epp_clean_n10_seed42 round 14
+[19:28:42]   local clients → 8/10 for epp_clean_n10_seed42 round 14
+[19:28:53]   local clients → 10/10 for epp_clean_n10_seed42 round 14
+[19:28:53]   ★ NEW BEST → round=14 val_acc=0.7916 val_loss=0.6113
+[19:28:53] EPP ROUND DONE → epp_clean_n10_seed42 | 14/50 | val_acc=0.7916 | val_f1=0.7770 | best=0.7916@14 | no_improve=0 | round=52.3s | ETA≈31.4 min
+[19:28:53] EPP ROUND START → epp_clean_n10_seed42 | 15/50 | lr=0.040776
+[19:28:59]   local clients → 1/10 for epp_clean_n10_seed42 round 15
+[19:29:04]   local clients → 2/10 for epp_clean_n10_seed42 round 15
+[19:29:14]   local clients → 4/10 for epp_clean_n10_seed42 round 15
+[19:29:24]   local clients → 6/10 for epp_clean_n10_seed42 round 15
+[19:29:35]   local clients → 8/10 for epp_clean_n10_seed42 round 15
+[19:29:45]   local clients → 10/10 for epp_clean_n10_seed42 round 15
+[19:29:46]   ★ NEW BEST → round=15 val_acc=0.7944 val_loss=0.5984
+[19:29:46] EPP ROUND DONE → epp_clean_n10_seed42 | 15/50 | val_acc=0.7944 | val_f1=0.7810 | best=0.7944@15 | no_improve=0 | round=52.4s | ETA≈30.5 min
+[19:29:46] EPP ROUND START → epp_clean_n10_seed42 | 16/50 | lr=0.039517
+[19:29:51]   local clients → 1/10 for epp_clean_n10_seed42 round 16
+[19:29:56]   local clients → 2/10 for epp_clean_n10_seed42 round 16
+[19:30:06]   local clients → 4/10 for epp_clean_n10_seed42 round 16
+[19:30:17]   local clients → 6/10 for epp_clean_n10_seed42 round 16
+[19:30:28]   local clients → 8/10 for epp_clean_n10_seed42 round 16
+[19:30:38]   local clients → 10/10 for epp_clean_n10_seed42 round 16
+[19:30:38]   ★ NEW BEST → round=16 val_acc=0.8034 val_loss=0.5746
+[19:30:38] EPP ROUND DONE → epp_clean_n10_seed42 | 16/50 | val_acc=0.8034 | val_f1=0.7900 | best=0.8034@16 | no_improve=0 | round=52.7s | ETA≈29.6 min
+[19:30:38] EPP ROUND START → epp_clean_n10_seed42 | 17/50 | lr=0.038201
+[19:30:43]   local clients → 1/10 for epp_clean_n10_seed42 round 17
+[19:30:49]   local clients → 2/10 for epp_clean_n10_seed42 round 17
+[19:30:59]   local clients → 4/10 for epp_clean_n10_seed42 round 17
+[19:31:09]   local clients → 6/10 for epp_clean_n10_seed42 round 17
+[19:31:19]   local clients → 8/10 for epp_clean_n10_seed42 round 17
+[19:31:30]   local clients → 10/10 for epp_clean_n10_seed42 round 17
+[19:31:30]   ★ NEW BEST → round=17 val_acc=0.8098 val_loss=0.5539
+[19:31:30] EPP ROUND DONE → epp_clean_n10_seed42 | 17/50 | val_acc=0.8098 | val_f1=0.7976 | best=0.8098@17 | no_improve=0 | round=52.1s | ETA≈28.8 min
+[19:31:30] EPP ROUND START → epp_clean_n10_seed42 | 18/50 | lr=0.036832
+[19:31:36]   local clients → 1/10 for epp_clean_n10_seed42 round 18
+[19:31:41]   local clients → 2/10 for epp_clean_n10_seed42 round 18
+[19:31:52]   local clients → 4/10 for epp_clean_n10_seed42 round 18
+[19:32:02]   local clients → 6/10 for epp_clean_n10_seed42 round 18
+[19:32:12]   local clients → 8/10 for epp_clean_n10_seed42 round 18
+[19:32:22]   local clients → 10/10 for epp_clean_n10_seed42 round 18
+[19:32:23]   ★ NEW BEST → round=18 val_acc=0.8132 val_loss=0.5505
+[19:32:23] EPP ROUND DONE → epp_clean_n10_seed42 | 18/50 | val_acc=0.8132 | val_f1=0.7986 | best=0.8132@18 | no_improve=0 | round=52.3s | ETA≈27.9 min
+[19:32:23] EPP ROUND START → epp_clean_n10_seed42 | 19/50 | lr=0.035417
+[19:32:28]   local clients → 1/10 for epp_clean_n10_seed42 round 19
+[19:32:33]   local clients → 2/10 for epp_clean_n10_seed42 round 19
+[19:32:43]   local clients → 4/10 for epp_clean_n10_seed42 round 19
+[19:32:54]   local clients → 6/10 for epp_clean_n10_seed42 round 19
+[19:33:04]   local clients → 8/10 for epp_clean_n10_seed42 round 19
+[19:33:14]   local clients → 10/10 for epp_clean_n10_seed42 round 19
+[19:33:15] EPP ROUND DONE → epp_clean_n10_seed42 | 19/50 | val_acc=0.8126 | val_f1=0.7997 | best=0.8132@18 | no_improve=1 | round=52.2s | ETA≈27.0 min
+[19:33:15] EPP ROUND START → epp_clean_n10_seed42 | 20/50 | lr=0.033961
+[19:33:20]   local clients → 1/10 for epp_clean_n10_seed42 round 20
+[19:33:25]   local clients → 2/10 for epp_clean_n10_seed42 round 20
+[19:33:36]   local clients → 4/10 for epp_clean_n10_seed42 round 20
+[19:33:46]   local clients → 6/10 for epp_clean_n10_seed42 round 20
+[19:33:56]   local clients → 8/10 for epp_clean_n10_seed42 round 20
+[19:34:06]   local clients → 10/10 for epp_clean_n10_seed42 round 20
+[19:34:07]   ★ NEW BEST → round=20 val_acc=0.8224 val_loss=0.5283
+[19:34:07] EPP ROUND DONE → epp_clean_n10_seed42 | 20/50 | val_acc=0.8224 | val_f1=0.8119 | best=0.8224@20 | no_improve=0 | round=52.0s | ETA≈26.1 min
+[19:34:08] RESUME SNAPSHOT → ~/Desktop/LSB_overnight/results/cifar_epp_matched/EPP_BCFL_REPRO_V4_Resume.zip | 19.5 MB
+[19:34:08] EPP ROUND START → epp_clean_n10_seed42 | 21/50 | lr=0.032471
+[19:34:13]   local clients → 1/10 for epp_clean_n10_seed42 round 21
+[19:34:18]   local clients → 2/10 for epp_clean_n10_seed42 round 21
+[19:34:28]   local clients → 4/10 for epp_clean_n10_seed42 round 21
+[19:34:39]   local clients → 6/10 for epp_clean_n10_seed42 round 21
+[19:34:49]   local clients → 8/10 for epp_clean_n10_seed42 round 21
+[19:34:59]   local clients → 10/10 for epp_clean_n10_seed42 round 21
+[19:35:00]   ★ NEW BEST → round=21 val_acc=0.8312 val_loss=0.4970
+[19:35:00] EPP ROUND DONE → epp_clean_n10_seed42 | 21/50 | val_acc=0.8312 | val_f1=0.8220 | best=0.8312@21 | no_improve=0 | round=52.0s | ETA≈25.3 min
+[19:35:00] EPP ROUND START → epp_clean_n10_seed42 | 22/50 | lr=0.030952
+[19:35:05]   local clients → 1/10 for epp_clean_n10_seed42 round 22
+[19:35:10]   local clients → 2/10 for epp_clean_n10_seed42 round 22
+[19:35:20]   local clients → 4/10 for epp_clean_n10_seed42 round 22
+[19:35:30]   local clients → 6/10 for epp_clean_n10_seed42 round 22
+[19:35:40]   local clients → 8/10 for epp_clean_n10_seed42 round 22
+[19:35:51]   local clients → 10/10 for epp_clean_n10_seed42 round 22
+[19:35:52]   ★ NEW BEST → round=22 val_acc=0.8368 val_loss=0.4784
+[19:35:52] EPP ROUND DONE → epp_clean_n10_seed42 | 22/50 | val_acc=0.8368 | val_f1=0.8301 | best=0.8368@22 | no_improve=0 | round=52.2s | ETA≈24.4 min
+[19:35:52] EPP ROUND START → epp_clean_n10_seed42 | 23/50 | lr=0.029410
+[19:35:57]   local clients → 1/10 for epp_clean_n10_seed42 round 23
+[19:36:03]   local clients → 2/10 for epp_clean_n10_seed42 round 23
+[19:36:12]   local clients → 4/10 for epp_clean_n10_seed42 round 23
+[19:36:23]   local clients → 6/10 for epp_clean_n10_seed42 round 23
+[19:36:33]   local clients → 8/10 for epp_clean_n10_seed42 round 23
+[19:36:43]   local clients → 10/10 for epp_clean_n10_seed42 round 23
+[19:36:44]   ★ NEW BEST → round=23 val_acc=0.8436 val_loss=0.4569
+[19:36:44] EPP ROUND DONE → epp_clean_n10_seed42 | 23/50 | val_acc=0.8436 | val_f1=0.8368 | best=0.8436@23 | no_improve=0 | round=52.0s | ETA≈23.5 min
+[19:36:44] EPP ROUND START → epp_clean_n10_seed42 | 24/50 | lr=0.027853
+[19:36:49]   local clients → 1/10 for epp_clean_n10_seed42 round 24
+[19:36:54]   local clients → 2/10 for epp_clean_n10_seed42 round 24
+[19:37:05]   local clients → 4/10 for epp_clean_n10_seed42 round 24
+[19:37:15]   local clients → 6/10 for epp_clean_n10_seed42 round 24
+[19:37:26]   local clients → 8/10 for epp_clean_n10_seed42 round 24
+[19:37:35]   local clients → 10/10 for epp_clean_n10_seed42 round 24
+[19:37:36]   ★ NEW BEST → round=24 val_acc=0.8498 val_loss=0.4419
+[19:37:36] EPP ROUND DONE → epp_clean_n10_seed42 | 24/50 | val_acc=0.8498 | val_f1=0.8442 | best=0.8498@24 | no_improve=0 | round=52.0s | ETA≈22.6 min
+[19:37:36] EPP ROUND START → epp_clean_n10_seed42 | 25/50 | lr=0.026285
+[19:37:41]   local clients → 1/10 for epp_clean_n10_seed42 round 25
+[19:37:46]   local clients → 2/10 for epp_clean_n10_seed42 round 25
+[19:37:56]   local clients → 4/10 for epp_clean_n10_seed42 round 25
+[19:38:07]   local clients → 6/10 for epp_clean_n10_seed42 round 25
+[19:38:16]   local clients → 8/10 for epp_clean_n10_seed42 round 25
+[19:38:27]   local clients → 10/10 for epp_clean_n10_seed42 round 25
+[19:38:28] EPP ROUND DONE → epp_clean_n10_seed42 | 25/50 | val_acc=0.8428 | val_f1=0.8367 | best=0.8498@24 | no_improve=1 | round=52.0s | ETA≈21.8 min
+[19:38:28] EPP ROUND START → epp_clean_n10_seed42 | 26/50 | lr=0.024715
+[19:38:33]   local clients → 1/10 for epp_clean_n10_seed42 round 26
+[19:38:38]   local clients → 2/10 for epp_clean_n10_seed42 round 26
+[19:38:48]   local clients → 4/10 for epp_clean_n10_seed42 round 26
+[19:38:59]   local clients → 6/10 for epp_clean_n10_seed42 round 26
+[19:39:09]   local clients → 8/10 for epp_clean_n10_seed42 round 26
+[19:39:20]   local clients → 10/10 for epp_clean_n10_seed42 round 26
+[19:39:20] EPP ROUND DONE → epp_clean_n10_seed42 | 26/50 | val_acc=0.8428 | val_f1=0.8352 | best=0.8498@24 | no_improve=2 | round=52.2s | ETA≈20.9 min
+[19:39:20] EPP ROUND START → epp_clean_n10_seed42 | 27/50 | lr=0.023147
+[19:39:25]   local clients → 1/10 for epp_clean_n10_seed42 round 27
+[19:39:31]   local clients → 2/10 for epp_clean_n10_seed42 round 27
+[19:39:41]   local clients → 4/10 for epp_clean_n10_seed42 round 27
+[19:39:51]   local clients → 6/10 for epp_clean_n10_seed42 round 27
+[19:40:01]   local clients → 8/10 for epp_clean_n10_seed42 round 27
+[19:40:12]   local clients → 10/10 for epp_clean_n10_seed42 round 27
+[19:40:12]   ★ NEW BEST → round=27 val_acc=0.8538 val_loss=0.4423
+[19:40:12] EPP ROUND DONE → epp_clean_n10_seed42 | 27/50 | val_acc=0.8538 | val_f1=0.8482 | best=0.8538@27 | no_improve=0 | round=52.1s | ETA≈20.0 min
+[19:40:12] EPP ROUND START → epp_clean_n10_seed42 | 28/50 | lr=0.021590
+[19:40:17]   local clients → 1/10 for epp_clean_n10_seed42 round 28
+[19:40:23]   local clients → 2/10 for epp_clean_n10_seed42 round 28
+[19:40:33]   local clients → 4/10 for epp_clean_n10_seed42 round 28
+[19:40:44]   local clients → 6/10 for epp_clean_n10_seed42 round 28
+[19:40:54]   local clients → 8/10 for epp_clean_n10_seed42 round 28
+[19:41:04]   local clients → 10/10 for epp_clean_n10_seed42 round 28
+[19:41:05]   ★ NEW BEST → round=28 val_acc=0.8572 val_loss=0.4196
+[19:41:05] EPP ROUND DONE → epp_clean_n10_seed42 | 28/50 | val_acc=0.8572 | val_f1=0.8531 | best=0.8572@28 | no_improve=0 | round=52.4s | ETA≈19.1 min
+[19:41:05] EPP ROUND START → epp_clean_n10_seed42 | 29/50 | lr=0.020048
+[19:41:10]   local clients → 1/10 for epp_clean_n10_seed42 round 29
+[19:41:15]   local clients → 2/10 for epp_clean_n10_seed42 round 29
+[19:41:25]   local clients → 4/10 for epp_clean_n10_seed42 round 29
+[19:41:35]   local clients → 6/10 for epp_clean_n10_seed42 round 29
+[19:41:46]   local clients → 8/10 for epp_clean_n10_seed42 round 29
+[19:41:56]   local clients → 10/10 for epp_clean_n10_seed42 round 29
+[19:41:57]   ★ NEW BEST → round=29 val_acc=0.8596 val_loss=0.4159
+[19:41:57] EPP ROUND DONE → epp_clean_n10_seed42 | 29/50 | val_acc=0.8596 | val_f1=0.8550 | best=0.8596@29 | no_improve=0 | round=51.9s | ETA≈18.3 min
+[19:41:57] EPP ROUND START → epp_clean_n10_seed42 | 30/50 | lr=0.018529
+[19:42:02]   local clients → 1/10 for epp_clean_n10_seed42 round 30
+[19:42:07]   local clients → 2/10 for epp_clean_n10_seed42 round 30
+[19:42:17]   local clients → 4/10 for epp_clean_n10_seed42 round 30
+[19:42:27]   local clients → 6/10 for epp_clean_n10_seed42 round 30
+[19:42:37]   local clients → 8/10 for epp_clean_n10_seed42 round 30
+[19:42:48]   local clients → 10/10 for epp_clean_n10_seed42 round 30
+[19:42:49] EPP ROUND DONE → epp_clean_n10_seed42 | 30/50 | val_acc=0.8594 | val_f1=0.8556 | best=0.8596@29 | no_improve=1 | round=52.1s | ETA≈17.4 min
+[19:42:49] RESUME SNAPSHOT → ~/Desktop/LSB_overnight/results/cifar_epp_matched/EPP_BCFL_REPRO_V4_Resume.zip | 19.5 MB
+[19:42:49] EPP ROUND START → epp_clean_n10_seed42 | 31/50 | lr=0.017039
+[19:42:54]   local clients → 1/10 for epp_clean_n10_seed42 round 31
+[19:42:59]   local clients → 2/10 for epp_clean_n10_seed42 round 31
+[19:43:10]   local clients → 4/10 for epp_clean_n10_seed42 round 31
+[19:43:20]   local clients → 6/10 for epp_clean_n10_seed42 round 31
+[19:43:30]   local clients → 8/10 for epp_clean_n10_seed42 round 31
+[19:43:41]   local clients → 10/10 for epp_clean_n10_seed42 round 31
+[19:43:42]   ★ NEW BEST → round=31 val_acc=0.8640 val_loss=0.4156
+[19:43:42] EPP ROUND DONE → epp_clean_n10_seed42 | 31/50 | val_acc=0.8640 | val_f1=0.8604 | best=0.8640@31 | no_improve=0 | round=52.3s | ETA≈16.5 min
+[19:43:42] EPP ROUND START → epp_clean_n10_seed42 | 32/50 | lr=0.015583
+[19:43:47]   local clients → 1/10 for epp_clean_n10_seed42 round 32
+[19:43:52]   local clients → 2/10 for epp_clean_n10_seed42 round 32
+[19:44:02]   local clients → 4/10 for epp_clean_n10_seed42 round 32
+[19:44:12]   local clients → 6/10 for epp_clean_n10_seed42 round 32
+[19:44:23]   local clients → 8/10 for epp_clean_n10_seed42 round 32
+[19:44:33]   local clients → 10/10 for epp_clean_n10_seed42 round 32
+[19:44:34]   ★ NEW BEST → round=32 val_acc=0.8682 val_loss=0.4132
+[19:44:34] EPP ROUND DONE → epp_clean_n10_seed42 | 32/50 | val_acc=0.8682 | val_f1=0.8658 | best=0.8682@32 | no_improve=0 | round=52.4s | ETA≈15.7 min
+[19:44:34] EPP ROUND START → epp_clean_n10_seed42 | 33/50 | lr=0.014168
+[19:44:39]   local clients → 1/10 for epp_clean_n10_seed42 round 33
+[19:44:44]   local clients → 2/10 for epp_clean_n10_seed42 round 33
+[19:44:54]   local clients → 4/10 for epp_clean_n10_seed42 round 33
+[19:45:04]   local clients → 6/10 for epp_clean_n10_seed42 round 33
+[19:45:15]   local clients → 8/10 for epp_clean_n10_seed42 round 33
+[19:45:25]   local clients → 10/10 for epp_clean_n10_seed42 round 33
+[19:45:26]   ★ NEW BEST → round=33 val_acc=0.8696 val_loss=0.4039
+[19:45:26] EPP ROUND DONE → epp_clean_n10_seed42 | 33/50 | val_acc=0.8696 | val_f1=0.8662 | best=0.8696@33 | no_improve=0 | round=52.1s | ETA≈14.8 min
+[19:45:26] EPP ROUND START → epp_clean_n10_seed42 | 34/50 | lr=0.012799
+[19:45:32]   local clients → 1/10 for epp_clean_n10_seed42 round 34
+[19:45:37]   local clients → 2/10 for epp_clean_n10_seed42 round 34
+[19:45:47]   local clients → 4/10 for epp_clean_n10_seed42 round 34
+[19:45:57]   local clients → 6/10 for epp_clean_n10_seed42 round 34
+[19:46:08]   local clients → 8/10 for epp_clean_n10_seed42 round 34
+[19:46:17]   local clients → 10/10 for epp_clean_n10_seed42 round 34
+[19:46:18]   ★ NEW BEST → round=34 val_acc=0.8748 val_loss=0.4007
+[19:46:18] EPP ROUND DONE → epp_clean_n10_seed42 | 34/50 | val_acc=0.8748 | val_f1=0.8720 | best=0.8748@34 | no_improve=0 | round=51.9s | ETA≈13.9 min
+[19:46:18] EPP ROUND START → epp_clean_n10_seed42 | 35/50 | lr=0.011483
+[19:46:23]   local clients → 1/10 for epp_clean_n10_seed42 round 35
+[19:46:28]   local clients → 2/10 for epp_clean_n10_seed42 round 35
+[19:46:38]   local clients → 4/10 for epp_clean_n10_seed42 round 35
+[19:46:48]   local clients → 6/10 for epp_clean_n10_seed42 round 35
+[19:46:59]   local clients → 8/10 for epp_clean_n10_seed42 round 35
+[19:47:09]   local clients → 10/10 for epp_clean_n10_seed42 round 35
+[19:47:10] EPP ROUND DONE → epp_clean_n10_seed42 | 35/50 | val_acc=0.8746 | val_f1=0.8724 | best=0.8748@34 | no_improve=1 | round=51.9s | ETA≈13.0 min
+[19:47:10] EPP ROUND START → epp_clean_n10_seed42 | 36/50 | lr=0.010224
+[19:47:15]   local clients → 1/10 for epp_clean_n10_seed42 round 36
+[19:47:20]   local clients → 2/10 for epp_clean_n10_seed42 round 36
+[19:47:31]   local clients → 4/10 for epp_clean_n10_seed42 round 36
+[19:47:41]   local clients → 6/10 for epp_clean_n10_seed42 round 36
+[19:47:51]   local clients → 8/10 for epp_clean_n10_seed42 round 36
+[19:48:01]   local clients → 10/10 for epp_clean_n10_seed42 round 36
+[19:48:02] EPP ROUND DONE → epp_clean_n10_seed42 | 36/50 | val_acc=0.8744 | val_f1=0.8726 | best=0.8748@34 | no_improve=2 | round=52.0s | ETA≈12.2 min
+[19:48:02] EPP ROUND START → epp_clean_n10_seed42 | 37/50 | lr=0.009029
+[19:48:07]   local clients → 1/10 for epp_clean_n10_seed42 round 37
+[19:48:12]   local clients → 2/10 for epp_clean_n10_seed42 round 37
+[19:48:22]   local clients → 4/10 for epp_clean_n10_seed42 round 37
+[19:48:32]   local clients → 6/10 for epp_clean_n10_seed42 round 37
+[19:48:42]   local clients → 8/10 for epp_clean_n10_seed42 round 37
+[19:48:53]   local clients → 10/10 for epp_clean_n10_seed42 round 37
+[19:48:54]   ★ NEW BEST → round=37 val_acc=0.8792 val_loss=0.3964
+[19:48:54] EPP ROUND DONE → epp_clean_n10_seed42 | 37/50 | val_acc=0.8792 | val_f1=0.8769 | best=0.8792@37 | no_improve=0 | round=52.0s | ETA≈11.3 min
+[19:48:54] EPP ROUND START → epp_clean_n10_seed42 | 38/50 | lr=0.007900
+[19:48:59]   local clients → 1/10 for epp_clean_n10_seed42 round 38
+[19:49:05]   local clients → 2/10 for epp_clean_n10_seed42 round 38
+[19:49:15]   local clients → 4/10 for epp_clean_n10_seed42 round 38
+[19:49:26]   local clients → 6/10 for epp_clean_n10_seed42 round 38
+[19:49:36]   local clients → 8/10 for epp_clean_n10_seed42 round 38
+[19:49:45]   local clients → 10/10 for epp_clean_n10_seed42 round 38
+[19:49:46]   ★ NEW BEST → round=38 val_acc=0.8810 val_loss=0.3964
+[19:49:46] EPP ROUND DONE → epp_clean_n10_seed42 | 38/50 | val_acc=0.8810 | val_f1=0.8793 | best=0.8810@38 | no_improve=0 | round=52.2s | ETA≈10.4 min
+[19:49:46] EPP ROUND START → epp_clean_n10_seed42 | 39/50 | lr=0.006845
+[19:49:51]   local clients → 1/10 for epp_clean_n10_seed42 round 39
+[19:49:56]   local clients → 2/10 for epp_clean_n10_seed42 round 39
+[19:50:07]   local clients → 4/10 for epp_clean_n10_seed42 round 39
+[19:50:17]   local clients → 6/10 for epp_clean_n10_seed42 round 39
+[19:50:28]   local clients → 8/10 for epp_clean_n10_seed42 round 39
+[19:50:38]   local clients → 10/10 for epp_clean_n10_seed42 round 39
+[19:50:38]   ★ NEW BEST → round=39 val_acc=0.8832 val_loss=0.3920
+[19:50:38] EPP ROUND DONE → epp_clean_n10_seed42 | 39/50 | val_acc=0.8832 | val_f1=0.8817 | best=0.8832@39 | no_improve=0 | round=52.1s | ETA≈9.6 min
+[19:50:38] EPP ROUND START → epp_clean_n10_seed42 | 40/50 | lr=0.005865
+[19:50:43]   local clients → 1/10 for epp_clean_n10_seed42 round 40
+[19:50:49]   local clients → 2/10 for epp_clean_n10_seed42 round 40
+[19:50:59]   local clients → 4/10 for epp_clean_n10_seed42 round 40
+[19:51:09]   local clients → 6/10 for epp_clean_n10_seed42 round 40
+[19:51:19]   local clients → 8/10 for epp_clean_n10_seed42 round 40
+[19:51:29]   local clients → 10/10 for epp_clean_n10_seed42 round 40
+[19:51:30]   ★ NEW BEST → round=40 val_acc=0.8858 val_loss=0.3837
+[19:51:30] EPP ROUND DONE → epp_clean_n10_seed42 | 40/50 | val_acc=0.8858 | val_f1=0.8845 | best=0.8858@40 | no_improve=0 | round=51.8s | ETA≈8.7 min
+[19:51:31] RESUME SNAPSHOT → ~/Desktop/LSB_overnight/results/cifar_epp_matched/EPP_BCFL_REPRO_V4_Resume.zip | 19.5 MB
+[19:51:31] EPP ROUND START → epp_clean_n10_seed42 | 41/50 | lr=0.004967
+[19:51:36]   local clients → 1/10 for epp_clean_n10_seed42 round 41
+[19:51:41]   local clients → 2/10 for epp_clean_n10_seed42 round 41
+[19:51:51]   local clients → 4/10 for epp_clean_n10_seed42 round 41
+[19:52:01]   local clients → 6/10 for epp_clean_n10_seed42 round 41
+[19:52:11]   local clients → 8/10 for epp_clean_n10_seed42 round 41
+[19:52:22]   local clients → 10/10 for epp_clean_n10_seed42 round 41
+[19:52:23] EPP ROUND DONE → epp_clean_n10_seed42 | 41/50 | val_acc=0.8846 | val_f1=0.8832 | best=0.8858@40 | no_improve=1 | round=52.0s | ETA≈7.8 min
+[19:52:23] EPP ROUND START → epp_clean_n10_seed42 | 42/50 | lr=0.004153
+[19:52:28]   local clients → 1/10 for epp_clean_n10_seed42 round 42
+[19:52:33]   local clients → 2/10 for epp_clean_n10_seed42 round 42
+[19:52:43]   local clients → 4/10 for epp_clean_n10_seed42 round 42
+[19:52:54]   local clients → 6/10 for epp_clean_n10_seed42 round 42
+[19:53:04]   local clients → 8/10 for epp_clean_n10_seed42 round 42
+[19:53:14]   local clients → 10/10 for epp_clean_n10_seed42 round 42
+[19:53:15]   ★ NEW BEST → round=42 val_acc=0.8896 val_loss=0.3831
+[19:53:15] EPP ROUND DONE → epp_clean_n10_seed42 | 42/50 | val_acc=0.8896 | val_f1=0.8883 | best=0.8896@42 | no_improve=0 | round=52.1s | ETA≈7.0 min
+[19:53:15] EPP ROUND START → epp_clean_n10_seed42 | 43/50 | lr=0.003426
+[19:53:20]   local clients → 1/10 for epp_clean_n10_seed42 round 43
+[19:53:25]   local clients → 2/10 for epp_clean_n10_seed42 round 43
+[19:53:35]   local clients → 4/10 for epp_clean_n10_seed42 round 43
+[19:53:46]   local clients → 6/10 for epp_clean_n10_seed42 round 43
+[19:53:56]   local clients → 8/10 for epp_clean_n10_seed42 round 43
+[19:54:06]   local clients → 10/10 for epp_clean_n10_seed42 round 43
+[19:54:07]   ★ NEW BEST → round=43 val_acc=0.8908 val_loss=0.3790
+[19:54:07] EPP ROUND DONE → epp_clean_n10_seed42 | 43/50 | val_acc=0.8908 | val_f1=0.8894 | best=0.8908@43 | no_improve=0 | round=52.0s | ETA≈6.1 min
+[19:54:07] EPP ROUND START → epp_clean_n10_seed42 | 44/50 | lr=0.002791
+[19:54:12]   local clients → 1/10 for epp_clean_n10_seed42 round 44
+[19:54:17]   local clients → 2/10 for epp_clean_n10_seed42 round 44
+[19:54:27]   local clients → 4/10 for epp_clean_n10_seed42 round 44
+[19:54:38]   local clients → 6/10 for epp_clean_n10_seed42 round 44
+[19:54:48]   local clients → 8/10 for epp_clean_n10_seed42 round 44
+[19:54:58]   local clients → 10/10 for epp_clean_n10_seed42 round 44
+[19:54:59]   ★ NEW BEST → round=44 val_acc=0.8928 val_loss=0.3720
+[19:54:59] EPP ROUND DONE → epp_clean_n10_seed42 | 44/50 | val_acc=0.8928 | val_f1=0.8914 | best=0.8928@44 | no_improve=0 | round=52.0s | ETA≈5.2 min
+[19:54:59] EPP ROUND START → epp_clean_n10_seed42 | 45/50 | lr=0.002248
+[19:55:04]   local clients → 1/10 for epp_clean_n10_seed42 round 45
+[19:55:09]   local clients → 2/10 for epp_clean_n10_seed42 round 45
+[19:55:20]   local clients → 4/10 for epp_clean_n10_seed42 round 45
+[19:55:30]   local clients → 6/10 for epp_clean_n10_seed42 round 45
+[19:55:41]   local clients → 8/10 for epp_clean_n10_seed42 round 45
+[19:55:51]   local clients → 10/10 for epp_clean_n10_seed42 round 45
+[19:55:51] EPP ROUND DONE → epp_clean_n10_seed42 | 45/50 | val_acc=0.8902 | val_f1=0.8889 | best=0.8928@44 | no_improve=1 | round=52.4s | ETA≈4.3 min
+[19:55:51] EPP ROUND START → epp_clean_n10_seed42 | 46/50 | lr=0.001801
+[19:55:57]   local clients → 1/10 for epp_clean_n10_seed42 round 46
+[19:56:02]   local clients → 2/10 for epp_clean_n10_seed42 round 46
+[19:56:12]   local clients → 4/10 for epp_clean_n10_seed42 round 46
+[19:56:22]   local clients → 6/10 for epp_clean_n10_seed42 round 46
+[19:56:32]   local clients → 8/10 for epp_clean_n10_seed42 round 46
+[19:56:43]   local clients → 10/10 for epp_clean_n10_seed42 round 46
+[19:56:43] EPP ROUND DONE → epp_clean_n10_seed42 | 46/50 | val_acc=0.8904 | val_f1=0.8892 | best=0.8928@44 | no_improve=2 | round=52.1s | ETA≈3.5 min
+[19:56:43] EPP ROUND START → epp_clean_n10_seed42 | 47/50 | lr=0.001452
+[19:56:48]   local clients → 1/10 for epp_clean_n10_seed42 round 47
+[19:56:53]   local clients → 2/10 for epp_clean_n10_seed42 round 47
+[19:57:04]   local clients → 4/10 for epp_clean_n10_seed42 round 47
+[19:57:14]   local clients → 6/10 for epp_clean_n10_seed42 round 47
+[19:57:25]   local clients → 8/10 for epp_clean_n10_seed42 round 47
+[19:57:35]   local clients → 10/10 for epp_clean_n10_seed42 round 47
+[19:57:36] EPP ROUND DONE → epp_clean_n10_seed42 | 47/50 | val_acc=0.8900 | val_f1=0.8889 | best=0.8928@44 | no_improve=3 | round=52.5s | ETA≈2.6 min
+[19:57:36] EPP ROUND START → epp_clean_n10_seed42 | 48/50 | lr=0.001201
+[19:57:41]   local clients → 1/10 for epp_clean_n10_seed42 round 48
+[19:57:46]   local clients → 2/10 for epp_clean_n10_seed42 round 48
+[19:57:56]   local clients → 4/10 for epp_clean_n10_seed42 round 48
+[19:58:06]   local clients → 6/10 for epp_clean_n10_seed42 round 48
+[19:58:16]   local clients → 8/10 for epp_clean_n10_seed42 round 48
+[19:58:27]   local clients → 10/10 for epp_clean_n10_seed42 round 48
+[19:58:28] EPP ROUND DONE → epp_clean_n10_seed42 | 48/50 | val_acc=0.8918 | val_f1=0.8906 | best=0.8928@44 | no_improve=4 | round=51.9s | ETA≈1.7 min
+[19:58:28] EPP ROUND START → epp_clean_n10_seed42 | 49/50 | lr=0.001050
+[19:58:33]   local clients → 1/10 for epp_clean_n10_seed42 round 49
+[19:58:38]   local clients → 2/10 for epp_clean_n10_seed42 round 49
+[19:58:48]   local clients → 4/10 for epp_clean_n10_seed42 round 49
+[19:58:59]   local clients → 6/10 for epp_clean_n10_seed42 round 49
+[19:59:09]   local clients → 8/10 for epp_clean_n10_seed42 round 49
+[19:59:19]   local clients → 10/10 for epp_clean_n10_seed42 round 49
+[19:59:20] EPP ROUND DONE → epp_clean_n10_seed42 | 49/50 | val_acc=0.8894 | val_f1=0.8884 | best=0.8928@44 | no_improve=5 | round=52.4s | ETA≈0.9 min
+[19:59:20] EPP ROUND START → epp_clean_n10_seed42 | 50/50 | lr=0.001000
+[19:59:26]   local clients → 1/10 for epp_clean_n10_seed42 round 50
+[19:59:31]   local clients → 2/10 for epp_clean_n10_seed42 round 50
+[19:59:41]   local clients → 4/10 for epp_clean_n10_seed42 round 50
+[19:59:51]   local clients → 6/10 for epp_clean_n10_seed42 round 50
+[20:00:02]   local clients → 8/10 for epp_clean_n10_seed42 round 50
+[20:00:12]   local clients → 10/10 for epp_clean_n10_seed42 round 50
+[20:00:12] EPP ROUND DONE → epp_clean_n10_seed42 | 50/50 | val_acc=0.8894 | val_f1=0.8885 | best=0.8928@44 | no_improve=6 | round=52.3s | ETA≈0.0 min
+[20:00:13] RESUME SNAPSHOT → ~/Desktop/LSB_overnight/results/cifar_epp_matched/EPP_BCFL_REPRO_V4_Resume.zip | 19.5 MB
+[20:00:13] EPP RUN COMPLETE → epp_clean_n10_seed42 | BEST round=44 val_acc=0.8928
+RESULT epp_clean_n10_seed42 {'test_accuracy': 0.8829, 'test_f1': 0.8800342542237966}
+[20:00:14] EPP RUN START → epp_clean_n10_seed43 | clients=10 | epsilon=inf | attack=NONE | aggregation=AMA
+[20:00:14] EPP ROUND START → epp_clean_n10_seed43 | 1/50 | lr=0.050000
+[20:00:20]   local clients → 1/10 for epp_clean_n10_seed43 round 1
+[20:00:25]   local clients → 2/10 for epp_clean_n10_seed43 round 1
+[20:00:35]   local clients → 4/10 for epp_clean_n10_seed43 round 1
+[20:00:45]   local clients → 6/10 for epp_clean_n10_seed43 round 1
+[20:00:55]   local clients → 8/10 for epp_clean_n10_seed43 round 1
+[20:01:06]   local clients → 10/10 for epp_clean_n10_seed43 round 1
+[20:01:06]   ★ NEW BEST → round=1 val_acc=0.2554 val_loss=2.0449
+[20:01:06] EPP ROUND DONE → epp_clean_n10_seed43 | 1/50 | val_acc=0.2554 | val_f1=0.1972 | best=0.2554@1 | no_improve=0 | round=51.8s | ETA≈42.3 min
+[20:01:06] EPP ROUND START → epp_clean_n10_seed43 | 2/50 | lr=0.049950
+[20:01:11]   local clients → 1/10 for epp_clean_n10_seed43 round 2
+[20:01:17]   local clients → 2/10 for epp_clean_n10_seed43 round 2
+[20:01:27]   local clients → 4/10 for epp_clean_n10_seed43 round 2
+[20:01:37]   local clients → 6/10 for epp_clean_n10_seed43 round 2
+[20:01:47]   local clients → 8/10 for epp_clean_n10_seed43 round 2
+[20:01:57]   local clients → 10/10 for epp_clean_n10_seed43 round 2
+[20:01:58]   ★ NEW BEST → round=2 val_acc=0.3838 val_loss=1.6716
+[20:01:58] EPP ROUND DONE → epp_clean_n10_seed43 | 2/50 | val_acc=0.3838 | val_f1=0.3581 | best=0.3838@2 | no_improve=0 | round=51.8s | ETA≈41.4 min
+[20:01:58] EPP ROUND START → epp_clean_n10_seed43 | 3/50 | lr=0.049799
+[20:02:03]   local clients → 1/10 for epp_clean_n10_seed43 round 3
+[20:02:09]   local clients → 2/10 for epp_clean_n10_seed43 round 3
+[20:02:19]   local clients → 4/10 for epp_clean_n10_seed43 round 3
+[20:02:29]   local clients → 6/10 for epp_clean_n10_seed43 round 3
+[20:02:40]   local clients → 8/10 for epp_clean_n10_seed43 round 3
+[20:02:50]   local clients → 10/10 for epp_clean_n10_seed43 round 3
+[20:02:51]   ★ NEW BEST → round=3 val_acc=0.4248 val_loss=1.5344
+[20:02:51] EPP ROUND DONE → epp_clean_n10_seed43 | 3/50 | val_acc=0.4248 | val_f1=0.3958 | best=0.4248@3 | no_improve=0 | round=52.4s | ETA≈40.8 min
+[20:02:51] EPP ROUND START → epp_clean_n10_seed43 | 4/50 | lr=0.049548
+[20:02:56]   local clients → 1/10 for epp_clean_n10_seed43 round 4
+[20:03:01]   local clients → 2/10 for epp_clean_n10_seed43 round 4
+[20:03:11]   local clients → 4/10 for epp_clean_n10_seed43 round 4
+[20:03:22]   local clients → 6/10 for epp_clean_n10_seed43 round 4
+[20:03:32]   local clients → 8/10 for epp_clean_n10_seed43 round 4
+[20:03:42]   local clients → 10/10 for epp_clean_n10_seed43 round 4
+[20:03:43]   ★ NEW BEST → round=4 val_acc=0.4944 val_loss=1.3334
+[20:03:43] EPP ROUND DONE → epp_clean_n10_seed43 | 4/50 | val_acc=0.4944 | val_f1=0.4787 | best=0.4944@4 | no_improve=0 | round=52.1s | ETA≈39.9 min
+[20:03:43] EPP ROUND START → epp_clean_n10_seed43 | 5/50 | lr=0.049199
+[20:03:48]   local clients → 1/10 for epp_clean_n10_seed43 round 5
+[20:03:53]   local clients → 2/10 for epp_clean_n10_seed43 round 5
+[20:04:03]   local clients → 4/10 for epp_clean_n10_seed43 round 5
+[20:04:13]   local clients → 6/10 for epp_clean_n10_seed43 round 5
+[20:04:24]   local clients → 8/10 for epp_clean_n10_seed43 round 5
+[20:04:34]   local clients → 10/10 for epp_clean_n10_seed43 round 5
+[20:04:35]   ★ NEW BEST → round=5 val_acc=0.5628 val_loss=1.1757
+[20:04:35] EPP ROUND DONE → epp_clean_n10_seed43 | 5/50 | val_acc=0.5628 | val_f1=0.5518 | best=0.5628@5 | no_improve=0 | round=51.9s | ETA≈39.0 min
+[20:04:35] EPP ROUND START → epp_clean_n10_seed43 | 6/50 | lr=0.048752
+[20:04:40]   local clients → 1/10 for epp_clean_n10_seed43 round 6
+[20:04:45]   local clients → 2/10 for epp_clean_n10_seed43 round 6
+[20:04:55]   local clients → 4/10 for epp_clean_n10_seed43 round 6
+[20:05:05]   local clients → 6/10 for epp_clean_n10_seed43 round 6
+[20:05:16]   local clients → 8/10 for epp_clean_n10_seed43 round 6
+[20:05:26]   local clients → 10/10 for epp_clean_n10_seed43 round 6
+[20:05:27]   ★ NEW BEST → round=6 val_acc=0.6226 val_loss=1.0446
+[20:05:27] EPP ROUND DONE → epp_clean_n10_seed43 | 6/50 | val_acc=0.6226 | val_f1=0.6191 | best=0.6226@6 | no_improve=0 | round=52.3s | ETA≈38.2 min
+[20:05:27] EPP ROUND START → epp_clean_n10_seed43 | 7/50 | lr=0.048209
+[20:05:32]   local clients → 1/10 for epp_clean_n10_seed43 round 7
+[20:05:37]   local clients → 2/10 for epp_clean_n10_seed43 round 7
+[20:05:48]   local clients → 4/10 for epp_clean_n10_seed43 round 7
+[20:05:57]   local clients → 6/10 for epp_clean_n10_seed43 round 7
+[20:06:08]   local clients → 8/10 for epp_clean_n10_seed43 round 7
+[20:06:18]   local clients → 10/10 for epp_clean_n10_seed43 round 7
+[20:06:19]   ★ NEW BEST → round=7 val_acc=0.6666 val_loss=0.9258
+[20:06:19] EPP ROUND DONE → epp_clean_n10_seed43 | 7/50 | val_acc=0.6666 | val_f1=0.6647 | best=0.6666@7 | no_improve=0 | round=51.9s | ETA≈37.3 min
+[20:06:19] EPP ROUND START → epp_clean_n10_seed43 | 8/50 | lr=0.047574
+[20:06:24]   local clients → 1/10 for epp_clean_n10_seed43 round 8
+[20:06:29]   local clients → 2/10 for epp_clean_n10_seed43 round 8
+[20:06:39]   local clients → 4/10 for epp_clean_n10_seed43 round 8
+[20:06:50]   local clients → 6/10 for epp_clean_n10_seed43 round 8
+[20:07:00]   local clients → 8/10 for epp_clean_n10_seed43 round 8
+[20:07:10]   local clients → 10/10 for epp_clean_n10_seed43 round 8
+[20:07:11]   ★ NEW BEST → round=8 val_acc=0.6758 val_loss=0.9126
+[20:07:11] EPP ROUND DONE → epp_clean_n10_seed43 | 8/50 | val_acc=0.6758 | val_f1=0.6772 | best=0.6758@8 | no_improve=0 | round=52.3s | ETA≈36.4 min
+[20:07:11] EPP ROUND START → epp_clean_n10_seed43 | 9/50 | lr=0.046847
+[20:07:17]   local clients → 1/10 for epp_clean_n10_seed43 round 9
+[20:07:22]   local clients → 2/10 for epp_clean_n10_seed43 round 9
+[20:07:32]   local clients → 4/10 for epp_clean_n10_seed43 round 9
+[20:07:42]   local clients → 6/10 for epp_clean_n10_seed43 round 9
+[20:07:52]   local clients → 8/10 for epp_clean_n10_seed43 round 9
+[20:08:02]   local clients → 10/10 for epp_clean_n10_seed43 round 9
+[20:08:03]   ★ NEW BEST → round=9 val_acc=0.7230 val_loss=0.7921
+[20:08:03] EPP ROUND DONE → epp_clean_n10_seed43 | 9/50 | val_acc=0.7230 | val_f1=0.7238 | best=0.7230@9 | no_improve=0 | round=52.0s | ETA≈35.6 min
+[20:08:03] EPP ROUND START → epp_clean_n10_seed43 | 10/50 | lr=0.046033
+[20:08:08]   local clients → 1/10 for epp_clean_n10_seed43 round 10
+[20:08:13]   local clients → 2/10 for epp_clean_n10_seed43 round 10
+[20:08:23]   local clients → 4/10 for epp_clean_n10_seed43 round 10
+[20:08:34]   local clients → 6/10 for epp_clean_n10_seed43 round 10
+[20:08:44]   local clients → 8/10 for epp_clean_n10_seed43 round 10
+[20:08:54]   local clients → 10/10 for epp_clean_n10_seed43 round 10
+[20:08:55]   ★ NEW BEST → round=10 val_acc=0.7462 val_loss=0.7036
+[20:08:55] EPP ROUND DONE → epp_clean_n10_seed43 | 10/50 | val_acc=0.7462 | val_f1=0.7443 | best=0.7462@10 | no_improve=0 | round=51.9s | ETA≈34.7 min
+[20:08:56] RESUME SNAPSHOT → ~/Desktop/LSB_overnight/results/cifar_epp_matched/EPP_BCFL_REPRO_V4_Resume.zip | 29.2 MB
+[20:08:56] EPP ROUND START → epp_clean_n10_seed43 | 11/50 | lr=0.045135
+[20:09:01]   local clients → 1/10 for epp_clean_n10_seed43 round 11
+[20:09:06]   local clients → 2/10 for epp_clean_n10_seed43 round 11
+[20:09:17]   local clients → 4/10 for epp_clean_n10_seed43 round 11
+[20:09:27]   local clients → 6/10 for epp_clean_n10_seed43 round 11
+[20:09:37]   local clients → 8/10 for epp_clean_n10_seed43 round 11
+[20:09:47]   local clients → 10/10 for epp_clean_n10_seed43 round 11
+[20:09:48]   ★ NEW BEST → round=11 val_acc=0.7614 val_loss=0.6799
+[20:09:48] EPP ROUND DONE → epp_clean_n10_seed43 | 11/50 | val_acc=0.7614 | val_f1=0.7591 | best=0.7614@11 | no_improve=0 | round=52.2s | ETA≈33.8 min
+[20:09:48] EPP ROUND START → epp_clean_n10_seed43 | 12/50 | lr=0.044155
+[20:09:53]   local clients → 1/10 for epp_clean_n10_seed43 round 12
+[20:09:59]   local clients → 2/10 for epp_clean_n10_seed43 round 12
+[20:10:08]   local clients → 4/10 for epp_clean_n10_seed43 round 12
+[20:10:19]   local clients → 6/10 for epp_clean_n10_seed43 round 12
+[20:10:30]   local clients → 8/10 for epp_clean_n10_seed43 round 12
+[20:10:40]   local clients → 10/10 for epp_clean_n10_seed43 round 12
+[20:10:40]   ★ NEW BEST → round=12 val_acc=0.7708 val_loss=0.6554
+[20:10:40] EPP ROUND DONE → epp_clean_n10_seed43 | 12/50 | val_acc=0.7708 | val_f1=0.7702 | best=0.7708@12 | no_improve=0 | round=52.3s | ETA≈33.0 min
+[20:10:40] EPP ROUND START → epp_clean_n10_seed43 | 13/50 | lr=0.043100
+[20:10:45]   local clients → 1/10 for epp_clean_n10_seed43 round 13
+[20:10:51]   local clients → 2/10 for epp_clean_n10_seed43 round 13
+[20:11:01]   local clients → 4/10 for epp_clean_n10_seed43 round 13
+[20:11:11]   local clients → 6/10 for epp_clean_n10_seed43 round 13
+[20:11:22]   local clients → 8/10 for epp_clean_n10_seed43 round 13
+[20:11:32]   local clients → 10/10 for epp_clean_n10_seed43 round 13
+[20:11:33]   ★ NEW BEST → round=13 val_acc=0.7812 val_loss=0.6173
+[20:11:33] EPP ROUND DONE → epp_clean_n10_seed43 | 13/50 | val_acc=0.7812 | val_f1=0.7794 | best=0.7812@13 | no_improve=0 | round=52.4s | ETA≈32.1 min
+[20:11:33] EPP ROUND START → epp_clean_n10_seed43 | 14/50 | lr=0.041971
+[20:11:38]   local clients → 1/10 for epp_clean_n10_seed43 round 14
+[20:11:43]   local clients → 2/10 for epp_clean_n10_seed43 round 14
+[20:11:54]   local clients → 4/10 for epp_clean_n10_seed43 round 14
+[20:12:04]   local clients → 6/10 for epp_clean_n10_seed43 round 14
+[20:12:14]   local clients → 8/10 for epp_clean_n10_seed43 round 14
+[20:12:24]   local clients → 10/10 for epp_clean_n10_seed43 round 14
+[20:12:25]   ★ NEW BEST → round=14 val_acc=0.7920 val_loss=0.5907
+[20:12:25] EPP ROUND DONE → epp_clean_n10_seed43 | 14/50 | val_acc=0.7920 | val_f1=0.7899 | best=0.7920@14 | no_improve=0 | round=52.2s | ETA≈31.3 min
+[20:12:25] EPP ROUND START → epp_clean_n10_seed43 | 15/50 | lr=0.040776
+[20:12:30]   local clients → 1/10 for epp_clean_n10_seed43 round 15
+[20:12:35]   local clients → 2/10 for epp_clean_n10_seed43 round 15
+[20:12:45]   local clients → 4/10 for epp_clean_n10_seed43 round 15
+[20:12:56]   local clients → 6/10 for epp_clean_n10_seed43 round 15
+[20:13:06]   local clients → 8/10 for epp_clean_n10_seed43 round 15
+[20:13:16]   local clients → 10/10 for epp_clean_n10_seed43 round 15
+[20:13:17] EPP ROUND DONE → epp_clean_n10_seed43 | 15/50 | val_acc=0.7856 | val_f1=0.7852 | best=0.7920@14 | no_improve=1 | round=52.0s | ETA≈30.4 min
+[20:13:17] EPP ROUND START → epp_clean_n10_seed43 | 16/50 | lr=0.039517
+[20:13:22]   local clients → 1/10 for epp_clean_n10_seed43 round 16
+[20:13:28]   local clients → 2/10 for epp_clean_n10_seed43 round 16
+[20:13:38]   local clients → 4/10 for epp_clean_n10_seed43 round 16
+[20:13:48]   local clients → 6/10 for epp_clean_n10_seed43 round 16
+[20:13:58]   local clients → 8/10 for epp_clean_n10_seed43 round 16
+[20:14:08]   local clients → 10/10 for epp_clean_n10_seed43 round 16
+[20:14:09]   ★ NEW BEST → round=16 val_acc=0.8082 val_loss=0.5471
+[20:14:09] EPP ROUND DONE → epp_clean_n10_seed43 | 16/50 | val_acc=0.8082 | val_f1=0.8071 | best=0.8082@16 | no_improve=0 | round=51.9s | ETA≈29.5 min
+[20:14:09] EPP ROUND START → epp_clean_n10_seed43 | 17/50 | lr=0.038201
+[20:14:14]   local clients → 1/10 for epp_clean_n10_seed43 round 17
+[20:14:19]   local clients → 2/10 for epp_clean_n10_seed43 round 17
+[20:14:29]   local clients → 4/10 for epp_clean_n10_seed43 round 17
+[20:14:40]   local clients → 6/10 for epp_clean_n10_seed43 round 17
+[20:14:50]   local clients → 8/10 for epp_clean_n10_seed43 round 17
+[20:15:01]   local clients → 10/10 for epp_clean_n10_seed43 round 17
+[20:15:01]   ★ NEW BEST → round=17 val_acc=0.8118 val_loss=0.5302
+[20:15:01] EPP ROUND DONE → epp_clean_n10_seed43 | 17/50 | val_acc=0.8118 | val_f1=0.8099 | best=0.8118@17 | no_improve=0 | round=52.4s | ETA≈28.7 min
+[20:15:01] EPP ROUND START → epp_clean_n10_seed43 | 18/50 | lr=0.036832
+[20:15:06]   local clients → 1/10 for epp_clean_n10_seed43 round 18
+[20:15:11]   local clients → 2/10 for epp_clean_n10_seed43 round 18
+[20:15:22]   local clients → 4/10 for epp_clean_n10_seed43 round 18
+[20:15:32]   local clients → 6/10 for epp_clean_n10_seed43 round 18
+[20:15:43]   local clients → 8/10 for epp_clean_n10_seed43 round 18
+[20:15:53]   local clients → 10/10 for epp_clean_n10_seed43 round 18
+[20:15:53]   ★ NEW BEST → round=18 val_acc=0.8264 val_loss=0.4905
+[20:15:53] EPP ROUND DONE → epp_clean_n10_seed43 | 18/50 | val_acc=0.8264 | val_f1=0.8250 | best=0.8264@18 | no_improve=0 | round=52.0s | ETA≈27.8 min
+[20:15:53] EPP ROUND START → epp_clean_n10_seed43 | 19/50 | lr=0.035417
+[20:15:58]   local clients → 1/10 for epp_clean_n10_seed43 round 19
+[20:16:03]   local clients → 2/10 for epp_clean_n10_seed43 round 19
+[20:16:14]   local clients → 4/10 for epp_clean_n10_seed43 round 19
+[20:16:24]   local clients → 6/10 for epp_clean_n10_seed43 round 19
+[20:16:35]   local clients → 8/10 for epp_clean_n10_seed43 round 19
+[20:16:45]   local clients → 10/10 for epp_clean_n10_seed43 round 19
+[20:16:45] EPP ROUND DONE → epp_clean_n10_seed43 | 19/50 | val_acc=0.8260 | val_f1=0.8248 | best=0.8264@18 | no_improve=1 | round=52.2s | ETA≈26.9 min
+[20:16:45] EPP ROUND START → epp_clean_n10_seed43 | 20/50 | lr=0.033961
+[20:16:51]   local clients → 1/10 for epp_clean_n10_seed43 round 20
+[20:16:56]   local clients → 2/10 for epp_clean_n10_seed43 round 20
+[20:17:06]   local clients → 4/10 for epp_clean_n10_seed43 round 20
+[20:17:16]   local clients → 6/10 for epp_clean_n10_seed43 round 20
+[20:17:27]   local clients → 8/10 for epp_clean_n10_seed43 round 20
+[20:17:37]   local clients → 10/10 for epp_clean_n10_seed43 round 20
+[20:17:37]   ★ NEW BEST → round=20 val_acc=0.8414 val_loss=0.4530
+[20:17:37] EPP ROUND DONE → epp_clean_n10_seed43 | 20/50 | val_acc=0.8414 | val_f1=0.8406 | best=0.8414@20 | no_improve=0 | round=52.1s | ETA≈26.0 min
+[20:17:38] RESUME SNAPSHOT → ~/Desktop/LSB_overnight/results/cifar_epp_matched/EPP_BCFL_REPRO_V4_Resume.zip | 29.3 MB
+[20:17:38] EPP ROUND START → epp_clean_n10_seed43 | 21/50 | lr=0.032471
+[20:17:43]   local clients → 1/10 for epp_clean_n10_seed43 round 21
+[20:17:49]   local clients → 2/10 for epp_clean_n10_seed43 round 21
+[20:17:59]   local clients → 4/10 for epp_clean_n10_seed43 round 21
+[20:18:09]   local clients → 6/10 for epp_clean_n10_seed43 round 21
+[20:18:19]   local clients → 8/10 for epp_clean_n10_seed43 round 21
+[20:18:30]   local clients → 10/10 for epp_clean_n10_seed43 round 21
+[20:18:30] EPP ROUND DONE → epp_clean_n10_seed43 | 21/50 | val_acc=0.8394 | val_f1=0.8390 | best=0.8414@20 | no_improve=1 | round=52.2s | ETA≈25.2 min
+[20:18:30] EPP ROUND START → epp_clean_n10_seed43 | 22/50 | lr=0.030952
+[20:18:36]   local clients → 1/10 for epp_clean_n10_seed43 round 22
+[20:18:41]   local clients → 2/10 for epp_clean_n10_seed43 round 22
+[20:18:51]   local clients → 4/10 for epp_clean_n10_seed43 round 22
+[20:19:02]   local clients → 6/10 for epp_clean_n10_seed43 round 22
+[20:19:12]   local clients → 8/10 for epp_clean_n10_seed43 round 22
+[20:19:22]   local clients → 10/10 for epp_clean_n10_seed43 round 22
+[20:19:23] EPP ROUND DONE → epp_clean_n10_seed43 | 22/50 | val_acc=0.8408 | val_f1=0.8406 | best=0.8414@20 | no_improve=2 | round=52.4s | ETA≈24.3 min
+[20:19:23] EPP ROUND START → epp_clean_n10_seed43 | 23/50 | lr=0.029410
+[20:19:28]   local clients → 1/10 for epp_clean_n10_seed43 round 23
+[20:19:33]   local clients → 2/10 for epp_clean_n10_seed43 round 23
+[20:19:44]   local clients → 4/10 for epp_clean_n10_seed43 round 23
+[20:19:54]   local clients → 6/10 for epp_clean_n10_seed43 round 23
+[20:20:04]   local clients → 8/10 for epp_clean_n10_seed43 round 23
+[20:20:14]   local clients → 10/10 for epp_clean_n10_seed43 round 23
+[20:20:15]   ★ NEW BEST → round=23 val_acc=0.8530 val_loss=0.4227
+[20:20:15] EPP ROUND DONE → epp_clean_n10_seed43 | 23/50 | val_acc=0.8530 | val_f1=0.8522 | best=0.8530@23 | no_improve=0 | round=51.8s | ETA≈23.4 min
+[20:20:15] EPP ROUND START → epp_clean_n10_seed43 | 24/50 | lr=0.027853
+[20:20:20]   local clients → 1/10 for epp_clean_n10_seed43 round 24
+[20:20:25]   local clients → 2/10 for epp_clean_n10_seed43 round 24
+[20:20:35]   local clients → 4/10 for epp_clean_n10_seed43 round 24
+[20:20:46]   local clients → 6/10 for epp_clean_n10_seed43 round 24
+[20:20:56]   local clients → 8/10 for epp_clean_n10_seed43 round 24
+[20:21:06]   local clients → 10/10 for epp_clean_n10_seed43 round 24
+[20:21:07]   ★ NEW BEST → round=24 val_acc=0.8534 val_loss=0.4228
+[20:21:07] EPP ROUND DONE → epp_clean_n10_seed43 | 24/50 | val_acc=0.8534 | val_f1=0.8528 | best=0.8534@24 | no_improve=0 | round=52.3s | ETA≈22.6 min
+[20:21:07] EPP ROUND START → epp_clean_n10_seed43 | 25/50 | lr=0.026285
+[20:21:13]   local clients → 1/10 for epp_clean_n10_seed43 round 25
+[20:21:18]   local clients → 2/10 for epp_clean_n10_seed43 round 25
+[20:21:28]   local clients → 4/10 for epp_clean_n10_seed43 round 25
+[20:21:39]   local clients → 6/10 for epp_clean_n10_seed43 round 25
+[20:21:49]   local clients → 8/10 for epp_clean_n10_seed43 round 25
+[20:21:59]   local clients → 10/10 for epp_clean_n10_seed43 round 25
+[20:22:00]   ★ NEW BEST → round=25 val_acc=0.8646 val_loss=0.3989
+[20:22:00] EPP ROUND DONE → epp_clean_n10_seed43 | 25/50 | val_acc=0.8646 | val_f1=0.8645 | best=0.8646@25 | no_improve=0 | round=52.5s | ETA≈21.7 min
+[20:22:00] EPP ROUND START → epp_clean_n10_seed43 | 26/50 | lr=0.024715
+[20:22:05]   local clients → 1/10 for epp_clean_n10_seed43 round 26
+[20:22:10]   local clients → 2/10 for epp_clean_n10_seed43 round 26
+[20:22:21]   local clients → 4/10 for epp_clean_n10_seed43 round 26
+[20:22:31]   local clients → 6/10 for epp_clean_n10_seed43 round 26
+[20:22:41]   local clients → 8/10 for epp_clean_n10_seed43 round 26
+[20:22:51]   local clients → 10/10 for epp_clean_n10_seed43 round 26
+[20:22:52] EPP ROUND DONE → epp_clean_n10_seed43 | 26/50 | val_acc=0.8628 | val_f1=0.8612 | best=0.8646@25 | no_improve=1 | round=52.0s | ETA≈20.8 min
+[20:22:52] EPP ROUND START → epp_clean_n10_seed43 | 27/50 | lr=0.023147
+[20:22:56]   local clients → 1/10 for epp_clean_n10_seed43 round 27
+[20:23:01]   local clients → 2/10 for epp_clean_n10_seed43 round 27
+[20:23:12]   local clients → 4/10 for epp_clean_n10_seed43 round 27
+[20:23:22]   local clients → 6/10 for epp_clean_n10_seed43 round 27
+[20:23:32]   local clients → 8/10 for epp_clean_n10_seed43 round 27
+[20:23:43]   local clients → 10/10 for epp_clean_n10_seed43 round 27
+[20:23:44]   ★ NEW BEST → round=27 val_acc=0.8676 val_loss=0.3875
+[20:23:44] EPP ROUND DONE → epp_clean_n10_seed43 | 27/50 | val_acc=0.8676 | val_f1=0.8669 | best=0.8676@27 | no_improve=0 | round=52.0s | ETA≈20.0 min
+[20:23:44] EPP ROUND START → epp_clean_n10_seed43 | 28/50 | lr=0.021590
+[20:23:49]   local clients → 1/10 for epp_clean_n10_seed43 round 28
+[20:23:54]   local clients → 2/10 for epp_clean_n10_seed43 round 28
+[20:24:04]   local clients → 4/10 for epp_clean_n10_seed43 round 28
+[20:24:15]   local clients → 6/10 for epp_clean_n10_seed43 round 28
+[20:24:25]   local clients → 8/10 for epp_clean_n10_seed43 round 28
+[20:24:35]   local clients → 10/10 for epp_clean_n10_seed43 round 28
+[20:24:36] EPP ROUND DONE → epp_clean_n10_seed43 | 28/50 | val_acc=0.8598 | val_f1=0.8590 | best=0.8676@27 | no_improve=1 | round=52.2s | ETA≈19.1 min
+[20:24:36] EPP ROUND START → epp_clean_n10_seed43 | 29/50 | lr=0.020048
+[20:24:41]   local clients → 1/10 for epp_clean_n10_seed43 round 29
+[20:24:46]   local clients → 2/10 for epp_clean_n10_seed43 round 29
+[20:24:57]   local clients → 4/10 for epp_clean_n10_seed43 round 29
+[20:25:07]   local clients → 6/10 for epp_clean_n10_seed43 round 29
+[20:25:17]   local clients → 8/10 for epp_clean_n10_seed43 round 29
+[20:25:27]   local clients → 10/10 for epp_clean_n10_seed43 round 29
+[20:25:28]   ★ NEW BEST → round=29 val_acc=0.8762 val_loss=0.3636
+[20:25:28] EPP ROUND DONE → epp_clean_n10_seed43 | 29/50 | val_acc=0.8762 | val_f1=0.8759 | best=0.8762@29 | no_improve=0 | round=52.3s | ETA≈18.2 min
+[20:25:28] EPP ROUND START → epp_clean_n10_seed43 | 30/50 | lr=0.018529
+[20:25:33]   local clients → 1/10 for epp_clean_n10_seed43 round 30
+[20:25:39]   local clients → 2/10 for epp_clean_n10_seed43 round 30
+[20:25:49]   local clients → 4/10 for epp_clean_n10_seed43 round 30
+[20:25:59]   local clients → 6/10 for epp_clean_n10_seed43 round 30
+[20:26:10]   local clients → 8/10 for epp_clean_n10_seed43 round 30
+[20:26:20]   local clients → 10/10 for epp_clean_n10_seed43 round 30
+[20:26:20]   ★ NEW BEST → round=30 val_acc=0.8776 val_loss=0.3775
+[20:26:20] EPP ROUND DONE → epp_clean_n10_seed43 | 30/50 | val_acc=0.8776 | val_f1=0.8770 | best=0.8776@30 | no_improve=0 | round=52.3s | ETA≈17.4 min
+[20:26:21] RESUME SNAPSHOT → ~/Desktop/LSB_overnight/results/cifar_epp_matched/EPP_BCFL_REPRO_V4_Resume.zip | 29.3 MB
+[20:26:21] EPP ROUND START → epp_clean_n10_seed43 | 31/50 | lr=0.017039
+[20:26:26]   local clients → 1/10 for epp_clean_n10_seed43 round 31
+[20:26:31]   local clients → 2/10 for epp_clean_n10_seed43 round 31
+[20:26:42]   local clients → 4/10 for epp_clean_n10_seed43 round 31
+[20:26:52]   local clients → 6/10 for epp_clean_n10_seed43 round 31
+[20:27:02]   local clients → 8/10 for epp_clean_n10_seed43 round 31
+[20:27:12]   local clients → 10/10 for epp_clean_n10_seed43 round 31
+[20:27:13] EPP ROUND DONE → epp_clean_n10_seed43 | 31/50 | val_acc=0.8736 | val_f1=0.8727 | best=0.8776@30 | no_improve=1 | round=52.0s | ETA≈16.5 min
+[20:27:13] EPP ROUND START → epp_clean_n10_seed43 | 32/50 | lr=0.015583
+[20:27:18]   local clients → 1/10 for epp_clean_n10_seed43 round 32
+[20:27:23]   local clients → 2/10 for epp_clean_n10_seed43 round 32
+[20:27:34]   local clients → 4/10 for epp_clean_n10_seed43 round 32
+[20:27:44]   local clients → 6/10 for epp_clean_n10_seed43 round 32
+[20:27:54]   local clients → 8/10 for epp_clean_n10_seed43 round 32
+[20:28:04]   local clients → 10/10 for epp_clean_n10_seed43 round 32
+[20:28:05]   ★ NEW BEST → round=32 val_acc=0.8788 val_loss=0.3643
+[20:28:05] EPP ROUND DONE → epp_clean_n10_seed43 | 32/50 | val_acc=0.8788 | val_f1=0.8784 | best=0.8788@32 | no_improve=0 | round=52.0s | ETA≈15.6 min
+[20:28:05] EPP ROUND START → epp_clean_n10_seed43 | 33/50 | lr=0.014168
+[20:28:10]   local clients → 1/10 for epp_clean_n10_seed43 round 33
+[20:28:15]   local clients → 2/10 for epp_clean_n10_seed43 round 33
+[20:28:25]   local clients → 4/10 for epp_clean_n10_seed43 round 33
+[20:28:36]   local clients → 6/10 for epp_clean_n10_seed43 round 33
+[20:28:46]   local clients → 8/10 for epp_clean_n10_seed43 round 33
+[20:28:57]   local clients → 10/10 for epp_clean_n10_seed43 round 33
+[20:28:57]   ★ NEW BEST → round=33 val_acc=0.8806 val_loss=0.3645
+[20:28:57] EPP ROUND DONE → epp_clean_n10_seed43 | 33/50 | val_acc=0.8806 | val_f1=0.8803 | best=0.8806@33 | no_improve=0 | round=52.3s | ETA≈14.8 min
+[20:28:57] EPP ROUND START → epp_clean_n10_seed43 | 34/50 | lr=0.012799
+[20:29:02]   local clients → 1/10 for epp_clean_n10_seed43 round 34
+[20:29:08]   local clients → 2/10 for epp_clean_n10_seed43 round 34
+[20:29:18]   local clients → 4/10 for epp_clean_n10_seed43 round 34
+[20:29:29]   local clients → 6/10 for epp_clean_n10_seed43 round 34
+[20:29:38]   local clients → 8/10 for epp_clean_n10_seed43 round 34
+[20:29:49]   local clients → 10/10 for epp_clean_n10_seed43 round 34
+[20:29:49]   ★ NEW BEST → round=34 val_acc=0.8834 val_loss=0.3560
+[20:29:49] EPP ROUND DONE → epp_clean_n10_seed43 | 34/50 | val_acc=0.8834 | val_f1=0.8831 | best=0.8834@34 | no_improve=0 | round=51.9s | ETA≈13.9 min
+[20:29:49] EPP ROUND START → epp_clean_n10_seed43 | 35/50 | lr=0.011483
+[20:29:55]   local clients → 1/10 for epp_clean_n10_seed43 round 35
+[20:30:00]   local clients → 2/10 for epp_clean_n10_seed43 round 35
+[20:30:10]   local clients → 4/10 for epp_clean_n10_seed43 round 35
+[20:30:20]   local clients → 6/10 for epp_clean_n10_seed43 round 35
+[20:30:31]   local clients → 8/10 for epp_clean_n10_seed43 round 35
+[20:30:41]   local clients → 10/10 for epp_clean_n10_seed43 round 35
+[20:30:42]   ★ NEW BEST → round=35 val_acc=0.8876 val_loss=0.3521
+[20:30:42] EPP ROUND DONE → epp_clean_n10_seed43 | 35/50 | val_acc=0.8876 | val_f1=0.8874 | best=0.8876@35 | no_improve=0 | round=52.4s | ETA≈13.0 min
+[20:30:42] EPP ROUND START → epp_clean_n10_seed43 | 36/50 | lr=0.010224
+[20:30:47]   local clients → 1/10 for epp_clean_n10_seed43 round 36
+[20:30:52]   local clients → 2/10 for epp_clean_n10_seed43 round 36
+[20:31:02]   local clients → 4/10 for epp_clean_n10_seed43 round 36
+[20:31:12]   local clients → 6/10 for epp_clean_n10_seed43 round 36
+[20:31:23]   local clients → 8/10 for epp_clean_n10_seed43 round 36
+[20:31:33]   local clients → 10/10 for epp_clean_n10_seed43 round 36
+[20:31:34] EPP ROUND DONE → epp_clean_n10_seed43 | 36/50 | val_acc=0.8852 | val_f1=0.8849 | best=0.8876@35 | no_improve=1 | round=52.2s | ETA≈12.2 min
+[20:31:34] EPP ROUND START → epp_clean_n10_seed43 | 37/50 | lr=0.009029
+[20:31:39]   local clients → 1/10 for epp_clean_n10_seed43 round 37
+[20:31:44]   local clients → 2/10 for epp_clean_n10_seed43 round 37
+[20:31:54]   local clients → 4/10 for epp_clean_n10_seed43 round 37
+[20:32:05]   local clients → 6/10 for epp_clean_n10_seed43 round 37
+[20:32:15]   local clients → 8/10 for epp_clean_n10_seed43 round 37
+[20:32:25]   local clients → 10/10 for epp_clean_n10_seed43 round 37
+[20:32:26] EPP ROUND DONE → epp_clean_n10_seed43 | 37/50 | val_acc=0.8876 | val_f1=0.8872 | best=0.8876@35 | no_improve=2 | round=52.0s | ETA≈11.3 min
+[20:32:26] EPP ROUND START → epp_clean_n10_seed43 | 38/50 | lr=0.007900
+[20:32:31]   local clients → 1/10 for epp_clean_n10_seed43 round 38
+[20:32:36]   local clients → 2/10 for epp_clean_n10_seed43 round 38
+[20:32:47]   local clients → 4/10 for epp_clean_n10_seed43 round 38
+[20:32:57]   local clients → 6/10 for epp_clean_n10_seed43 round 38
+[20:33:08]   local clients → 8/10 for epp_clean_n10_seed43 round 38
+[20:33:18]   local clients → 10/10 for epp_clean_n10_seed43 round 38
+[20:33:18]   ★ NEW BEST → round=38 val_acc=0.8884 val_loss=0.3536
+[20:33:18] EPP ROUND DONE → epp_clean_n10_seed43 | 38/50 | val_acc=0.8884 | val_f1=0.8884 | best=0.8884@38 | no_improve=0 | round=52.5s | ETA≈10.4 min
+[20:33:18] EPP ROUND START → epp_clean_n10_seed43 | 39/50 | lr=0.006845
+[20:33:24]   local clients → 1/10 for epp_clean_n10_seed43 round 39
+[20:33:29]   local clients → 2/10 for epp_clean_n10_seed43 round 39
+[20:33:39]   local clients → 4/10 for epp_clean_n10_seed43 round 39
+[20:33:49]   local clients → 6/10 for epp_clean_n10_seed43 round 39
+[20:34:00]   local clients → 8/10 for epp_clean_n10_seed43 round 39
+[20:34:10]   local clients → 10/10 for epp_clean_n10_seed43 round 39
+[20:34:11]   ★ NEW BEST → round=39 val_acc=0.8894 val_loss=0.3559
+[20:34:11] EPP ROUND DONE → epp_clean_n10_seed43 | 39/50 | val_acc=0.8894 | val_f1=0.8891 | best=0.8894@39 | no_improve=0 | round=52.3s | ETA≈9.6 min
+[20:34:11] EPP ROUND START → epp_clean_n10_seed43 | 40/50 | lr=0.005865
+[20:34:16]   local clients → 1/10 for epp_clean_n10_seed43 round 40
+[20:34:21]   local clients → 2/10 for epp_clean_n10_seed43 round 40
+[20:34:31]   local clients → 4/10 for epp_clean_n10_seed43 round 40
+[20:34:41]   local clients → 6/10 for epp_clean_n10_seed43 round 40
+[20:34:52]   local clients → 8/10 for epp_clean_n10_seed43 round 40
+[20:35:02]   local clients → 10/10 for epp_clean_n10_seed43 round 40
+[20:35:03]   ★ NEW BEST → round=40 val_acc=0.8896 val_loss=0.3531
+[20:35:03] EPP ROUND DONE → epp_clean_n10_seed43 | 40/50 | val_acc=0.8896 | val_f1=0.8895 | best=0.8896@40 | no_improve=0 | round=52.0s | ETA≈8.7 min
+[20:35:04] RESUME SNAPSHOT → ~/Desktop/LSB_overnight/results/cifar_epp_matched/EPP_BCFL_REPRO_V4_Resume.zip | 29.3 MB
+[20:35:04] EPP ROUND START → epp_clean_n10_seed43 | 41/50 | lr=0.004967
+[20:35:08]   local clients → 1/10 for epp_clean_n10_seed43 round 41
+[20:35:14]   local clients → 2/10 for epp_clean_n10_seed43 round 41
+[20:35:25]   local clients → 4/10 for epp_clean_n10_seed43 round 41
+[20:35:35]   local clients → 6/10 for epp_clean_n10_seed43 round 41
+[20:35:45]   local clients → 8/10 for epp_clean_n10_seed43 round 41
+[20:35:55]   local clients → 10/10 for epp_clean_n10_seed43 round 41
+[20:35:56]   ★ NEW BEST → round=41 val_acc=0.8898 val_loss=0.3524
+[20:35:56] EPP ROUND DONE → epp_clean_n10_seed43 | 41/50 | val_acc=0.8898 | val_f1=0.8897 | best=0.8898@41 | no_improve=0 | round=52.2s | ETA≈7.8 min
+[20:35:56] EPP ROUND START → epp_clean_n10_seed43 | 42/50 | lr=0.004153
+[20:36:01]   local clients → 1/10 for epp_clean_n10_seed43 round 42
+[20:36:06]   local clients → 2/10 for epp_clean_n10_seed43 round 42
+[20:36:16]   local clients → 4/10 for epp_clean_n10_seed43 round 42
+[20:36:27]   local clients → 6/10 for epp_clean_n10_seed43 round 42
+[20:36:37]   local clients → 8/10 for epp_clean_n10_seed43 round 42
+[20:36:47]   local clients → 10/10 for epp_clean_n10_seed43 round 42
+[20:36:48]   ★ NEW BEST → round=42 val_acc=0.8922 val_loss=0.3551
+[20:36:48] EPP ROUND DONE → epp_clean_n10_seed43 | 42/50 | val_acc=0.8922 | val_f1=0.8920 | best=0.8922@42 | no_improve=0 | round=52.0s | ETA≈7.0 min
+[20:36:48] EPP ROUND START → epp_clean_n10_seed43 | 43/50 | lr=0.003426
+[20:36:53]   local clients → 1/10 for epp_clean_n10_seed43 round 43
+[20:36:58]   local clients → 2/10 for epp_clean_n10_seed43 round 43
+[20:37:08]   local clients → 4/10 for epp_clean_n10_seed43 round 43
+[20:37:18]   local clients → 6/10 for epp_clean_n10_seed43 round 43
+[20:37:29]   local clients → 8/10 for epp_clean_n10_seed43 round 43
+[20:37:39]   local clients → 10/10 for epp_clean_n10_seed43 round 43
+[20:37:40] EPP ROUND DONE → epp_clean_n10_seed43 | 43/50 | val_acc=0.8920 | val_f1=0.8918 | best=0.8922@42 | no_improve=1 | round=51.9s | ETA≈6.1 min
+[20:37:40] EPP ROUND START → epp_clean_n10_seed43 | 44/50 | lr=0.002791
+[20:37:45]   local clients → 1/10 for epp_clean_n10_seed43 round 44
+[20:37:50]   local clients → 2/10 for epp_clean_n10_seed43 round 44
+[20:38:00]   local clients → 4/10 for epp_clean_n10_seed43 round 44
+[20:38:10]   local clients → 6/10 for epp_clean_n10_seed43 round 44
+[20:38:21]   local clients → 8/10 for epp_clean_n10_seed43 round 44
+[20:38:32]   local clients → 10/10 for epp_clean_n10_seed43 round 44
+[20:38:32]   ★ NEW BEST → round=44 val_acc=0.8928 val_loss=0.3554
+[20:38:32] EPP ROUND DONE → epp_clean_n10_seed43 | 44/50 | val_acc=0.8928 | val_f1=0.8925 | best=0.8928@44 | no_improve=0 | round=52.5s | ETA≈5.2 min
+[20:38:32] EPP ROUND START → epp_clean_n10_seed43 | 45/50 | lr=0.002248
+[20:38:37]   local clients → 1/10 for epp_clean_n10_seed43 round 45
+[20:38:43]   local clients → 2/10 for epp_clean_n10_seed43 round 45
+[20:38:53]   local clients → 4/10 for epp_clean_n10_seed43 round 45
+[20:39:03]   local clients → 6/10 for epp_clean_n10_seed43 round 45
+[20:39:13]   local clients → 8/10 for epp_clean_n10_seed43 round 45
+[20:39:24]   local clients → 10/10 for epp_clean_n10_seed43 round 45
+[20:39:24]   ★ NEW BEST → round=45 val_acc=0.8946 val_loss=0.3527
+[20:39:24] EPP ROUND DONE → epp_clean_n10_seed43 | 45/50 | val_acc=0.8946 | val_f1=0.8944 | best=0.8946@45 | no_improve=0 | round=52.1s | ETA≈4.3 min
+[20:39:24] EPP ROUND START → epp_clean_n10_seed43 | 46/50 | lr=0.001801
+[20:39:30]   local clients → 1/10 for epp_clean_n10_seed43 round 46
+[20:39:35]   local clients → 2/10 for epp_clean_n10_seed43 round 46
+[20:39:45]   local clients → 4/10 for epp_clean_n10_seed43 round 46
+[20:39:55]   local clients → 6/10 for epp_clean_n10_seed43 round 46
+[20:40:05]   local clients → 8/10 for epp_clean_n10_seed43 round 46
+[20:40:16]   local clients → 10/10 for epp_clean_n10_seed43 round 46
+[20:40:16] EPP ROUND DONE → epp_clean_n10_seed43 | 46/50 | val_acc=0.8940 | val_f1=0.8938 | best=0.8946@45 | no_improve=1 | round=51.9s | ETA≈3.5 min
+[20:40:16] EPP ROUND START → epp_clean_n10_seed43 | 47/50 | lr=0.001452
+[20:40:21]   local clients → 1/10 for epp_clean_n10_seed43 round 47
+[20:40:26]   local clients → 2/10 for epp_clean_n10_seed43 round 47
+[20:40:37]   local clients → 4/10 for epp_clean_n10_seed43 round 47
+[20:40:47]   local clients → 6/10 for epp_clean_n10_seed43 round 47
+[20:40:58]   local clients → 8/10 for epp_clean_n10_seed43 round 47
+[20:41:08]   local clients → 10/10 for epp_clean_n10_seed43 round 47
+[20:41:08] EPP ROUND DONE → epp_clean_n10_seed43 | 47/50 | val_acc=0.8936 | val_f1=0.8936 | best=0.8946@45 | no_improve=2 | round=52.2s | ETA≈2.6 min
+[20:41:08] EPP ROUND START → epp_clean_n10_seed43 | 48/50 | lr=0.001201
+[20:41:13]   local clients → 1/10 for epp_clean_n10_seed43 round 48
+[20:41:18]   local clients → 2/10 for epp_clean_n10_seed43 round 48
+[20:41:29]   local clients → 4/10 for epp_clean_n10_seed43 round 48
+[20:41:39]   local clients → 6/10 for epp_clean_n10_seed43 round 48
+[20:41:49]   local clients → 8/10 for epp_clean_n10_seed43 round 48
+[20:42:00]   local clients → 10/10 for epp_clean_n10_seed43 round 48
+[20:42:00] EPP ROUND DONE → epp_clean_n10_seed43 | 48/50 | val_acc=0.8926 | val_f1=0.8926 | best=0.8946@45 | no_improve=3 | round=52.1s | ETA≈1.7 min
+[20:42:00] EPP ROUND START → epp_clean_n10_seed43 | 49/50 | lr=0.001050
+[20:42:06]   local clients → 1/10 for epp_clean_n10_seed43 round 49
+[20:42:11]   local clients → 2/10 for epp_clean_n10_seed43 round 49
+[20:42:21]   local clients → 4/10 for epp_clean_n10_seed43 round 49
+[20:42:32]   local clients → 6/10 for epp_clean_n10_seed43 round 49
+[20:42:42]   local clients → 8/10 for epp_clean_n10_seed43 round 49
+[20:42:52]   local clients → 10/10 for epp_clean_n10_seed43 round 49
+[20:42:53] EPP ROUND DONE → epp_clean_n10_seed43 | 49/50 | val_acc=0.8938 | val_f1=0.8937 | best=0.8946@45 | no_improve=4 | round=52.0s | ETA≈0.9 min
+[20:42:53] EPP ROUND START → epp_clean_n10_seed43 | 50/50 | lr=0.001000
+[20:42:58]   local clients → 1/10 for epp_clean_n10_seed43 round 50
+[20:43:03]   local clients → 2/10 for epp_clean_n10_seed43 round 50
+[20:43:13]   local clients → 4/10 for epp_clean_n10_seed43 round 50
+[20:43:23]   local clients → 6/10 for epp_clean_n10_seed43 round 50
+[20:43:33]   local clients → 8/10 for epp_clean_n10_seed43 round 50
+[20:43:44]   local clients → 10/10 for epp_clean_n10_seed43 round 50
+[20:43:44] EPP ROUND DONE → epp_clean_n10_seed43 | 50/50 | val_acc=0.8938 | val_f1=0.8936 | best=0.8946@45 | no_improve=5 | round=51.8s | ETA≈0.0 min
+[20:43:45] RESUME SNAPSHOT → ~/Desktop/LSB_overnight/results/cifar_epp_matched/EPP_BCFL_REPRO_V4_Resume.zip | 29.3 MB
+[20:43:45] EPP RUN COMPLETE → epp_clean_n10_seed43 | BEST round=45 val_acc=0.8946
+RESULT epp_clean_n10_seed43 {'test_accuracy': 0.8907, 'test_f1': 0.8902624163985087}
+[20:43:47] EPP RUN START → epp_clean_n10_seed44 | clients=10 | epsilon=inf | attack=NONE | aggregation=AMA
+[20:43:47] EPP ROUND START → epp_clean_n10_seed44 | 1/50 | lr=0.050000
+[20:43:52]   local clients → 1/10 for epp_clean_n10_seed44 round 1
+[20:43:57]   local clients → 2/10 for epp_clean_n10_seed44 round 1
+[20:44:07]   local clients → 4/10 for epp_clean_n10_seed44 round 1
+[20:44:17]   local clients → 6/10 for epp_clean_n10_seed44 round 1
+[20:44:28]   local clients → 8/10 for epp_clean_n10_seed44 round 1
+[20:44:38]   local clients → 10/10 for epp_clean_n10_seed44 round 1
+[20:44:39]   ★ NEW BEST → round=1 val_acc=0.2296 val_loss=2.0088
+[20:44:39] EPP ROUND DONE → epp_clean_n10_seed44 | 1/50 | val_acc=0.2296 | val_f1=0.1739 | best=0.2296@1 | no_improve=0 | round=52.2s | ETA≈42.6 min
+[20:44:39] EPP ROUND START → epp_clean_n10_seed44 | 2/50 | lr=0.049950
+[20:44:44]   local clients → 1/10 for epp_clean_n10_seed44 round 2
+[20:44:50]   local clients → 2/10 for epp_clean_n10_seed44 round 2
+[20:45:00]   local clients → 4/10 for epp_clean_n10_seed44 round 2
+[20:45:10]   local clients → 6/10 for epp_clean_n10_seed44 round 2
+[20:45:20]   local clients → 8/10 for epp_clean_n10_seed44 round 2
+[20:45:30]   local clients → 10/10 for epp_clean_n10_seed44 round 2
+[20:45:31]   ★ NEW BEST → round=2 val_acc=0.3672 val_loss=1.7500
+[20:45:31] EPP ROUND DONE → epp_clean_n10_seed44 | 2/50 | val_acc=0.3672 | val_f1=0.3313 | best=0.3672@2 | no_improve=0 | round=51.9s | ETA≈41.6 min
+[20:45:31] EPP ROUND START → epp_clean_n10_seed44 | 3/50 | lr=0.049799
+[20:45:36]   local clients → 1/10 for epp_clean_n10_seed44 round 3
+[20:45:41]   local clients → 2/10 for epp_clean_n10_seed44 round 3
+[20:45:51]   local clients → 4/10 for epp_clean_n10_seed44 round 3
+[20:46:02]   local clients → 6/10 for epp_clean_n10_seed44 round 3
+[20:46:12]   local clients → 8/10 for epp_clean_n10_seed44 round 3
+[20:46:22]   local clients → 10/10 for epp_clean_n10_seed44 round 3
+[20:46:23]   ★ NEW BEST → round=3 val_acc=0.4344 val_loss=1.5405
+[20:46:23] EPP ROUND DONE → epp_clean_n10_seed44 | 3/50 | val_acc=0.4344 | val_f1=0.4085 | best=0.4344@3 | no_improve=0 | round=51.9s | ETA≈40.7 min
+[20:46:23] EPP ROUND START → epp_clean_n10_seed44 | 4/50 | lr=0.049548
+[20:46:28]   local clients → 1/10 for epp_clean_n10_seed44 round 4
+[20:46:33]   local clients → 2/10 for epp_clean_n10_seed44 round 4
+[20:46:43]   local clients → 4/10 for epp_clean_n10_seed44 round 4
+[20:46:53]   local clients → 6/10 for epp_clean_n10_seed44 round 4
+[20:47:04]   local clients → 8/10 for epp_clean_n10_seed44 round 4
+[20:47:14]   local clients → 10/10 for epp_clean_n10_seed44 round 4
+[20:47:15]   ★ NEW BEST → round=4 val_acc=0.4996 val_loss=1.3653
+[20:47:15] EPP ROUND DONE → epp_clean_n10_seed44 | 4/50 | val_acc=0.4996 | val_f1=0.4741 | best=0.4996@4 | no_improve=0 | round=52.1s | ETA≈39.9 min
+[20:47:15] EPP ROUND START → epp_clean_n10_seed44 | 5/50 | lr=0.049199
+[20:47:20]   local clients → 1/10 for epp_clean_n10_seed44 round 5
+[20:47:25]   local clients → 2/10 for epp_clean_n10_seed44 round 5
+[20:47:35]   local clients → 4/10 for epp_clean_n10_seed44 round 5
+[20:47:45]   local clients → 6/10 for epp_clean_n10_seed44 round 5
+[20:47:56]   local clients → 8/10 for epp_clean_n10_seed44 round 5
+[20:48:06]   local clients → 10/10 for epp_clean_n10_seed44 round 5
+[20:48:07]   ★ NEW BEST → round=5 val_acc=0.5670 val_loss=1.1760
+[20:48:07] EPP ROUND DONE → epp_clean_n10_seed44 | 5/50 | val_acc=0.5670 | val_f1=0.5469 | best=0.5670@5 | no_improve=0 | round=52.0s | ETA≈39.0 min
+[20:48:07] EPP ROUND START → epp_clean_n10_seed44 | 6/50 | lr=0.048752
+[20:48:12]   local clients → 1/10 for epp_clean_n10_seed44 round 6
+[20:48:17]   local clients → 2/10 for epp_clean_n10_seed44 round 6
+[20:48:28]   local clients → 4/10 for epp_clean_n10_seed44 round 6
+[20:48:38]   local clients → 6/10 for epp_clean_n10_seed44 round 6
+[20:48:48]   local clients → 8/10 for epp_clean_n10_seed44 round 6
+[20:48:58]   local clients → 10/10 for epp_clean_n10_seed44 round 6
+[20:48:59]   ★ NEW BEST → round=6 val_acc=0.6398 val_loss=0.9769
+[20:48:59] EPP ROUND DONE → epp_clean_n10_seed44 | 6/50 | val_acc=0.6398 | val_f1=0.6293 | best=0.6398@6 | no_improve=0 | round=51.8s | ETA≈38.1 min
+[20:48:59] EPP ROUND START → epp_clean_n10_seed44 | 7/50 | lr=0.048209
+[20:49:04]   local clients → 1/10 for epp_clean_n10_seed44 round 7
+[20:49:09]   local clients → 2/10 for epp_clean_n10_seed44 round 7
+[20:49:19]   local clients → 4/10 for epp_clean_n10_seed44 round 7
+[20:49:29]   local clients → 6/10 for epp_clean_n10_seed44 round 7
+[20:49:39]   local clients → 8/10 for epp_clean_n10_seed44 round 7
+[20:49:50]   local clients → 10/10 for epp_clean_n10_seed44 round 7
+[20:49:51]   ★ NEW BEST → round=7 val_acc=0.6876 val_loss=0.8787
+[20:49:51] EPP ROUND DONE → epp_clean_n10_seed44 | 7/50 | val_acc=0.6876 | val_f1=0.6764 | best=0.6876@7 | no_improve=0 | round=51.9s | ETA≈37.2 min
+[20:49:51] EPP ROUND START → epp_clean_n10_seed44 | 8/50 | lr=0.047574
+[20:49:56]   local clients → 1/10 for epp_clean_n10_seed44 round 8
+[20:50:01]   local clients → 2/10 for epp_clean_n10_seed44 round 8
+[20:50:11]   local clients → 4/10 for epp_clean_n10_seed44 round 8
+[20:50:21]   local clients → 6/10 for epp_clean_n10_seed44 round 8
+[20:50:31]   local clients → 8/10 for epp_clean_n10_seed44 round 8
+[20:50:42]   local clients → 10/10 for epp_clean_n10_seed44 round 8
+[20:50:43]   ★ NEW BEST → round=8 val_acc=0.7328 val_loss=0.7770
+[20:50:43] EPP ROUND DONE → epp_clean_n10_seed44 | 8/50 | val_acc=0.7328 | val_f1=0.7245 | best=0.7328@8 | no_improve=0 | round=51.9s | ETA≈36.4 min
+[20:50:43] EPP ROUND START → epp_clean_n10_seed44 | 9/50 | lr=0.046847
+[20:50:48]   local clients → 1/10 for epp_clean_n10_seed44 round 9
+[20:50:53]   local clients → 2/10 for epp_clean_n10_seed44 round 9
+[20:51:03]   local clients → 4/10 for epp_clean_n10_seed44 round 9
+[20:51:14]   local clients → 6/10 for epp_clean_n10_seed44 round 9
+[20:51:24]   local clients → 8/10 for epp_clean_n10_seed44 round 9
+[20:51:34]   local clients → 10/10 for epp_clean_n10_seed44 round 9
+[20:51:35]   ★ NEW BEST → round=9 val_acc=0.7402 val_loss=0.7529
+[20:51:35] EPP ROUND DONE → epp_clean_n10_seed44 | 9/50 | val_acc=0.7402 | val_f1=0.7341 | best=0.7402@9 | no_improve=0 | round=52.1s | ETA≈35.5 min
+[20:51:35] EPP ROUND START → epp_clean_n10_seed44 | 10/50 | lr=0.046033
+[20:51:40]   local clients → 1/10 for epp_clean_n10_seed44 round 10
+[20:51:45]   local clients → 2/10 for epp_clean_n10_seed44 round 10
+[20:51:55]   local clients → 4/10 for epp_clean_n10_seed44 round 10
+[20:52:06]   local clients → 6/10 for epp_clean_n10_seed44 round 10
+[20:52:16]   local clients → 8/10 for epp_clean_n10_seed44 round 10
+[20:52:26]   local clients → 10/10 for epp_clean_n10_seed44 round 10
+[20:52:27]   ★ NEW BEST → round=10 val_acc=0.7648 val_loss=0.6717
+[20:52:27] EPP ROUND DONE → epp_clean_n10_seed44 | 10/50 | val_acc=0.7648 | val_f1=0.7581 | best=0.7648@10 | no_improve=0 | round=52.0s | ETA≈34.6 min
+[20:52:28] RESUME SNAPSHOT → ~/Desktop/LSB_overnight/results/cifar_epp_matched/EPP_BCFL_REPRO_V4_Resume.zip | 39.0 MB
+[20:52:28] EPP ROUND START → epp_clean_n10_seed44 | 11/50 | lr=0.045135
+[20:52:33]   local clients → 1/10 for epp_clean_n10_seed44 round 11
+[20:52:38]   local clients → 2/10 for epp_clean_n10_seed44 round 11
+[20:52:48]   local clients → 4/10 for epp_clean_n10_seed44 round 11
+[20:52:58]   local clients → 6/10 for epp_clean_n10_seed44 round 11
+[20:53:08]   local clients → 8/10 for epp_clean_n10_seed44 round 11
+[20:53:19]   local clients → 10/10 for epp_clean_n10_seed44 round 11
+[20:53:20]   ★ NEW BEST → round=11 val_acc=0.7734 val_loss=0.6510
+[20:53:20] EPP ROUND DONE → epp_clean_n10_seed44 | 11/50 | val_acc=0.7734 | val_f1=0.7643 | best=0.7734@11 | no_improve=0 | round=52.0s | ETA≈33.8 min
+[20:53:20] EPP ROUND START → epp_clean_n10_seed44 | 12/50 | lr=0.044155
+[20:53:25]   local clients → 1/10 for epp_clean_n10_seed44 round 12
+[20:53:30]   local clients → 2/10 for epp_clean_n10_seed44 round 12
+[20:53:40]   local clients → 4/10 for epp_clean_n10_seed44 round 12
+[20:53:50]   local clients → 6/10 for epp_clean_n10_seed44 round 12
+[20:54:01]   local clients → 8/10 for epp_clean_n10_seed44 round 12
+[20:54:11]   local clients → 10/10 for epp_clean_n10_seed44 round 12
+[20:54:12]   ★ NEW BEST → round=12 val_acc=0.7910 val_loss=0.6107
+[20:54:12] EPP ROUND DONE → epp_clean_n10_seed44 | 12/50 | val_acc=0.7910 | val_f1=0.7855 | best=0.7910@12 | no_improve=0 | round=52.1s | ETA≈32.9 min
+[20:54:12] EPP ROUND START → epp_clean_n10_seed44 | 13/50 | lr=0.043100
+[20:54:17]   local clients → 1/10 for epp_clean_n10_seed44 round 13
+[20:54:22]   local clients → 2/10 for epp_clean_n10_seed44 round 13
+[20:54:32]   local clients → 4/10 for epp_clean_n10_seed44 round 13
+[20:54:43]   local clients → 6/10 for epp_clean_n10_seed44 round 13
+[20:54:53]   local clients → 8/10 for epp_clean_n10_seed44 round 13
+[20:55:03]   local clients → 10/10 for epp_clean_n10_seed44 round 13
+[20:55:04]   ★ NEW BEST → round=13 val_acc=0.8124 val_loss=0.5460
+[20:55:04] EPP ROUND DONE → epp_clean_n10_seed44 | 13/50 | val_acc=0.8124 | val_f1=0.8078 | best=0.8124@13 | no_improve=0 | round=52.3s | ETA≈32.1 min
+[20:55:04] EPP ROUND START → epp_clean_n10_seed44 | 14/50 | lr=0.041971
+[20:55:09]   local clients → 1/10 for epp_clean_n10_seed44 round 14
+[20:55:14]   local clients → 2/10 for epp_clean_n10_seed44 round 14
+[20:55:24]   local clients → 4/10 for epp_clean_n10_seed44 round 14
+[20:55:35]   local clients → 6/10 for epp_clean_n10_seed44 round 14
+[20:55:45]   local clients → 8/10 for epp_clean_n10_seed44 round 14
+[20:55:56]   local clients → 10/10 for epp_clean_n10_seed44 round 14
+[20:55:56] EPP ROUND DONE → epp_clean_n10_seed44 | 14/50 | val_acc=0.8066 | val_f1=0.8003 | best=0.8124@13 | no_improve=1 | round=52.3s | ETA≈31.2 min
+[20:55:56] EPP ROUND START → epp_clean_n10_seed44 | 15/50 | lr=0.040776
+[20:56:02]   local clients → 1/10 for epp_clean_n10_seed44 round 15
+[20:56:07]   local clients → 2/10 for epp_clean_n10_seed44 round 15
+[20:56:17]   local clients → 4/10 for epp_clean_n10_seed44 round 15
+[20:56:27]   local clients → 6/10 for epp_clean_n10_seed44 round 15
+[20:56:37]   local clients → 8/10 for epp_clean_n10_seed44 round 15
+[20:56:48]   local clients → 10/10 for epp_clean_n10_seed44 round 15
+[20:56:48]   ★ NEW BEST → round=15 val_acc=0.8288 val_loss=0.5007
+[20:56:48] EPP ROUND DONE → epp_clean_n10_seed44 | 15/50 | val_acc=0.8288 | val_f1=0.8255 | best=0.8288@15 | no_improve=0 | round=51.8s | ETA≈30.3 min
+[20:56:48] EPP ROUND START → epp_clean_n10_seed44 | 16/50 | lr=0.039517
+[20:56:54]   local clients → 1/10 for epp_clean_n10_seed44 round 16
+[20:56:59]   local clients → 2/10 for epp_clean_n10_seed44 round 16
+[20:57:09]   local clients → 4/10 for epp_clean_n10_seed44 round 16
+[20:57:19]   local clients → 6/10 for epp_clean_n10_seed44 round 16
+[20:57:30]   local clients → 8/10 for epp_clean_n10_seed44 round 16
+[20:57:40]   local clients → 10/10 for epp_clean_n10_seed44 round 16
+[20:57:40] EPP ROUND DONE → epp_clean_n10_seed44 | 16/50 | val_acc=0.8234 | val_f1=0.8186 | best=0.8288@15 | no_improve=1 | round=52.1s | ETA≈29.5 min
+[20:57:40] EPP ROUND START → epp_clean_n10_seed44 | 17/50 | lr=0.038201
+[20:57:46]   local clients → 1/10 for epp_clean_n10_seed44 round 17
+[20:57:51]   local clients → 2/10 for epp_clean_n10_seed44 round 17
+[20:58:01]   local clients → 4/10 for epp_clean_n10_seed44 round 17
+[20:58:11]   local clients → 6/10 for epp_clean_n10_seed44 round 17
+[20:58:22]   local clients → 8/10 for epp_clean_n10_seed44 round 17
+[20:58:32]   local clients → 10/10 for epp_clean_n10_seed44 round 17
+[20:58:33]   ★ NEW BEST → round=17 val_acc=0.8312 val_loss=0.4929
+[20:58:33] EPP ROUND DONE → epp_clean_n10_seed44 | 17/50 | val_acc=0.8312 | val_f1=0.8281 | best=0.8312@17 | no_improve=0 | round=52.2s | ETA≈28.6 min
+[20:58:33] EPP ROUND START → epp_clean_n10_seed44 | 18/50 | lr=0.036832
+[20:58:38]   local clients → 1/10 for epp_clean_n10_seed44 round 18
+[20:58:43]   local clients → 2/10 for epp_clean_n10_seed44 round 18
+[20:58:53]   local clients → 4/10 for epp_clean_n10_seed44 round 18
+[20:59:03]   local clients → 6/10 for epp_clean_n10_seed44 round 18
+[20:59:14]   local clients → 8/10 for epp_clean_n10_seed44 round 18
+[20:59:24]   local clients → 10/10 for epp_clean_n10_seed44 round 18
+[20:59:25]   ★ NEW BEST → round=18 val_acc=0.8462 val_loss=0.4562
+[20:59:25] EPP ROUND DONE → epp_clean_n10_seed44 | 18/50 | val_acc=0.8462 | val_f1=0.8425 | best=0.8462@18 | no_improve=0 | round=52.0s | ETA≈27.8 min
+[20:59:25] EPP ROUND START → epp_clean_n10_seed44 | 19/50 | lr=0.035417
+[20:59:30]   local clients → 1/10 for epp_clean_n10_seed44 round 19
+[20:59:35]   local clients → 2/10 for epp_clean_n10_seed44 round 19
+[20:59:46]   local clients → 4/10 for epp_clean_n10_seed44 round 19
+[20:59:56]   local clients → 6/10 for epp_clean_n10_seed44 round 19
+[21:00:06]   local clients → 8/10 for epp_clean_n10_seed44 round 19
+[21:00:16]   local clients → 10/10 for epp_clean_n10_seed44 round 19
+[21:00:17]   ★ NEW BEST → round=19 val_acc=0.8522 val_loss=0.4423
+[21:00:17] EPP ROUND DONE → epp_clean_n10_seed44 | 19/50 | val_acc=0.8522 | val_f1=0.8495 | best=0.8522@19 | no_improve=0 | round=52.2s | ETA≈26.9 min
+[21:00:17] EPP ROUND START → epp_clean_n10_seed44 | 20/50 | lr=0.033961
+[21:00:22]   local clients → 1/10 for epp_clean_n10_seed44 round 20
+[21:00:27]   local clients → 2/10 for epp_clean_n10_seed44 round 20
+[21:00:38]   local clients → 4/10 for epp_clean_n10_seed44 round 20
+[21:00:48]   local clients → 6/10 for epp_clean_n10_seed44 round 20
+[21:00:58]   local clients → 8/10 for epp_clean_n10_seed44 round 20
+[21:01:08]   local clients → 10/10 for epp_clean_n10_seed44 round 20
+[21:01:09]   ★ NEW BEST → round=20 val_acc=0.8544 val_loss=0.4259
+[21:01:09] EPP ROUND DONE → epp_clean_n10_seed44 | 20/50 | val_acc=0.8544 | val_f1=0.8515 | best=0.8544@20 | no_improve=0 | round=51.9s | ETA≈26.0 min
+[21:01:10] RESUME SNAPSHOT → ~/Desktop/LSB_overnight/results/cifar_epp_matched/EPP_BCFL_REPRO_V4_Resume.zip | 39.0 MB
+[21:01:10] EPP ROUND START → epp_clean_n10_seed44 | 21/50 | lr=0.032471
+[21:01:15]   local clients → 1/10 for epp_clean_n10_seed44 round 21
+[21:01:20]   local clients → 2/10 for epp_clean_n10_seed44 round 21
+[21:01:30]   local clients → 4/10 for epp_clean_n10_seed44 round 21
+[21:01:40]   local clients → 6/10 for epp_clean_n10_seed44 round 21
+[21:01:51]   local clients → 8/10 for epp_clean_n10_seed44 round 21
+[21:02:01]   local clients → 10/10 for epp_clean_n10_seed44 round 21
+[21:02:02]   ★ NEW BEST → round=21 val_acc=0.8576 val_loss=0.4153
+[21:02:02] EPP ROUND DONE → epp_clean_n10_seed44 | 21/50 | val_acc=0.8576 | val_f1=0.8560 | best=0.8576@21 | no_improve=0 | round=52.2s | ETA≈25.2 min
+[21:02:02] EPP ROUND START → epp_clean_n10_seed44 | 22/50 | lr=0.030952
+[21:02:07]   local clients → 1/10 for epp_clean_n10_seed44 round 22
+[21:02:12]   local clients → 2/10 for epp_clean_n10_seed44 round 22
+[21:02:22]   local clients → 4/10 for epp_clean_n10_seed44 round 22
+[21:02:33]   local clients → 6/10 for epp_clean_n10_seed44 round 22
+[21:02:43]   local clients → 8/10 for epp_clean_n10_seed44 round 22
+[21:02:53]   local clients → 10/10 for epp_clean_n10_seed44 round 22
+[21:02:54]   ★ NEW BEST → round=22 val_acc=0.8630 val_loss=0.3992
+[21:02:54] EPP ROUND DONE → epp_clean_n10_seed44 | 22/50 | val_acc=0.8630 | val_f1=0.8609 | best=0.8630@22 | no_improve=0 | round=52.1s | ETA≈24.3 min
+[21:02:54] EPP ROUND START → epp_clean_n10_seed44 | 23/50 | lr=0.029410
+[21:02:59]   local clients → 1/10 for epp_clean_n10_seed44 round 23
+[21:03:04]   local clients → 2/10 for epp_clean_n10_seed44 round 23
+[21:03:15]   local clients → 4/10 for epp_clean_n10_seed44 round 23
+[21:03:25]   local clients → 6/10 for epp_clean_n10_seed44 round 23
+[21:03:36]   local clients → 8/10 for epp_clean_n10_seed44 round 23
+[21:03:46]   local clients → 10/10 for epp_clean_n10_seed44 round 23
+[21:03:47]   ★ NEW BEST → round=23 val_acc=0.8676 val_loss=0.3882
+[21:03:47] EPP ROUND DONE → epp_clean_n10_seed44 | 23/50 | val_acc=0.8676 | val_f1=0.8656 | best=0.8676@23 | no_improve=0 | round=52.5s | ETA≈23.4 min
+[21:03:47] EPP ROUND START → epp_clean_n10_seed44 | 24/50 | lr=0.027853
+[21:03:52]   local clients → 1/10 for epp_clean_n10_seed44 round 24
+[21:03:57]   local clients → 2/10 for epp_clean_n10_seed44 round 24
+[21:04:07]   local clients → 4/10 for epp_clean_n10_seed44 round 24
+[21:04:17]   local clients → 6/10 for epp_clean_n10_seed44 round 24
+[21:04:28]   local clients → 8/10 for epp_clean_n10_seed44 round 24
+[21:04:38]   local clients → 10/10 for epp_clean_n10_seed44 round 24
+[21:04:39] EPP ROUND DONE → epp_clean_n10_seed44 | 24/50 | val_acc=0.8646 | val_f1=0.8627 | best=0.8676@23 | no_improve=1 | round=52.1s | ETA≈22.6 min
+[21:04:39] EPP ROUND START → epp_clean_n10_seed44 | 25/50 | lr=0.026285
+[21:04:44]   local clients → 1/10 for epp_clean_n10_seed44 round 25
+[21:04:49]   local clients → 2/10 for epp_clean_n10_seed44 round 25
+[21:04:59]   local clients → 4/10 for epp_clean_n10_seed44 round 25
+[21:05:09]   local clients → 6/10 for epp_clean_n10_seed44 round 25
+[21:05:20]   local clients → 8/10 for epp_clean_n10_seed44 round 25
+[21:05:30]   local clients → 10/10 for epp_clean_n10_seed44 round 25
+[21:05:31] EPP ROUND DONE → epp_clean_n10_seed44 | 25/50 | val_acc=0.8644 | val_f1=0.8629 | best=0.8676@23 | no_improve=2 | round=52.0s | ETA≈21.7 min
+[21:05:31] EPP ROUND START → epp_clean_n10_seed44 | 26/50 | lr=0.024715
+[21:05:36]   local clients → 1/10 for epp_clean_n10_seed44 round 26
+[21:05:41]   local clients → 2/10 for epp_clean_n10_seed44 round 26
+[21:05:52]   local clients → 4/10 for epp_clean_n10_seed44 round 26
+[21:06:02]   local clients → 6/10 for epp_clean_n10_seed44 round 26
+[21:06:12]   local clients → 8/10 for epp_clean_n10_seed44 round 26
+[21:06:23]   local clients → 10/10 for epp_clean_n10_seed44 round 26
+[21:06:23]   ★ NEW BEST → round=26 val_acc=0.8736 val_loss=0.3735
+[21:06:23] EPP ROUND DONE → epp_clean_n10_seed44 | 26/50 | val_acc=0.8736 | val_f1=0.8718 | best=0.8736@26 | no_improve=0 | round=52.6s | ETA≈20.8 min
+[21:06:23] EPP ROUND START → epp_clean_n10_seed44 | 27/50 | lr=0.023147
+[21:06:28]   local clients → 1/10 for epp_clean_n10_seed44 round 27
+[21:06:33]   local clients → 2/10 for epp_clean_n10_seed44 round 27
+[21:06:44]   local clients → 4/10 for epp_clean_n10_seed44 round 27
+[21:06:54]   local clients → 6/10 for epp_clean_n10_seed44 round 27
+[21:07:04]   local clients → 8/10 for epp_clean_n10_seed44 round 27
+[21:07:14]   local clients → 10/10 for epp_clean_n10_seed44 round 27
+[21:07:15]   ★ NEW BEST → round=27 val_acc=0.8748 val_loss=0.3700
+[21:07:15] EPP ROUND DONE → epp_clean_n10_seed44 | 27/50 | val_acc=0.8748 | val_f1=0.8729 | best=0.8748@27 | no_improve=0 | round=51.9s | ETA≈20.0 min
+[21:07:15] EPP ROUND START → epp_clean_n10_seed44 | 28/50 | lr=0.021590
+[21:07:20]   local clients → 1/10 for epp_clean_n10_seed44 round 28
+[21:07:25]   local clients → 2/10 for epp_clean_n10_seed44 round 28
+[21:07:36]   local clients → 4/10 for epp_clean_n10_seed44 round 28
+[21:07:46]   local clients → 6/10 for epp_clean_n10_seed44 round 28
+[21:07:56]   local clients → 8/10 for epp_clean_n10_seed44 round 28
+[21:08:06]   local clients → 10/10 for epp_clean_n10_seed44 round 28
+[21:08:07]   ★ NEW BEST → round=28 val_acc=0.8770 val_loss=0.3629
+[21:08:07] EPP ROUND DONE → epp_clean_n10_seed44 | 28/50 | val_acc=0.8770 | val_f1=0.8756 | best=0.8770@28 | no_improve=0 | round=51.9s | ETA≈19.1 min
+[21:08:07] EPP ROUND START → epp_clean_n10_seed44 | 29/50 | lr=0.020048
+[21:08:12]   local clients → 1/10 for epp_clean_n10_seed44 round 29
+[21:08:17]   local clients → 2/10 for epp_clean_n10_seed44 round 29
+[21:08:27]   local clients → 4/10 for epp_clean_n10_seed44 round 29
+[21:08:38]   local clients → 6/10 for epp_clean_n10_seed44 round 29
+[21:08:48]   local clients → 8/10 for epp_clean_n10_seed44 round 29
+[21:08:58]   local clients → 10/10 for epp_clean_n10_seed44 round 29
+[21:08:59]   ★ NEW BEST → round=29 val_acc=0.8802 val_loss=0.3560
+[21:08:59] EPP ROUND DONE → epp_clean_n10_seed44 | 29/50 | val_acc=0.8802 | val_f1=0.8789 | best=0.8802@29 | no_improve=0 | round=52.0s | ETA≈18.2 min
+[21:08:59] EPP ROUND START → epp_clean_n10_seed44 | 30/50 | lr=0.018529
+[21:09:04]   local clients → 1/10 for epp_clean_n10_seed44 round 30
+[21:09:09]   local clients → 2/10 for epp_clean_n10_seed44 round 30
+[21:09:20]   local clients → 4/10 for epp_clean_n10_seed44 round 30
+[21:09:30]   local clients → 6/10 for epp_clean_n10_seed44 round 30
+[21:09:40]   local clients → 8/10 for epp_clean_n10_seed44 round 30
+[21:09:51]   local clients → 10/10 for epp_clean_n10_seed44 round 30
+[21:09:51]   ★ NEW BEST → round=30 val_acc=0.8808 val_loss=0.3583
+[21:09:51] EPP ROUND DONE → epp_clean_n10_seed44 | 30/50 | val_acc=0.8808 | val_f1=0.8793 | best=0.8808@30 | no_improve=0 | round=52.1s | ETA≈17.4 min
+[21:09:52] RESUME SNAPSHOT → ~/Desktop/LSB_overnight/results/cifar_epp_matched/EPP_BCFL_REPRO_V4_Resume.zip | 39.1 MB
+[21:09:52] EPP ROUND START → epp_clean_n10_seed44 | 31/50 | lr=0.017039
+[21:09:57]   local clients → 1/10 for epp_clean_n10_seed44 round 31
+[21:10:02]   local clients → 2/10 for epp_clean_n10_seed44 round 31
+[21:10:12]   local clients → 4/10 for epp_clean_n10_seed44 round 31
+[21:10:23]   local clients → 6/10 for epp_clean_n10_seed44 round 31
+[21:10:33]   local clients → 8/10 for epp_clean_n10_seed44 round 31
+[21:10:43]   local clients → 10/10 for epp_clean_n10_seed44 round 31
+[21:10:44]   ★ NEW BEST → round=31 val_acc=0.8814 val_loss=0.3506
+[21:10:44] EPP ROUND DONE → epp_clean_n10_seed44 | 31/50 | val_acc=0.8814 | val_f1=0.8800 | best=0.8814@31 | no_improve=0 | round=51.8s | ETA≈16.5 min
+[21:10:44] EPP ROUND START → epp_clean_n10_seed44 | 32/50 | lr=0.015583
+[21:10:49]   local clients → 1/10 for epp_clean_n10_seed44 round 32
+[21:10:55]   local clients → 2/10 for epp_clean_n10_seed44 round 32
+[21:11:05]   local clients → 4/10 for epp_clean_n10_seed44 round 32
+[21:11:15]   local clients → 6/10 for epp_clean_n10_seed44 round 32
+[21:11:25]   local clients → 8/10 for epp_clean_n10_seed44 round 32
+[21:11:35]   local clients → 10/10 for epp_clean_n10_seed44 round 32
+[21:11:36]   ★ NEW BEST → round=32 val_acc=0.8852 val_loss=0.3405
+[21:11:36] EPP ROUND DONE → epp_clean_n10_seed44 | 32/50 | val_acc=0.8852 | val_f1=0.8841 | best=0.8852@32 | no_improve=0 | round=52.0s | ETA≈15.6 min
+[21:11:36] EPP ROUND START → epp_clean_n10_seed44 | 33/50 | lr=0.014168
+[21:11:41]   local clients → 1/10 for epp_clean_n10_seed44 round 33
+[21:11:46]   local clients → 2/10 for epp_clean_n10_seed44 round 33
+[21:11:56]   local clients → 4/10 for epp_clean_n10_seed44 round 33
+[21:12:07]   local clients → 6/10 for epp_clean_n10_seed44 round 33
+[21:12:17]   local clients → 8/10 for epp_clean_n10_seed44 round 33
+[21:12:28]   local clients → 10/10 for epp_clean_n10_seed44 round 33
+[21:12:28]   ★ NEW BEST → round=33 val_acc=0.8890 val_loss=0.3396
+[21:12:28] EPP ROUND DONE → epp_clean_n10_seed44 | 33/50 | val_acc=0.8890 | val_f1=0.8880 | best=0.8890@33 | no_improve=0 | round=52.2s | ETA≈14.8 min
+[21:12:28] EPP ROUND START → epp_clean_n10_seed44 | 34/50 | lr=0.012799
+[21:12:33]   local clients → 1/10 for epp_clean_n10_seed44 round 34
+[21:12:38]   local clients → 2/10 for epp_clean_n10_seed44 round 34
+[21:12:49]   local clients → 4/10 for epp_clean_n10_seed44 round 34
+[21:12:59]   local clients → 6/10 for epp_clean_n10_seed44 round 34
+[21:13:10]   local clients → 8/10 for epp_clean_n10_seed44 round 34
+[21:13:20]   local clients → 10/10 for epp_clean_n10_seed44 round 34
+[21:13:20] EPP ROUND DONE → epp_clean_n10_seed44 | 34/50 | val_acc=0.8860 | val_f1=0.8846 | best=0.8890@33 | no_improve=1 | round=52.2s | ETA≈13.9 min
+[21:13:20] EPP ROUND START → epp_clean_n10_seed44 | 35/50 | lr=0.011483
+[21:13:25]   local clients → 1/10 for epp_clean_n10_seed44 round 35
+[21:13:31]   local clients → 2/10 for epp_clean_n10_seed44 round 35
+[21:13:41]   local clients → 4/10 for epp_clean_n10_seed44 round 35
+[21:13:51]   local clients → 6/10 for epp_clean_n10_seed44 round 35
+[21:14:01]   local clients → 8/10 for epp_clean_n10_seed44 round 35
+[21:14:12]   local clients → 10/10 for epp_clean_n10_seed44 round 35
+[21:14:13]   ★ NEW BEST → round=35 val_acc=0.8916 val_loss=0.3297
+[21:14:13] EPP ROUND DONE → epp_clean_n10_seed44 | 35/50 | val_acc=0.8916 | val_f1=0.8906 | best=0.8916@35 | no_improve=0 | round=52.3s | ETA≈13.0 min
+[21:14:13] EPP ROUND START → epp_clean_n10_seed44 | 36/50 | lr=0.010224
+[21:14:18]   local clients → 1/10 for epp_clean_n10_seed44 round 36
+[21:14:23]   local clients → 2/10 for epp_clean_n10_seed44 round 36
+[21:14:34]   local clients → 4/10 for epp_clean_n10_seed44 round 36
+[21:14:44]   local clients → 6/10 for epp_clean_n10_seed44 round 36
+[21:14:54]   local clients → 8/10 for epp_clean_n10_seed44 round 36
+[21:15:04]   local clients → 10/10 for epp_clean_n10_seed44 round 36
+[21:15:05] EPP ROUND DONE → epp_clean_n10_seed44 | 36/50 | val_acc=0.8886 | val_f1=0.8870 | best=0.8916@35 | no_improve=1 | round=52.3s | ETA≈12.2 min
+[21:15:05] EPP ROUND START → epp_clean_n10_seed44 | 37/50 | lr=0.009029
+[21:15:10]   local clients → 1/10 for epp_clean_n10_seed44 round 37
+[21:15:16]   local clients → 2/10 for epp_clean_n10_seed44 round 37
+[21:15:26]   local clients → 4/10 for epp_clean_n10_seed44 round 37
+[21:15:37]   local clients → 6/10 for epp_clean_n10_seed44 round 37
+[21:15:47]   local clients → 8/10 for epp_clean_n10_seed44 round 37
+[21:15:57]   local clients → 10/10 for epp_clean_n10_seed44 round 37
+[21:15:57]   ★ NEW BEST → round=37 val_acc=0.8928 val_loss=0.3433
+[21:15:57] EPP ROUND DONE → epp_clean_n10_seed44 | 37/50 | val_acc=0.8928 | val_f1=0.8916 | best=0.8928@37 | no_improve=0 | round=52.3s | ETA≈11.3 min
+[21:15:57] EPP ROUND START → epp_clean_n10_seed44 | 38/50 | lr=0.007900
+[21:16:03]   local clients → 1/10 for epp_clean_n10_seed44 round 38
+[21:16:08]   local clients → 2/10 for epp_clean_n10_seed44 round 38
+[21:16:18]   local clients → 4/10 for epp_clean_n10_seed44 round 38
+[21:16:29]   local clients → 6/10 for epp_clean_n10_seed44 round 38
+[21:16:39]   local clients → 8/10 for epp_clean_n10_seed44 round 38
+[21:16:49]   local clients → 10/10 for epp_clean_n10_seed44 round 38
+[21:16:49]   ★ NEW BEST → round=38 val_acc=0.8936 val_loss=0.3361
+[21:16:49] EPP ROUND DONE → epp_clean_n10_seed44 | 38/50 | val_acc=0.8936 | val_f1=0.8925 | best=0.8936@38 | no_improve=0 | round=52.0s | ETA≈10.4 min
+[21:16:49] EPP ROUND START → epp_clean_n10_seed44 | 39/50 | lr=0.006845
+[21:16:55]   local clients → 1/10 for epp_clean_n10_seed44 round 39
+[21:17:00]   local clients → 2/10 for epp_clean_n10_seed44 round 39
+[21:17:10]   local clients → 4/10 for epp_clean_n10_seed44 round 39
+[21:17:21]   local clients → 6/10 for epp_clean_n10_seed44 round 39
+[21:17:31]   local clients → 8/10 for epp_clean_n10_seed44 round 39
+[21:17:41]   local clients → 10/10 for epp_clean_n10_seed44 round 39
+[21:17:42]   ★ NEW BEST → round=39 val_acc=0.8964 val_loss=0.3333
+[21:17:42] EPP ROUND DONE → epp_clean_n10_seed44 | 39/50 | val_acc=0.8964 | val_f1=0.8955 | best=0.8964@39 | no_improve=0 | round=52.2s | ETA≈9.5 min
+[21:17:42] EPP ROUND START → epp_clean_n10_seed44 | 40/50 | lr=0.005865
+[21:17:47]   local clients → 1/10 for epp_clean_n10_seed44 round 40
+[21:17:52]   local clients → 2/10 for epp_clean_n10_seed44 round 40
+[21:18:02]   local clients → 4/10 for epp_clean_n10_seed44 round 40
+[21:18:12]   local clients → 6/10 for epp_clean_n10_seed44 round 40
+[21:18:22]   local clients → 8/10 for epp_clean_n10_seed44 round 40
+[21:18:33]   local clients → 10/10 for epp_clean_n10_seed44 round 40
+[21:18:33] EPP ROUND DONE → epp_clean_n10_seed44 | 40/50 | val_acc=0.8958 | val_f1=0.8947 | best=0.8964@39 | no_improve=1 | round=51.8s | ETA≈8.7 min
+[21:18:34] RESUME SNAPSHOT → ~/Desktop/LSB_overnight/results/cifar_epp_matched/EPP_BCFL_REPRO_V4_Resume.zip | 39.1 MB
+[21:18:34] EPP ROUND START → epp_clean_n10_seed44 | 41/50 | lr=0.004967
+[21:18:40]   local clients → 1/10 for epp_clean_n10_seed44 round 41
+[21:18:45]   local clients → 2/10 for epp_clean_n10_seed44 round 41
+[21:18:55]   local clients → 4/10 for epp_clean_n10_seed44 round 41
+[21:19:06]   local clients → 6/10 for epp_clean_n10_seed44 round 41
+[21:19:16]   local clients → 8/10 for epp_clean_n10_seed44 round 41
+[21:19:26]   local clients → 10/10 for epp_clean_n10_seed44 round 41
+[21:19:27]   ★ NEW BEST → round=41 val_acc=0.8990 val_loss=0.3342
+[21:19:27] EPP ROUND DONE → epp_clean_n10_seed44 | 41/50 | val_acc=0.8990 | val_f1=0.8983 | best=0.8990@41 | no_improve=0 | round=52.3s | ETA≈7.8 min
+[21:19:27] EPP ROUND START → epp_clean_n10_seed44 | 42/50 | lr=0.004153
+[21:19:32]   local clients → 1/10 for epp_clean_n10_seed44 round 42
+[21:19:37]   local clients → 2/10 for epp_clean_n10_seed44 round 42
+[21:19:47]   local clients → 4/10 for epp_clean_n10_seed44 round 42
+[21:19:58]   local clients → 6/10 for epp_clean_n10_seed44 round 42
+[21:20:08]   local clients → 8/10 for epp_clean_n10_seed44 round 42
+[21:20:18]   local clients → 10/10 for epp_clean_n10_seed44 round 42
+[21:20:19] EPP ROUND DONE → epp_clean_n10_seed44 | 42/50 | val_acc=0.8978 | val_f1=0.8971 | best=0.8990@41 | no_improve=1 | round=52.2s | ETA≈6.9 min
+[21:20:19] EPP ROUND START → epp_clean_n10_seed44 | 43/50 | lr=0.003426
+[21:20:24]   local clients → 1/10 for epp_clean_n10_seed44 round 43
+[21:20:29]   local clients → 2/10 for epp_clean_n10_seed44 round 43
+[21:20:40]   local clients → 4/10 for epp_clean_n10_seed44 round 43
+[21:20:50]   local clients → 6/10 for epp_clean_n10_seed44 round 43
+[21:21:00]   local clients → 8/10 for epp_clean_n10_seed44 round 43
+[21:21:10]   local clients → 10/10 for epp_clean_n10_seed44 round 43
+[21:21:11] EPP ROUND DONE → epp_clean_n10_seed44 | 43/50 | val_acc=0.8972 | val_f1=0.8964 | best=0.8990@41 | no_improve=2 | round=52.0s | ETA≈6.1 min
+[21:21:11] EPP ROUND START → epp_clean_n10_seed44 | 44/50 | lr=0.002791
+[21:21:16]   local clients → 1/10 for epp_clean_n10_seed44 round 44
+[21:21:21]   local clients → 2/10 for epp_clean_n10_seed44 round 44
+[21:21:31]   local clients → 4/10 for epp_clean_n10_seed44 round 44
+[21:21:42]   local clients → 6/10 for epp_clean_n10_seed44 round 44
+[21:21:52]   local clients → 8/10 for epp_clean_n10_seed44 round 44
+[21:22:02]   local clients → 10/10 for epp_clean_n10_seed44 round 44
+[21:22:03] EPP ROUND DONE → epp_clean_n10_seed44 | 44/50 | val_acc=0.8968 | val_f1=0.8961 | best=0.8990@41 | no_improve=3 | round=51.9s | ETA≈5.2 min
+[21:22:03] EPP ROUND START → epp_clean_n10_seed44 | 45/50 | lr=0.002248
+[21:22:08]   local clients → 1/10 for epp_clean_n10_seed44 round 45
+[21:22:14]   local clients → 2/10 for epp_clean_n10_seed44 round 45
+[21:22:24]   local clients → 4/10 for epp_clean_n10_seed44 round 45
+[21:22:34]   local clients → 6/10 for epp_clean_n10_seed44 round 45
+[21:22:44]   local clients → 8/10 for epp_clean_n10_seed44 round 45
+[21:22:55]   local clients → 10/10 for epp_clean_n10_seed44 round 45
+[21:22:55] EPP ROUND DONE → epp_clean_n10_seed44 | 45/50 | val_acc=0.8968 | val_f1=0.8960 | best=0.8990@41 | no_improve=4 | round=52.3s | ETA≈4.3 min
+[21:22:55] EPP ROUND START → epp_clean_n10_seed44 | 46/50 | lr=0.001801
+[21:23:00]   local clients → 1/10 for epp_clean_n10_seed44 round 46
+[21:23:06]   local clients → 2/10 for epp_clean_n10_seed44 round 46
+[21:23:16]   local clients → 4/10 for epp_clean_n10_seed44 round 46
+[21:23:26]   local clients → 6/10 for epp_clean_n10_seed44 round 46
+[21:23:36]   local clients → 8/10 for epp_clean_n10_seed44 round 46
+[21:23:47]   local clients → 10/10 for epp_clean_n10_seed44 round 46
+[21:23:47] EPP ROUND DONE → epp_clean_n10_seed44 | 46/50 | val_acc=0.8986 | val_f1=0.8978 | best=0.8990@41 | no_improve=5 | round=52.1s | ETA≈3.5 min
+[21:23:47] EPP ROUND START → epp_clean_n10_seed44 | 47/50 | lr=0.001452
+[21:23:52]   local clients → 1/10 for epp_clean_n10_seed44 round 47
+[21:23:58]   local clients → 2/10 for epp_clean_n10_seed44 round 47
+[21:24:08]   local clients → 4/10 for epp_clean_n10_seed44 round 47
+[21:24:19]   local clients → 6/10 for epp_clean_n10_seed44 round 47
+[21:24:29]   local clients → 8/10 for epp_clean_n10_seed44 round 47
+[21:24:39]   local clients → 10/10 for epp_clean_n10_seed44 round 47
+[21:24:40] EPP ROUND DONE → epp_clean_n10_seed44 | 47/50 | val_acc=0.8980 | val_f1=0.8973 | best=0.8990@41 | no_improve=6 | round=52.3s | ETA≈2.6 min
+[21:24:40] EPP ROUND START → epp_clean_n10_seed44 | 48/50 | lr=0.001201
+[21:24:45]   local clients → 1/10 for epp_clean_n10_seed44 round 48
+[21:24:50]   local clients → 2/10 for epp_clean_n10_seed44 round 48
+[21:25:00]   local clients → 4/10 for epp_clean_n10_seed44 round 48
+[21:25:11]   local clients → 6/10 for epp_clean_n10_seed44 round 48
+[21:25:21]   local clients → 8/10 for epp_clean_n10_seed44 round 48
+[21:25:31]   local clients → 10/10 for epp_clean_n10_seed44 round 48
+[21:25:32] EPP ROUND DONE → epp_clean_n10_seed44 | 48/50 | val_acc=0.8988 | val_f1=0.8981 | best=0.8990@41 | no_improve=7 | round=52.1s | ETA≈1.7 min
+[21:25:32] EPP ROUND START → epp_clean_n10_seed44 | 49/50 | lr=0.001050
+[21:25:37]   local clients → 1/10 for epp_clean_n10_seed44 round 49
+[21:25:42]   local clients → 2/10 for epp_clean_n10_seed44 round 49
+[21:25:52]   local clients → 4/10 for epp_clean_n10_seed44 round 49
+[21:26:03]   local clients → 6/10 for epp_clean_n10_seed44 round 49
+[21:26:13]   local clients → 8/10 for epp_clean_n10_seed44 round 49
+[21:26:23]   local clients → 10/10 for epp_clean_n10_seed44 round 49
+[21:26:24] EPP ROUND DONE → epp_clean_n10_seed44 | 49/50 | val_acc=0.8984 | val_f1=0.8979 | best=0.8990@41 | no_improve=8 | round=52.3s | ETA≈0.9 min
+[21:26:24] EPP ROUND START → epp_clean_n10_seed44 | 50/50 | lr=0.001000
+[21:26:29]   local clients → 1/10 for epp_clean_n10_seed44 round 50
+[21:26:34]   local clients → 2/10 for epp_clean_n10_seed44 round 50
+[21:26:45]   local clients → 4/10 for epp_clean_n10_seed44 round 50
+[21:26:55]   local clients → 6/10 for epp_clean_n10_seed44 round 50
+[21:27:06]   local clients → 8/10 for epp_clean_n10_seed44 round 50
+[21:27:16]   local clients → 10/10 for epp_clean_n10_seed44 round 50
+[21:27:16] EPP ROUND DONE → epp_clean_n10_seed44 | 50/50 | val_acc=0.8984 | val_f1=0.8977 | best=0.8990@41 | no_improve=9 | round=52.3s | ETA≈0.0 min
+[21:27:17] RESUME SNAPSHOT → ~/Desktop/LSB_overnight/results/cifar_epp_matched/EPP_BCFL_REPRO_V4_Resume.zip | 39.1 MB
+[21:27:17] EPP RUN COMPLETE → epp_clean_n10_seed44 | BEST round=41 val_acc=0.8990
+RESULT epp_clean_n10_seed44 {'test_accuracy': 0.8868, 'test_f1': 0.8851360261091188}
+[21:27:19] EPP RUN START → epp_clean_n10_seed45 | clients=10 | epsilon=inf | attack=NONE | aggregation=AMA
+[21:27:19] EPP ROUND START → epp_clean_n10_seed45 | 1/50 | lr=0.050000
+[21:27:25]   local clients → 1/10 for epp_clean_n10_seed45 round 1
+[21:27:30]   local clients → 2/10 for epp_clean_n10_seed45 round 1
+[21:27:40]   local clients → 4/10 for epp_clean_n10_seed45 round 1
+[21:27:50]   local clients → 6/10 for epp_clean_n10_seed45 round 1
+[21:28:00]   local clients → 8/10 for epp_clean_n10_seed45 round 1
+[21:28:11]   local clients → 10/10 for epp_clean_n10_seed45 round 1
+[21:28:11]   ★ NEW BEST → round=1 val_acc=0.2648 val_loss=1.9625
+[21:28:11] EPP ROUND DONE → epp_clean_n10_seed45 | 1/50 | val_acc=0.2648 | val_f1=0.1873 | best=0.2648@1 | no_improve=0 | round=51.8s | ETA≈42.3 min
+[21:28:11] EPP ROUND START → epp_clean_n10_seed45 | 2/50 | lr=0.049950
+[21:28:16]   local clients → 1/10 for epp_clean_n10_seed45 round 2
+[21:28:21]   local clients → 2/10 for epp_clean_n10_seed45 round 2
+[21:28:32]   local clients → 4/10 for epp_clean_n10_seed45 round 2
+[21:28:42]   local clients → 6/10 for epp_clean_n10_seed45 round 2
+[21:28:52]   local clients → 8/10 for epp_clean_n10_seed45 round 2
+[21:29:03]   local clients → 10/10 for epp_clean_n10_seed45 round 2
+[21:29:03]   ★ NEW BEST → round=2 val_acc=0.4042 val_loss=1.6512
+[21:29:03] EPP ROUND DONE → epp_clean_n10_seed45 | 2/50 | val_acc=0.4042 | val_f1=0.3771 | best=0.4042@2 | no_improve=0 | round=52.3s | ETA≈41.6 min
+[21:29:03] EPP ROUND START → epp_clean_n10_seed45 | 3/50 | lr=0.049799
+[21:29:09]   local clients → 1/10 for epp_clean_n10_seed45 round 3
+[21:29:14]   local clients → 2/10 for epp_clean_n10_seed45 round 3
+[21:29:24]   local clients → 4/10 for epp_clean_n10_seed45 round 3
+[21:29:35]   local clients → 6/10 for epp_clean_n10_seed45 round 3
+[21:29:45]   local clients → 8/10 for epp_clean_n10_seed45 round 3
+[21:29:55]   local clients → 10/10 for epp_clean_n10_seed45 round 3
+[21:29:56]   ★ NEW BEST → round=3 val_acc=0.4792 val_loss=1.4548
+[21:29:56] EPP ROUND DONE → epp_clean_n10_seed45 | 3/50 | val_acc=0.4792 | val_f1=0.4577 | best=0.4792@3 | no_improve=0 | round=52.3s | ETA≈40.8 min
+[21:29:56] EPP ROUND START → epp_clean_n10_seed45 | 4/50 | lr=0.049548
+[21:30:01]   local clients → 1/10 for epp_clean_n10_seed45 round 4
+[21:30:06]   local clients → 2/10 for epp_clean_n10_seed45 round 4
+[21:30:16]   local clients → 4/10 for epp_clean_n10_seed45 round 4
+[21:30:27]   local clients → 6/10 for epp_clean_n10_seed45 round 4
+[21:30:37]   local clients → 8/10 for epp_clean_n10_seed45 round 4
+[21:30:47]   local clients → 10/10 for epp_clean_n10_seed45 round 4
+[21:30:48]   ★ NEW BEST → round=4 val_acc=0.5530 val_loss=1.2461
+[21:30:48] EPP ROUND DONE → epp_clean_n10_seed45 | 4/50 | val_acc=0.5530 | val_f1=0.5383 | best=0.5530@4 | no_improve=0 | round=51.9s | ETA≈39.9 min
+[21:30:48] EPP ROUND START → epp_clean_n10_seed45 | 5/50 | lr=0.049199
+[21:30:53]   local clients → 1/10 for epp_clean_n10_seed45 round 5
+[21:30:58]   local clients → 2/10 for epp_clean_n10_seed45 round 5
+[21:31:08]   local clients → 4/10 for epp_clean_n10_seed45 round 5
+[21:31:18]   local clients → 6/10 for epp_clean_n10_seed45 round 5
+[21:31:29]   local clients → 8/10 for epp_clean_n10_seed45 round 5
+[21:31:39]   local clients → 10/10 for epp_clean_n10_seed45 round 5
+[21:31:40]   ★ NEW BEST → round=5 val_acc=0.5986 val_loss=1.1039
+[21:31:40] EPP ROUND DONE → epp_clean_n10_seed45 | 5/50 | val_acc=0.5986 | val_f1=0.5818 | best=0.5986@5 | no_improve=0 | round=51.8s | ETA≈39.0 min
+[21:31:40] EPP ROUND START → epp_clean_n10_seed45 | 6/50 | lr=0.048752
+[21:31:45]   local clients → 1/10 for epp_clean_n10_seed45 round 6
+[21:31:50]   local clients → 2/10 for epp_clean_n10_seed45 round 6
+[21:32:00]   local clients → 4/10 for epp_clean_n10_seed45 round 6
+[21:32:10]   local clients → 6/10 for epp_clean_n10_seed45 round 6
+[21:32:21]   local clients → 8/10 for epp_clean_n10_seed45 round 6
+[21:32:31]   local clients → 10/10 for epp_clean_n10_seed45 round 6
+[21:32:32]   ★ NEW BEST → round=6 val_acc=0.6566 val_loss=0.9682
+[21:32:32] EPP ROUND DONE → epp_clean_n10_seed45 | 6/50 | val_acc=0.6566 | val_f1=0.6461 | best=0.6566@6 | no_improve=0 | round=52.1s | ETA≈38.2 min
+[21:32:32] EPP ROUND START → epp_clean_n10_seed45 | 7/50 | lr=0.048209
+[21:32:37]   local clients → 1/10 for epp_clean_n10_seed45 round 7
+[21:32:42]   local clients → 2/10 for epp_clean_n10_seed45 round 7
+[21:32:52]   local clients → 4/10 for epp_clean_n10_seed45 round 7
+[21:33:03]   local clients → 6/10 for epp_clean_n10_seed45 round 7
+[21:33:13]   local clients → 8/10 for epp_clean_n10_seed45 round 7
+[21:33:23]   local clients → 10/10 for epp_clean_n10_seed45 round 7
+[21:33:24]   ★ NEW BEST → round=7 val_acc=0.6906 val_loss=0.8678
+[21:33:24] EPP ROUND DONE → epp_clean_n10_seed45 | 7/50 | val_acc=0.6906 | val_f1=0.6784 | best=0.6906@7 | no_improve=0 | round=52.0s | ETA≈37.3 min
+[21:33:24] EPP ROUND START → epp_clean_n10_seed45 | 8/50 | lr=0.047574
+[21:33:29]   local clients → 1/10 for epp_clean_n10_seed45 round 8
+[21:33:34]   local clients → 2/10 for epp_clean_n10_seed45 round 8
+[21:33:44]   local clients → 4/10 for epp_clean_n10_seed45 round 8
+[21:33:55]   local clients → 6/10 for epp_clean_n10_seed45 round 8
+[21:34:05]   local clients → 8/10 for epp_clean_n10_seed45 round 8
+[21:34:15]   local clients → 10/10 for epp_clean_n10_seed45 round 8
+[21:34:16]   ★ NEW BEST → round=8 val_acc=0.7302 val_loss=0.7694
+[21:34:16] EPP ROUND DONE → epp_clean_n10_seed45 | 8/50 | val_acc=0.7302 | val_f1=0.7233 | best=0.7302@8 | no_improve=0 | round=52.4s | ETA≈36.5 min
+[21:34:16] EPP ROUND START → epp_clean_n10_seed45 | 9/50 | lr=0.046847
+[21:34:21]   local clients → 1/10 for epp_clean_n10_seed45 round 9
+[21:34:27]   local clients → 2/10 for epp_clean_n10_seed45 round 9
+[21:34:37]   local clients → 4/10 for epp_clean_n10_seed45 round 9
+[21:34:47]   local clients → 6/10 for epp_clean_n10_seed45 round 9
+[21:34:58]   local clients → 8/10 for epp_clean_n10_seed45 round 9
+[21:35:08]   local clients → 10/10 for epp_clean_n10_seed45 round 9
+[21:35:08]   ★ NEW BEST → round=9 val_acc=0.7482 val_loss=0.7130
+[21:35:08] EPP ROUND DONE → epp_clean_n10_seed45 | 9/50 | val_acc=0.7482 | val_f1=0.7424 | best=0.7482@9 | no_improve=0 | round=52.2s | ETA≈35.6 min
+[21:35:08] EPP ROUND START → epp_clean_n10_seed45 | 10/50 | lr=0.046033
+[21:35:14]   local clients → 1/10 for epp_clean_n10_seed45 round 10
+[21:35:19]   local clients → 2/10 for epp_clean_n10_seed45 round 10
+[21:35:29]   local clients → 4/10 for epp_clean_n10_seed45 round 10
+[21:35:39]   local clients → 6/10 for epp_clean_n10_seed45 round 10
+[21:35:49]   local clients → 8/10 for epp_clean_n10_seed45 round 10
+[21:36:00]   local clients → 10/10 for epp_clean_n10_seed45 round 10
+[21:36:00]   ★ NEW BEST → round=10 val_acc=0.7690 val_loss=0.6455
+[21:36:00] EPP ROUND DONE → epp_clean_n10_seed45 | 10/50 | val_acc=0.7690 | val_f1=0.7649 | best=0.7690@10 | no_improve=0 | round=52.1s | ETA≈34.7 min
+[21:36:02] RESUME SNAPSHOT → ~/Desktop/LSB_overnight/results/cifar_epp_matched/EPP_BCFL_REPRO_V4_Resume.zip | 48.8 MB
+[21:36:02] EPP ROUND START → epp_clean_n10_seed45 | 11/50 | lr=0.045135
+[21:36:07]   local clients → 1/10 for epp_clean_n10_seed45 round 11
+[21:36:12]   local clients → 2/10 for epp_clean_n10_seed45 round 11
+[21:36:22]   local clients → 4/10 for epp_clean_n10_seed45 round 11
+[21:36:32]   local clients → 6/10 for epp_clean_n10_seed45 round 11
+[21:36:43]   local clients → 8/10 for epp_clean_n10_seed45 round 11
+[21:36:53]   local clients → 10/10 for epp_clean_n10_seed45 round 11
+[21:36:54]   ★ NEW BEST → round=11 val_acc=0.7914 val_loss=0.5951
+[21:36:54] EPP ROUND DONE → epp_clean_n10_seed45 | 11/50 | val_acc=0.7914 | val_f1=0.7876 | best=0.7914@11 | no_improve=0 | round=52.0s | ETA≈33.9 min
+[21:36:54] EPP ROUND START → epp_clean_n10_seed45 | 12/50 | lr=0.044155
+[21:36:59]   local clients → 1/10 for epp_clean_n10_seed45 round 12
+[21:37:04]   local clients → 2/10 for epp_clean_n10_seed45 round 12
+[21:37:14]   local clients → 4/10 for epp_clean_n10_seed45 round 12
+[21:37:25]   local clients → 6/10 for epp_clean_n10_seed45 round 12
+[21:37:35]   local clients → 8/10 for epp_clean_n10_seed45 round 12
+[21:37:45]   local clients → 10/10 for epp_clean_n10_seed45 round 12
+[21:37:46]   ★ NEW BEST → round=12 val_acc=0.7956 val_loss=0.5914
+[21:37:46] EPP ROUND DONE → epp_clean_n10_seed45 | 12/50 | val_acc=0.7956 | val_f1=0.7929 | best=0.7956@12 | no_improve=0 | round=52.1s | ETA≈33.0 min
+[21:37:46] EPP ROUND START → epp_clean_n10_seed45 | 13/50 | lr=0.043100
+[21:37:51]   local clients → 1/10 for epp_clean_n10_seed45 round 13
+[21:37:56]   local clients → 2/10 for epp_clean_n10_seed45 round 13
+[21:38:06]   local clients → 4/10 for epp_clean_n10_seed45 round 13
+[21:38:17]   local clients → 6/10 for epp_clean_n10_seed45 round 13
+[21:38:27]   local clients → 8/10 for epp_clean_n10_seed45 round 13
+[21:38:37]   local clients → 10/10 for epp_clean_n10_seed45 round 13
+[21:38:38]   ★ NEW BEST → round=13 val_acc=0.8150 val_loss=0.5374
+[21:38:38] EPP ROUND DONE → epp_clean_n10_seed45 | 13/50 | val_acc=0.8150 | val_f1=0.8116 | best=0.8150@13 | no_improve=0 | round=52.1s | ETA≈32.1 min
+[21:38:38] EPP ROUND START → epp_clean_n10_seed45 | 14/50 | lr=0.041971
+[21:38:43]   local clients → 1/10 for epp_clean_n10_seed45 round 14
+[21:38:48]   local clients → 2/10 for epp_clean_n10_seed45 round 14
+[21:38:58]   local clients → 4/10 for epp_clean_n10_seed45 round 14
+[21:39:09]   local clients → 6/10 for epp_clean_n10_seed45 round 14
+[21:39:19]   local clients → 8/10 for epp_clean_n10_seed45 round 14
+[21:39:29]   local clients → 10/10 for epp_clean_n10_seed45 round 14
+[21:39:30]   ★ NEW BEST → round=14 val_acc=0.8200 val_loss=0.5250
+[21:39:30] EPP ROUND DONE → epp_clean_n10_seed45 | 14/50 | val_acc=0.8200 | val_f1=0.8168 | best=0.8200@14 | no_improve=0 | round=51.9s | ETA≈31.2 min
+[21:39:30] EPP ROUND START → epp_clean_n10_seed45 | 15/50 | lr=0.040776
+[21:39:35]   local clients → 1/10 for epp_clean_n10_seed45 round 15
+[21:39:40]   local clients → 2/10 for epp_clean_n10_seed45 round 15
+[21:39:50]   local clients → 4/10 for epp_clean_n10_seed45 round 15
+[21:40:00]   local clients → 6/10 for epp_clean_n10_seed45 round 15
+[21:40:11]   local clients → 8/10 for epp_clean_n10_seed45 round 15
+[21:40:21]   local clients → 10/10 for epp_clean_n10_seed45 round 15
+[21:40:22]   ★ NEW BEST → round=15 val_acc=0.8222 val_loss=0.5057
+[21:40:22] EPP ROUND DONE → epp_clean_n10_seed45 | 15/50 | val_acc=0.8222 | val_f1=0.8186 | best=0.8222@15 | no_improve=0 | round=52.0s | ETA≈30.4 min
+[21:40:22] EPP ROUND START → epp_clean_n10_seed45 | 16/50 | lr=0.039517
+[21:40:27]   local clients → 1/10 for epp_clean_n10_seed45 round 16
+[21:40:32]   local clients → 2/10 for epp_clean_n10_seed45 round 16
+[21:40:43]   local clients → 4/10 for epp_clean_n10_seed45 round 16
+[21:40:53]   local clients → 6/10 for epp_clean_n10_seed45 round 16
+[21:41:03]   local clients → 8/10 for epp_clean_n10_seed45 round 16
+[21:41:14]   local clients → 10/10 for epp_clean_n10_seed45 round 16
+[21:41:14]   ★ NEW BEST → round=16 val_acc=0.8388 val_loss=0.4699
+[21:41:14] EPP ROUND DONE → epp_clean_n10_seed45 | 16/50 | val_acc=0.8388 | val_f1=0.8362 | best=0.8388@16 | no_improve=0 | round=52.5s | ETA≈29.5 min
+[21:41:14] EPP ROUND START → epp_clean_n10_seed45 | 17/50 | lr=0.038201
+[21:41:19]   local clients → 1/10 for epp_clean_n10_seed45 round 17
+[21:41:25]   local clients → 2/10 for epp_clean_n10_seed45 round 17
+[21:41:35]   local clients → 4/10 for epp_clean_n10_seed45 round 17
+[21:41:45]   local clients → 6/10 for epp_clean_n10_seed45 round 17
+[21:41:56]   local clients → 8/10 for epp_clean_n10_seed45 round 17
+[21:42:06]   local clients → 10/10 for epp_clean_n10_seed45 round 17
+[21:42:06]   ★ NEW BEST → round=17 val_acc=0.8402 val_loss=0.4602
+[21:42:06] EPP ROUND DONE → epp_clean_n10_seed45 | 17/50 | val_acc=0.8402 | val_f1=0.8376 | best=0.8402@17 | no_improve=0 | round=52.1s | ETA≈28.7 min
+[21:42:06] EPP ROUND START → epp_clean_n10_seed45 | 18/50 | lr=0.036832
+[21:42:12]   local clients → 1/10 for epp_clean_n10_seed45 round 18
+[21:42:17]   local clients → 2/10 for epp_clean_n10_seed45 round 18
+[21:42:27]   local clients → 4/10 for epp_clean_n10_seed45 round 18
+[21:42:38]   local clients → 6/10 for epp_clean_n10_seed45 round 18
+[21:42:48]   local clients → 8/10 for epp_clean_n10_seed45 round 18
+[21:42:58]   local clients → 10/10 for epp_clean_n10_seed45 round 18
+[21:42:58]   ★ NEW BEST → round=18 val_acc=0.8424 val_loss=0.4449
+[21:42:58] EPP ROUND DONE → epp_clean_n10_seed45 | 18/50 | val_acc=0.8424 | val_f1=0.8401 | best=0.8424@18 | no_improve=0 | round=51.9s | ETA≈27.8 min
+[21:42:58] EPP ROUND START → epp_clean_n10_seed45 | 19/50 | lr=0.035417
+[21:43:04]   local clients → 1/10 for epp_clean_n10_seed45 round 19
+[21:43:09]   local clients → 2/10 for epp_clean_n10_seed45 round 19
+[21:43:19]   local clients → 4/10 for epp_clean_n10_seed45 round 19
+[21:43:29]   local clients → 6/10 for epp_clean_n10_seed45 round 19
+[21:43:39]   local clients → 8/10 for epp_clean_n10_seed45 round 19
+[21:43:50]   local clients → 10/10 for epp_clean_n10_seed45 round 19
+[21:43:50]   ★ NEW BEST → round=19 val_acc=0.8524 val_loss=0.4260
+[21:43:50] EPP ROUND DONE → epp_clean_n10_seed45 | 19/50 | val_acc=0.8524 | val_f1=0.8501 | best=0.8524@19 | no_improve=0 | round=51.9s | ETA≈26.9 min
+[21:43:50] EPP ROUND START → epp_clean_n10_seed45 | 20/50 | lr=0.033961
+[21:43:55]   local clients → 1/10 for epp_clean_n10_seed45 round 20
+[21:44:01]   local clients → 2/10 for epp_clean_n10_seed45 round 20
+[21:44:11]   local clients → 4/10 for epp_clean_n10_seed45 round 20
+[21:44:21]   local clients → 6/10 for epp_clean_n10_seed45 round 20
+[21:44:31]   local clients → 8/10 for epp_clean_n10_seed45 round 20
+[21:44:42]   local clients → 10/10 for epp_clean_n10_seed45 round 20
+[21:44:42] EPP ROUND DONE → epp_clean_n10_seed45 | 20/50 | val_acc=0.8464 | val_f1=0.8433 | best=0.8524@19 | no_improve=1 | round=52.1s | ETA≈26.0 min
+[21:44:44] RESUME SNAPSHOT → ~/Desktop/LSB_overnight/results/cifar_epp_matched/EPP_BCFL_REPRO_V4_Resume.zip | 48.8 MB
+[21:44:44] EPP ROUND START → epp_clean_n10_seed45 | 21/50 | lr=0.032471
+[21:44:49]   local clients → 1/10 for epp_clean_n10_seed45 round 21
+[21:44:54]   local clients → 2/10 for epp_clean_n10_seed45 round 21
+[21:45:04]   local clients → 4/10 for epp_clean_n10_seed45 round 21
+[21:45:15]   local clients → 6/10 for epp_clean_n10_seed45 round 21
+[21:45:25]   local clients → 8/10 for epp_clean_n10_seed45 round 21
+[21:45:35]   local clients → 10/10 for epp_clean_n10_seed45 round 21
+[21:45:36]   ★ NEW BEST → round=21 val_acc=0.8570 val_loss=0.4136
+[21:45:36] EPP ROUND DONE → epp_clean_n10_seed45 | 21/50 | val_acc=0.8570 | val_f1=0.8547 | best=0.8570@21 | no_improve=0 | round=52.5s | ETA≈25.2 min
+[21:45:36] EPP ROUND START → epp_clean_n10_seed45 | 22/50 | lr=0.030952
+[21:45:41]   local clients → 1/10 for epp_clean_n10_seed45 round 22
+[21:45:46]   local clients → 2/10 for epp_clean_n10_seed45 round 22
+[21:45:57]   local clients → 4/10 for epp_clean_n10_seed45 round 22
+[21:46:07]   local clients → 6/10 for epp_clean_n10_seed45 round 22
+[21:46:17]   local clients → 8/10 for epp_clean_n10_seed45 round 22
+[21:46:28]   local clients → 10/10 for epp_clean_n10_seed45 round 22
+[21:46:28]   ★ NEW BEST → round=22 val_acc=0.8610 val_loss=0.3955
+[21:46:28] EPP ROUND DONE → epp_clean_n10_seed45 | 22/50 | val_acc=0.8610 | val_f1=0.8589 | best=0.8610@22 | no_improve=0 | round=52.1s | ETA≈24.3 min
+[21:46:28] EPP ROUND START → epp_clean_n10_seed45 | 23/50 | lr=0.029410
+[21:46:33]   local clients → 1/10 for epp_clean_n10_seed45 round 23
+[21:46:38]   local clients → 2/10 for epp_clean_n10_seed45 round 23
+[21:46:49]   local clients → 4/10 for epp_clean_n10_seed45 round 23
+[21:46:59]   local clients → 6/10 for epp_clean_n10_seed45 round 23
+[21:47:09]   local clients → 8/10 for epp_clean_n10_seed45 round 23
+[21:47:20]   local clients → 10/10 for epp_clean_n10_seed45 round 23
+[21:47:20] EPP ROUND DONE → epp_clean_n10_seed45 | 23/50 | val_acc=0.8582 | val_f1=0.8558 | best=0.8610@22 | no_improve=1 | round=52.0s | ETA≈23.4 min
+[21:47:20] EPP ROUND START → epp_clean_n10_seed45 | 24/50 | lr=0.027853
+[21:47:26]   local clients → 1/10 for epp_clean_n10_seed45 round 24
+[21:47:31]   local clients → 2/10 for epp_clean_n10_seed45 round 24
+[21:47:41]   local clients → 4/10 for epp_clean_n10_seed45 round 24
+[21:47:51]   local clients → 6/10 for epp_clean_n10_seed45 round 24
+[21:48:01]   local clients → 8/10 for epp_clean_n10_seed45 round 24
+[21:48:12]   local clients → 10/10 for epp_clean_n10_seed45 round 24
+[21:48:12]   ★ NEW BEST → round=24 val_acc=0.8666 val_loss=0.3784
+[21:48:12] EPP ROUND DONE → epp_clean_n10_seed45 | 24/50 | val_acc=0.8666 | val_f1=0.8651 | best=0.8666@24 | no_improve=0 | round=52.0s | ETA≈22.6 min
+[21:48:12] EPP ROUND START → epp_clean_n10_seed45 | 25/50 | lr=0.026285
+[21:48:17]   local clients → 1/10 for epp_clean_n10_seed45 round 25
+[21:48:22]   local clients → 2/10 for epp_clean_n10_seed45 round 25
+[21:48:33]   local clients → 4/10 for epp_clean_n10_seed45 round 25
+[21:48:43]   local clients → 6/10 for epp_clean_n10_seed45 round 25
+[21:48:53]   local clients → 8/10 for epp_clean_n10_seed45 round 25
+[21:49:04]   local clients → 10/10 for epp_clean_n10_seed45 round 25
+[21:49:05]   ★ NEW BEST → round=25 val_acc=0.8728 val_loss=0.3649
+[21:49:05] EPP ROUND DONE → epp_clean_n10_seed45 | 25/50 | val_acc=0.8728 | val_f1=0.8711 | best=0.8728@25 | no_improve=0 | round=52.3s | ETA≈21.7 min
+[21:49:05] EPP ROUND START → epp_clean_n10_seed45 | 26/50 | lr=0.024715
+[21:49:10]   local clients → 1/10 for epp_clean_n10_seed45 round 26
+[21:49:15]   local clients → 2/10 for epp_clean_n10_seed45 round 26
+[21:49:25]   local clients → 4/10 for epp_clean_n10_seed45 round 26
+[21:49:35]   local clients → 6/10 for epp_clean_n10_seed45 round 26
+[21:49:46]   local clients → 8/10 for epp_clean_n10_seed45 round 26
+[21:49:56]   local clients → 10/10 for epp_clean_n10_seed45 round 26
+[21:49:57]   ★ NEW BEST → round=26 val_acc=0.8750 val_loss=0.3618
+[21:49:57] EPP ROUND DONE → epp_clean_n10_seed45 | 26/50 | val_acc=0.8750 | val_f1=0.8734 | best=0.8750@26 | no_improve=0 | round=52.0s | ETA≈20.8 min
+[21:49:57] EPP ROUND START → epp_clean_n10_seed45 | 27/50 | lr=0.023147
+[21:50:02]   local clients → 1/10 for epp_clean_n10_seed45 round 27
+[21:50:07]   local clients → 2/10 for epp_clean_n10_seed45 round 27
+[21:50:17]   local clients → 4/10 for epp_clean_n10_seed45 round 27
+[21:50:28]   local clients → 6/10 for epp_clean_n10_seed45 round 27
+[21:50:38]   local clients → 8/10 for epp_clean_n10_seed45 round 27
+[21:50:48]   local clients → 10/10 for epp_clean_n10_seed45 round 27
+[21:50:49]   ★ NEW BEST → round=27 val_acc=0.8814 val_loss=0.3415
+[21:50:49] EPP ROUND DONE → epp_clean_n10_seed45 | 27/50 | val_acc=0.8814 | val_f1=0.8802 | best=0.8814@27 | no_improve=0 | round=52.3s | ETA≈20.0 min
+[21:50:49] EPP ROUND START → epp_clean_n10_seed45 | 28/50 | lr=0.021590
+[21:50:54]   local clients → 1/10 for epp_clean_n10_seed45 round 28
+[21:50:59]   local clients → 2/10 for epp_clean_n10_seed45 round 28
+[21:51:09]   local clients → 4/10 for epp_clean_n10_seed45 round 28
+[21:51:20]   local clients → 6/10 for epp_clean_n10_seed45 round 28
+[21:51:30]   local clients → 8/10 for epp_clean_n10_seed45 round 28
+[21:51:40]   local clients → 10/10 for epp_clean_n10_seed45 round 28
+[21:51:41]   ★ NEW BEST → round=28 val_acc=0.8856 val_loss=0.3329
+[21:51:41] EPP ROUND DONE → epp_clean_n10_seed45 | 28/50 | val_acc=0.8856 | val_f1=0.8844 | best=0.8856@28 | no_improve=0 | round=52.1s | ETA≈19.1 min
+[21:51:41] EPP ROUND START → epp_clean_n10_seed45 | 29/50 | lr=0.020048
+[21:51:46]   local clients → 1/10 for epp_clean_n10_seed45 round 29
+[21:51:51]   local clients → 2/10 for epp_clean_n10_seed45 round 29
+[21:52:02]   local clients → 4/10 for epp_clean_n10_seed45 round 29
+[21:52:12]   local clients → 6/10 for epp_clean_n10_seed45 round 29
+[21:52:22]   local clients → 8/10 for epp_clean_n10_seed45 round 29
+[21:52:32]   local clients → 10/10 for epp_clean_n10_seed45 round 29
+[21:52:33] EPP ROUND DONE → epp_clean_n10_seed45 | 29/50 | val_acc=0.8838 | val_f1=0.8825 | best=0.8856@28 | no_improve=1 | round=51.9s | ETA≈18.2 min
+[21:52:33] EPP ROUND START → epp_clean_n10_seed45 | 30/50 | lr=0.018529
+[21:52:38]   local clients → 1/10 for epp_clean_n10_seed45 round 30
+[21:52:43]   local clients → 2/10 for epp_clean_n10_seed45 round 30
+[21:52:54]   local clients → 4/10 for epp_clean_n10_seed45 round 30
+[21:53:04]   local clients → 6/10 for epp_clean_n10_seed45 round 30
+[21:53:14]   local clients → 8/10 for epp_clean_n10_seed45 round 30
+[21:53:24]   local clients → 10/10 for epp_clean_n10_seed45 round 30
+[21:53:25]   ★ NEW BEST → round=30 val_acc=0.8898 val_loss=0.3323
+[21:53:25] EPP ROUND DONE → epp_clean_n10_seed45 | 30/50 | val_acc=0.8898 | val_f1=0.8885 | best=0.8898@30 | no_improve=0 | round=52.0s | ETA≈17.4 min
+[21:53:26] RESUME SNAPSHOT → ~/Desktop/LSB_overnight/results/cifar_epp_matched/EPP_BCFL_REPRO_V4_Resume.zip | 48.8 MB
+[21:53:26] EPP ROUND START → epp_clean_n10_seed45 | 31/50 | lr=0.017039
+[21:53:31]   local clients → 1/10 for epp_clean_n10_seed45 round 31
+[21:53:36]   local clients → 2/10 for epp_clean_n10_seed45 round 31
+[21:53:47]   local clients → 4/10 for epp_clean_n10_seed45 round 31
+[21:53:57]   local clients → 6/10 for epp_clean_n10_seed45 round 31
+[21:54:07]   local clients → 8/10 for epp_clean_n10_seed45 round 31
+[21:54:18]   local clients → 10/10 for epp_clean_n10_seed45 round 31
+[21:54:18]   ★ NEW BEST → round=31 val_acc=0.8904 val_loss=0.3292
+[21:54:18] EPP ROUND DONE → epp_clean_n10_seed45 | 31/50 | val_acc=0.8904 | val_f1=0.8895 | best=0.8904@31 | no_improve=0 | round=52.1s | ETA≈16.5 min
+[21:54:18] EPP ROUND START → epp_clean_n10_seed45 | 32/50 | lr=0.015583
+[21:54:23]   local clients → 1/10 for epp_clean_n10_seed45 round 32
+[21:54:29]   local clients → 2/10 for epp_clean_n10_seed45 round 32
+[21:54:39]   local clients → 4/10 for epp_clean_n10_seed45 round 32
+[21:54:49]   local clients → 6/10 for epp_clean_n10_seed45 round 32
+[21:55:00]   local clients → 8/10 for epp_clean_n10_seed45 round 32
+[21:55:10]   local clients → 10/10 for epp_clean_n10_seed45 round 32
+[21:55:10] EPP ROUND DONE → epp_clean_n10_seed45 | 32/50 | val_acc=0.8902 | val_f1=0.8895 | best=0.8904@31 | no_improve=1 | round=52.1s | ETA≈15.6 min
+[21:55:10] EPP ROUND START → epp_clean_n10_seed45 | 33/50 | lr=0.014168
+[21:55:15]   local clients → 1/10 for epp_clean_n10_seed45 round 33
+[21:55:21]   local clients → 2/10 for epp_clean_n10_seed45 round 33
+[21:55:31]   local clients → 4/10 for epp_clean_n10_seed45 round 33
+[21:55:41]   local clients → 6/10 for epp_clean_n10_seed45 round 33
+[21:55:52]   local clients → 8/10 for epp_clean_n10_seed45 round 33
+[21:56:02]   local clients → 10/10 for epp_clean_n10_seed45 round 33
+[21:56:02]   ★ NEW BEST → round=33 val_acc=0.8914 val_loss=0.3253
+[21:56:02] EPP ROUND DONE → epp_clean_n10_seed45 | 33/50 | val_acc=0.8914 | val_f1=0.8905 | best=0.8914@33 | no_improve=0 | round=52.1s | ETA≈14.8 min
+[21:56:03] EPP ROUND START → epp_clean_n10_seed45 | 34/50 | lr=0.012799
+[21:56:08]   local clients → 1/10 for epp_clean_n10_seed45 round 34
+[21:56:13]   local clients → 2/10 for epp_clean_n10_seed45 round 34
+[21:56:23]   local clients → 4/10 for epp_clean_n10_seed45 round 34
+[21:56:33]   local clients → 6/10 for epp_clean_n10_seed45 round 34
+[21:56:43]   local clients → 8/10 for epp_clean_n10_seed45 round 34
+[21:56:54]   local clients → 10/10 for epp_clean_n10_seed45 round 34
+[21:56:54]   ★ NEW BEST → round=34 val_acc=0.8930 val_loss=0.3232
+[21:56:54] EPP ROUND DONE → epp_clean_n10_seed45 | 34/50 | val_acc=0.8930 | val_f1=0.8921 | best=0.8930@34 | no_improve=0 | round=51.9s | ETA≈13.9 min
+[21:56:54] EPP ROUND START → epp_clean_n10_seed45 | 35/50 | lr=0.011483
+[21:57:00]   local clients → 1/10 for epp_clean_n10_seed45 round 35
+[21:57:05]   local clients → 2/10 for epp_clean_n10_seed45 round 35
+[21:57:15]   local clients → 4/10 for epp_clean_n10_seed45 round 35
+[21:57:25]   local clients → 6/10 for epp_clean_n10_seed45 round 35
+[21:57:35]   local clients → 8/10 for epp_clean_n10_seed45 round 35
+[21:57:46]   local clients → 10/10 for epp_clean_n10_seed45 round 35
+[21:57:46] EPP ROUND DONE → epp_clean_n10_seed45 | 35/50 | val_acc=0.8928 | val_f1=0.8923 | best=0.8930@34 | no_improve=1 | round=52.0s | ETA≈13.0 min
+[21:57:46] EPP ROUND START → epp_clean_n10_seed45 | 36/50 | lr=0.010224
+[21:57:51]   local clients → 1/10 for epp_clean_n10_seed45 round 36
+[21:57:57]   local clients → 2/10 for epp_clean_n10_seed45 round 36
+[21:58:07]   local clients → 4/10 for epp_clean_n10_seed45 round 36
+[21:58:17]   local clients → 6/10 for epp_clean_n10_seed45 round 36
+[21:58:27]   local clients → 8/10 for epp_clean_n10_seed45 round 36
+[21:58:38]   local clients → 10/10 for epp_clean_n10_seed45 round 36
+[21:58:38]   ★ NEW BEST → round=36 val_acc=0.8960 val_loss=0.3240
+[21:58:38] EPP ROUND DONE → epp_clean_n10_seed45 | 36/50 | val_acc=0.8960 | val_f1=0.8957 | best=0.8960@36 | no_improve=0 | round=51.9s | ETA≈12.2 min
+[21:58:38] EPP ROUND START → epp_clean_n10_seed45 | 37/50 | lr=0.009029
+[21:58:43]   local clients → 1/10 for epp_clean_n10_seed45 round 37
+[21:58:48]   local clients → 2/10 for epp_clean_n10_seed45 round 37
+[21:58:59]   local clients → 4/10 for epp_clean_n10_seed45 round 37
+[21:59:09]   local clients → 6/10 for epp_clean_n10_seed45 round 37
+[21:59:19]   local clients → 8/10 for epp_clean_n10_seed45 round 37
+[21:59:30]   local clients → 10/10 for epp_clean_n10_seed45 round 37
+[21:59:30] EPP ROUND DONE → epp_clean_n10_seed45 | 37/50 | val_acc=0.8952 | val_f1=0.8948 | best=0.8960@36 | no_improve=1 | round=52.0s | ETA≈11.3 min
+[21:59:30] EPP ROUND START → epp_clean_n10_seed45 | 38/50 | lr=0.007900
+[21:59:36]   local clients → 1/10 for epp_clean_n10_seed45 round 38
+[21:59:41]   local clients → 2/10 for epp_clean_n10_seed45 round 38
+[21:59:51]   local clients → 4/10 for epp_clean_n10_seed45 round 38
+[22:00:02]   local clients → 6/10 for epp_clean_n10_seed45 round 38
+[22:00:12]   local clients → 8/10 for epp_clean_n10_seed45 round 38
+[22:00:22]   local clients → 10/10 for epp_clean_n10_seed45 round 38
+[22:00:23]   ★ NEW BEST → round=38 val_acc=0.8968 val_loss=0.3240
+[22:00:23] EPP ROUND DONE → epp_clean_n10_seed45 | 38/50 | val_acc=0.8968 | val_f1=0.8960 | best=0.8968@38 | no_improve=0 | round=52.1s | ETA≈10.4 min
+[22:00:23] EPP ROUND START → epp_clean_n10_seed45 | 39/50 | lr=0.006845
+[22:00:28]   local clients → 1/10 for epp_clean_n10_seed45 round 39
+[22:00:33]   local clients → 2/10 for epp_clean_n10_seed45 round 39
+[22:00:43]   local clients → 4/10 for epp_clean_n10_seed45 round 39
+[22:00:53]   local clients → 6/10 for epp_clean_n10_seed45 round 39
+[22:01:04]   local clients → 8/10 for epp_clean_n10_seed45 round 39
+[22:01:14]   local clients → 10/10 for epp_clean_n10_seed45 round 39
+[22:01:15]   ★ NEW BEST → round=39 val_acc=0.8978 val_loss=0.3281
+[22:01:15] EPP ROUND DONE → epp_clean_n10_seed45 | 39/50 | val_acc=0.8978 | val_f1=0.8971 | best=0.8978@39 | no_improve=0 | round=52.0s | ETA≈9.5 min
+[22:01:15] EPP ROUND START → epp_clean_n10_seed45 | 40/50 | lr=0.005865
+[22:01:20]   local clients → 1/10 for epp_clean_n10_seed45 round 40
+[22:01:25]   local clients → 2/10 for epp_clean_n10_seed45 round 40
+[22:01:35]   local clients → 4/10 for epp_clean_n10_seed45 round 40
+[22:01:45]   local clients → 6/10 for epp_clean_n10_seed45 round 40
+[22:01:56]   local clients → 8/10 for epp_clean_n10_seed45 round 40
+[22:02:06]   local clients → 10/10 for epp_clean_n10_seed45 round 40
+[22:02:07]   ★ NEW BEST → round=40 val_acc=0.8988 val_loss=0.3236
+[22:02:07] EPP ROUND DONE → epp_clean_n10_seed45 | 40/50 | val_acc=0.8988 | val_f1=0.8983 | best=0.8988@40 | no_improve=0 | round=52.3s | ETA≈8.7 min
+[22:02:08] RESUME SNAPSHOT → ~/Desktop/LSB_overnight/results/cifar_epp_matched/EPP_BCFL_REPRO_V4_Resume.zip | 48.9 MB
+[22:02:08] EPP ROUND START → epp_clean_n10_seed45 | 41/50 | lr=0.004967
+[22:02:13]   local clients → 1/10 for epp_clean_n10_seed45 round 41
+[22:02:18]   local clients → 2/10 for epp_clean_n10_seed45 round 41
+[22:02:28]   local clients → 4/10 for epp_clean_n10_seed45 round 41
+[22:02:39]   local clients → 6/10 for epp_clean_n10_seed45 round 41
+[22:02:49]   local clients → 8/10 for epp_clean_n10_seed45 round 41
+[22:02:59]   local clients → 10/10 for epp_clean_n10_seed45 round 41
+[22:03:00] EPP ROUND DONE → epp_clean_n10_seed45 | 41/50 | val_acc=0.8984 | val_f1=0.8978 | best=0.8988@40 | no_improve=1 | round=52.0s | ETA≈7.8 min
+[22:03:00] EPP ROUND START → epp_clean_n10_seed45 | 42/50 | lr=0.004153
+[22:03:05]   local clients → 1/10 for epp_clean_n10_seed45 round 42
+[22:03:10]   local clients → 2/10 for epp_clean_n10_seed45 round 42
+[22:03:21]   local clients → 4/10 for epp_clean_n10_seed45 round 42
+[22:03:31]   local clients → 6/10 for epp_clean_n10_seed45 round 42
+[22:03:41]   local clients → 8/10 for epp_clean_n10_seed45 round 42
+[22:03:51]   local clients → 10/10 for epp_clean_n10_seed45 round 42
+[22:03:52] EPP ROUND DONE → epp_clean_n10_seed45 | 42/50 | val_acc=0.8974 | val_f1=0.8967 | best=0.8988@40 | no_improve=2 | round=52.0s | ETA≈6.9 min
+[22:03:52] EPP ROUND START → epp_clean_n10_seed45 | 43/50 | lr=0.003426
+[22:03:57]   local clients → 1/10 for epp_clean_n10_seed45 round 43
+[22:04:02]   local clients → 2/10 for epp_clean_n10_seed45 round 43
+[22:04:13]   local clients → 4/10 for epp_clean_n10_seed45 round 43
+[22:04:23]   local clients → 6/10 for epp_clean_n10_seed45 round 43
+[22:04:33]   local clients → 8/10 for epp_clean_n10_seed45 round 43
+[22:04:44]   local clients → 10/10 for epp_clean_n10_seed45 round 43
+[22:04:44]   ★ NEW BEST → round=43 val_acc=0.8990 val_loss=0.3397
+[22:04:44] EPP ROUND DONE → epp_clean_n10_seed45 | 43/50 | val_acc=0.8990 | val_f1=0.8984 | best=0.8990@43 | no_improve=0 | round=52.1s | ETA≈6.1 min
+[22:04:44] EPP ROUND START → epp_clean_n10_seed45 | 44/50 | lr=0.002791
+[22:04:50]   local clients → 1/10 for epp_clean_n10_seed45 round 44
+[22:04:55]   local clients → 2/10 for epp_clean_n10_seed45 round 44
+[22:05:05]   local clients → 4/10 for epp_clean_n10_seed45 round 44
+[22:05:15]   local clients → 6/10 for epp_clean_n10_seed45 round 44
+[22:05:26]   local clients → 8/10 for epp_clean_n10_seed45 round 44
+[22:05:36]   local clients → 10/10 for epp_clean_n10_seed45 round 44
+[22:05:37] EPP ROUND DONE → epp_clean_n10_seed45 | 44/50 | val_acc=0.8978 | val_f1=0.8972 | best=0.8990@43 | no_improve=1 | round=52.3s | ETA≈5.2 min
+[22:05:37] EPP ROUND START → epp_clean_n10_seed45 | 45/50 | lr=0.002248
+[22:05:42]   local clients → 1/10 for epp_clean_n10_seed45 round 45
+[22:05:47]   local clients → 2/10 for epp_clean_n10_seed45 round 45
+[22:05:57]   local clients → 4/10 for epp_clean_n10_seed45 round 45
+[22:06:07]   local clients → 6/10 for epp_clean_n10_seed45 round 45
+[22:06:18]   local clients → 8/10 for epp_clean_n10_seed45 round 45
+[22:06:28]   local clients → 10/10 for epp_clean_n10_seed45 round 45
+[22:06:29] EPP ROUND DONE → epp_clean_n10_seed45 | 45/50 | val_acc=0.8988 | val_f1=0.8982 | best=0.8990@43 | no_improve=2 | round=52.1s | ETA≈4.3 min
+[22:06:29] EPP ROUND START → epp_clean_n10_seed45 | 46/50 | lr=0.001801
+[22:06:34]   local clients → 1/10 for epp_clean_n10_seed45 round 46
+[22:06:39]   local clients → 2/10 for epp_clean_n10_seed45 round 46
+[22:06:49]   local clients → 4/10 for epp_clean_n10_seed45 round 46
+[22:07:00]   local clients → 6/10 for epp_clean_n10_seed45 round 46
+[22:07:10]   local clients → 8/10 for epp_clean_n10_seed45 round 46
+[22:07:20]   local clients → 10/10 for epp_clean_n10_seed45 round 46
+[22:07:21] EPP ROUND DONE → epp_clean_n10_seed45 | 46/50 | val_acc=0.8976 | val_f1=0.8971 | best=0.8990@43 | no_improve=3 | round=52.1s | ETA≈3.5 min
+[22:07:21] EPP ROUND START → epp_clean_n10_seed45 | 47/50 | lr=0.001452
+[22:07:26]   local clients → 1/10 for epp_clean_n10_seed45 round 47
+[22:07:31]   local clients → 2/10 for epp_clean_n10_seed45 round 47
+[22:07:41]   local clients → 4/10 for epp_clean_n10_seed45 round 47
+[22:07:52]   local clients → 6/10 for epp_clean_n10_seed45 round 47
+[22:08:02]   local clients → 8/10 for epp_clean_n10_seed45 round 47
+[22:08:12]   local clients → 10/10 for epp_clean_n10_seed45 round 47
+[22:08:13] EPP ROUND DONE → epp_clean_n10_seed45 | 47/50 | val_acc=0.8964 | val_f1=0.8959 | best=0.8990@43 | no_improve=4 | round=52.2s | ETA≈2.6 min
+[22:08:13] EPP ROUND START → epp_clean_n10_seed45 | 48/50 | lr=0.001201
+[22:08:18]   local clients → 1/10 for epp_clean_n10_seed45 round 48
+[22:08:23]   local clients → 2/10 for epp_clean_n10_seed45 round 48
+[22:08:34]   local clients → 4/10 for epp_clean_n10_seed45 round 48
+[22:08:44]   local clients → 6/10 for epp_clean_n10_seed45 round 48
+[22:08:54]   local clients → 8/10 for epp_clean_n10_seed45 round 48
+[22:09:04]   local clients → 10/10 for epp_clean_n10_seed45 round 48
+[22:09:05] EPP ROUND DONE → epp_clean_n10_seed45 | 48/50 | val_acc=0.8976 | val_f1=0.8971 | best=0.8990@43 | no_improve=5 | round=51.9s | ETA≈1.7 min
+[22:09:05] EPP ROUND START → epp_clean_n10_seed45 | 49/50 | lr=0.001050
+[22:09:10]   local clients → 1/10 for epp_clean_n10_seed45 round 49
+[22:09:15]   local clients → 2/10 for epp_clean_n10_seed45 round 49
+[22:09:25]   local clients → 4/10 for epp_clean_n10_seed45 round 49
+[22:09:35]   local clients → 6/10 for epp_clean_n10_seed45 round 49
+[22:09:46]   local clients → 8/10 for epp_clean_n10_seed45 round 49
+[22:09:56]   local clients → 10/10 for epp_clean_n10_seed45 round 49
+[22:09:57] EPP ROUND DONE → epp_clean_n10_seed45 | 49/50 | val_acc=0.8950 | val_f1=0.8945 | best=0.8990@43 | no_improve=6 | round=52.0s | ETA≈0.9 min
+[22:09:57] EPP ROUND START → epp_clean_n10_seed45 | 50/50 | lr=0.001000
+[22:10:02]   local clients → 1/10 for epp_clean_n10_seed45 round 50
+[22:10:07]   local clients → 2/10 for epp_clean_n10_seed45 round 50
+[22:10:18]   local clients → 4/10 for epp_clean_n10_seed45 round 50
+[22:10:28]   local clients → 6/10 for epp_clean_n10_seed45 round 50
+[22:10:38]   local clients → 8/10 for epp_clean_n10_seed45 round 50
+[22:10:48]   local clients → 10/10 for epp_clean_n10_seed45 round 50
+[22:10:49] EPP ROUND DONE → epp_clean_n10_seed45 | 50/50 | val_acc=0.8970 | val_f1=0.8964 | best=0.8990@43 | no_improve=7 | round=52.0s | ETA≈0.0 min
+[22:10:50] RESUME SNAPSHOT → ~/Desktop/LSB_overnight/results/cifar_epp_matched/EPP_BCFL_REPRO_V4_Resume.zip | 48.9 MB
+[22:10:50] EPP RUN COMPLETE → epp_clean_n10_seed45 | BEST round=43 val_acc=0.8990
+RESULT epp_clean_n10_seed45 {'test_accuracy': 0.8909, 'test_f1': 0.8896634386727733}
+[22:10:52] EPP RUN START → epp_clean_n10_seed46 | clients=10 | epsilon=inf | attack=NONE | aggregation=AMA
+[22:10:52] EPP ROUND START → epp_clean_n10_seed46 | 1/50 | lr=0.050000
+[22:10:57]   local clients → 1/10 for epp_clean_n10_seed46 round 1
+[22:11:03]   local clients → 2/10 for epp_clean_n10_seed46 round 1
+[22:11:13]   local clients → 4/10 for epp_clean_n10_seed46 round 1
+[22:11:23]   local clients → 6/10 for epp_clean_n10_seed46 round 1
+[22:11:33]   local clients → 8/10 for epp_clean_n10_seed46 round 1
+[22:11:44]   local clients → 10/10 for epp_clean_n10_seed46 round 1
+[22:11:44]   ★ NEW BEST → round=1 val_acc=0.1934 val_loss=2.1249
+[22:11:44] EPP ROUND DONE → epp_clean_n10_seed46 | 1/50 | val_acc=0.1934 | val_f1=0.1078 | best=0.1934@1 | no_improve=0 | round=52.1s | ETA≈42.5 min
+[22:11:44] EPP ROUND START → epp_clean_n10_seed46 | 2/50 | lr=0.049950
+[22:11:49]   local clients → 1/10 for epp_clean_n10_seed46 round 2
+[22:11:55]   local clients → 2/10 for epp_clean_n10_seed46 round 2
+[22:12:05]   local clients → 4/10 for epp_clean_n10_seed46 round 2
+[22:12:15]   local clients → 6/10 for epp_clean_n10_seed46 round 2
+[22:12:26]   local clients → 8/10 for epp_clean_n10_seed46 round 2
+[22:12:36]   local clients → 10/10 for epp_clean_n10_seed46 round 2
+[22:12:36]   ★ NEW BEST → round=2 val_acc=0.3474 val_loss=1.7103
+[22:12:36] EPP ROUND DONE → epp_clean_n10_seed46 | 2/50 | val_acc=0.3474 | val_f1=0.3013 | best=0.3474@2 | no_improve=0 | round=51.9s | ETA≈41.6 min
+[22:12:36] EPP ROUND START → epp_clean_n10_seed46 | 3/50 | lr=0.049799
+[22:12:42]   local clients → 1/10 for epp_clean_n10_seed46 round 3
+[22:12:47]   local clients → 2/10 for epp_clean_n10_seed46 round 3
+[22:12:57]   local clients → 4/10 for epp_clean_n10_seed46 round 3
+[22:13:07]   local clients → 6/10 for epp_clean_n10_seed46 round 3
+[22:13:17]   local clients → 8/10 for epp_clean_n10_seed46 round 3
+[22:13:28]   local clients → 10/10 for epp_clean_n10_seed46 round 3
+[22:13:29]   ★ NEW BEST → round=3 val_acc=0.3992 val_loss=1.5791
+[22:13:29] EPP ROUND DONE → epp_clean_n10_seed46 | 3/50 | val_acc=0.3992 | val_f1=0.3645 | best=0.3992@3 | no_improve=0 | round=52.2s | ETA≈40.8 min
+[22:13:29] EPP ROUND START → epp_clean_n10_seed46 | 4/50 | lr=0.049548
+[22:13:33]   local clients → 1/10 for epp_clean_n10_seed46 round 4
+[22:13:38]   local clients → 2/10 for epp_clean_n10_seed46 round 4
+[22:13:48]   local clients → 4/10 for epp_clean_n10_seed46 round 4
+[22:13:59]   local clients → 6/10 for epp_clean_n10_seed46 round 4
+[22:14:09]   local clients → 8/10 for epp_clean_n10_seed46 round 4
+[22:14:20]   local clients → 10/10 for epp_clean_n10_seed46 round 4
+[22:14:21]   ★ NEW BEST → round=4 val_acc=0.4602 val_loss=1.4396
+[22:14:21] EPP ROUND DONE → epp_clean_n10_seed46 | 4/50 | val_acc=0.4602 | val_f1=0.4415 | best=0.4602@4 | no_improve=0 | round=52.0s | ETA≈39.9 min
+[22:14:21] EPP ROUND START → epp_clean_n10_seed46 | 5/50 | lr=0.049199
+[22:14:26]   local clients → 1/10 for epp_clean_n10_seed46 round 5
+[22:14:31]   local clients → 2/10 for epp_clean_n10_seed46 round 5
+[22:14:42]   local clients → 4/10 for epp_clean_n10_seed46 round 5
+[22:14:52]   local clients → 6/10 for epp_clean_n10_seed46 round 5
+[22:15:02]   local clients → 8/10 for epp_clean_n10_seed46 round 5
+[22:15:12]   local clients → 10/10 for epp_clean_n10_seed46 round 5
+[22:15:13]   ★ NEW BEST → round=5 val_acc=0.5480 val_loss=1.2129
+[22:15:13] EPP ROUND DONE → epp_clean_n10_seed46 | 5/50 | val_acc=0.5480 | val_f1=0.5340 | best=0.5480@5 | no_improve=0 | round=52.3s | ETA≈39.1 min
+[22:15:13] EPP ROUND START → epp_clean_n10_seed46 | 6/50 | lr=0.048752
+[22:15:18]   local clients → 1/10 for epp_clean_n10_seed46 round 6
+[22:15:23]   local clients → 2/10 for epp_clean_n10_seed46 round 6
+[22:15:34]   local clients → 4/10 for epp_clean_n10_seed46 round 6
+[22:15:44]   local clients → 6/10 for epp_clean_n10_seed46 round 6
+[22:15:54]   local clients → 8/10 for epp_clean_n10_seed46 round 6
+[22:16:04]   local clients → 10/10 for epp_clean_n10_seed46 round 6
+[22:16:05]   ★ NEW BEST → round=6 val_acc=0.5930 val_loss=1.0963
+[22:16:05] EPP ROUND DONE → epp_clean_n10_seed46 | 6/50 | val_acc=0.5930 | val_f1=0.5814 | best=0.5930@6 | no_improve=0 | round=52.2s | ETA≈38.2 min
+[22:16:05] EPP ROUND START → epp_clean_n10_seed46 | 7/50 | lr=0.048209
+[22:16:10]   local clients → 1/10 for epp_clean_n10_seed46 round 7
+[22:16:16]   local clients → 2/10 for epp_clean_n10_seed46 round 7
+[22:16:26]   local clients → 4/10 for epp_clean_n10_seed46 round 7
+[22:16:36]   local clients → 6/10 for epp_clean_n10_seed46 round 7
+[22:16:46]   local clients → 8/10 for epp_clean_n10_seed46 round 7
+[22:16:56]   local clients → 10/10 for epp_clean_n10_seed46 round 7
+[22:16:57]   ★ NEW BEST → round=7 val_acc=0.6490 val_loss=0.9752
+[22:16:57] EPP ROUND DONE → epp_clean_n10_seed46 | 7/50 | val_acc=0.6490 | val_f1=0.6460 | best=0.6490@7 | no_improve=0 | round=52.1s | ETA≈37.3 min
+[22:16:57] EPP ROUND START → epp_clean_n10_seed46 | 8/50 | lr=0.047574
+[22:17:02]   local clients → 1/10 for epp_clean_n10_seed46 round 8
+[22:17:07]   local clients → 2/10 for epp_clean_n10_seed46 round 8
+[22:17:18]   local clients → 4/10 for epp_clean_n10_seed46 round 8
+[22:17:28]   local clients → 6/10 for epp_clean_n10_seed46 round 8
+[22:17:38]   local clients → 8/10 for epp_clean_n10_seed46 round 8
+[22:17:49]   local clients → 10/10 for epp_clean_n10_seed46 round 8
+[22:17:49]   ★ NEW BEST → round=8 val_acc=0.6748 val_loss=0.9135
+[22:17:49] EPP ROUND DONE → epp_clean_n10_seed46 | 8/50 | val_acc=0.6748 | val_f1=0.6718 | best=0.6748@8 | no_improve=0 | round=52.0s | ETA≈36.5 min
+[22:17:49] EPP ROUND START → epp_clean_n10_seed46 | 9/50 | lr=0.046847
+[22:17:54]   local clients → 1/10 for epp_clean_n10_seed46 round 9
+[22:18:00]   local clients → 2/10 for epp_clean_n10_seed46 round 9
+[22:18:10]   local clients → 4/10 for epp_clean_n10_seed46 round 9
+[22:18:20]   local clients → 6/10 for epp_clean_n10_seed46 round 9
+[22:18:30]   local clients → 8/10 for epp_clean_n10_seed46 round 9
+[22:18:41]   local clients → 10/10 for epp_clean_n10_seed46 round 9
+[22:18:41]   ★ NEW BEST → round=9 val_acc=0.7098 val_loss=0.8202
+[22:18:41] EPP ROUND DONE → epp_clean_n10_seed46 | 9/50 | val_acc=0.7098 | val_f1=0.7061 | best=0.7098@9 | no_improve=0 | round=52.1s | ETA≈35.6 min
+[22:18:41] EPP ROUND START → epp_clean_n10_seed46 | 10/50 | lr=0.046033
+[22:18:46]   local clients → 1/10 for epp_clean_n10_seed46 round 10
+[22:18:52]   local clients → 2/10 for epp_clean_n10_seed46 round 10
+[22:19:02]   local clients → 4/10 for epp_clean_n10_seed46 round 10
+[22:19:13]   local clients → 6/10 for epp_clean_n10_seed46 round 10
+[22:19:23]   local clients → 8/10 for epp_clean_n10_seed46 round 10
+[22:19:33]   local clients → 10/10 for epp_clean_n10_seed46 round 10
+[22:19:33]   ★ NEW BEST → round=10 val_acc=0.7122 val_loss=0.8059
+[22:19:33] EPP ROUND DONE → epp_clean_n10_seed46 | 10/50 | val_acc=0.7122 | val_f1=0.7099 | best=0.7122@10 | no_improve=0 | round=52.1s | ETA≈34.7 min
+[22:19:35] RESUME SNAPSHOT → ~/Desktop/LSB_overnight/results/cifar_epp_matched/EPP_BCFL_REPRO_V4_Resume.zip | 58.5 MB
+[22:19:35] EPP ROUND START → epp_clean_n10_seed46 | 11/50 | lr=0.045135
+[22:19:40]   local clients → 1/10 for epp_clean_n10_seed46 round 11
+[22:19:46]   local clients → 2/10 for epp_clean_n10_seed46 round 11
+[22:19:56]   local clients → 4/10 for epp_clean_n10_seed46 round 11
+[22:20:06]   local clients → 6/10 for epp_clean_n10_seed46 round 11
+[22:20:16]   local clients → 8/10 for epp_clean_n10_seed46 round 11
+[22:20:27]   local clients → 10/10 for epp_clean_n10_seed46 round 11
+[22:20:27]   ★ NEW BEST → round=11 val_acc=0.7472 val_loss=0.7113
+[22:20:27] EPP ROUND DONE → epp_clean_n10_seed46 | 11/50 | val_acc=0.7472 | val_f1=0.7459 | best=0.7472@11 | no_improve=0 | round=52.4s | ETA≈33.9 min
+[22:20:27] EPP ROUND START → epp_clean_n10_seed46 | 12/50 | lr=0.044155
+[22:20:32]   local clients → 1/10 for epp_clean_n10_seed46 round 12
+[22:20:38]   local clients → 2/10 for epp_clean_n10_seed46 round 12
+[22:20:48]   local clients → 4/10 for epp_clean_n10_seed46 round 12
+[22:20:58]   local clients → 6/10 for epp_clean_n10_seed46 round 12
+[22:21:09]   local clients → 8/10 for epp_clean_n10_seed46 round 12
+[22:21:19]   local clients → 10/10 for epp_clean_n10_seed46 round 12
+[22:21:19]   ★ NEW BEST → round=12 val_acc=0.7618 val_loss=0.6743
+[22:21:19] EPP ROUND DONE → epp_clean_n10_seed46 | 12/50 | val_acc=0.7618 | val_f1=0.7597 | best=0.7618@12 | no_improve=0 | round=52.0s | ETA≈33.0 min
+[22:21:19] EPP ROUND START → epp_clean_n10_seed46 | 13/50 | lr=0.043100
+[22:21:24]   local clients → 1/10 for epp_clean_n10_seed46 round 13
+[22:21:29]   local clients → 2/10 for epp_clean_n10_seed46 round 13
+[22:21:40]   local clients → 4/10 for epp_clean_n10_seed46 round 13
+[22:21:51]   local clients → 6/10 for epp_clean_n10_seed46 round 13
+[22:22:01]   local clients → 8/10 for epp_clean_n10_seed46 round 13
+[22:22:11]   local clients → 10/10 for epp_clean_n10_seed46 round 13
+[22:22:11]   ★ NEW BEST → round=13 val_acc=0.7750 val_loss=0.6431
+[22:22:11] EPP ROUND DONE → epp_clean_n10_seed46 | 13/50 | val_acc=0.7750 | val_f1=0.7733 | best=0.7750@13 | no_improve=0 | round=52.1s | ETA≈32.1 min
+[22:22:11] EPP ROUND START → epp_clean_n10_seed46 | 14/50 | lr=0.041971
+[22:22:17]   local clients → 1/10 for epp_clean_n10_seed46 round 14
+[22:22:22]   local clients → 2/10 for epp_clean_n10_seed46 round 14
+[22:22:32]   local clients → 4/10 for epp_clean_n10_seed46 round 14
+[22:22:43]   local clients → 6/10 for epp_clean_n10_seed46 round 14
+[22:22:53]   local clients → 8/10 for epp_clean_n10_seed46 round 14
+[22:23:03]   local clients → 10/10 for epp_clean_n10_seed46 round 14
+[22:23:04]   ★ NEW BEST → round=14 val_acc=0.7862 val_loss=0.6011
+[22:23:04] EPP ROUND DONE → epp_clean_n10_seed46 | 14/50 | val_acc=0.7862 | val_f1=0.7855 | best=0.7862@14 | no_improve=0 | round=52.3s | ETA≈31.3 min
+[22:23:04] EPP ROUND START → epp_clean_n10_seed46 | 15/50 | lr=0.040776
+[22:23:09]   local clients → 1/10 for epp_clean_n10_seed46 round 15
+[22:23:14]   local clients → 2/10 for epp_clean_n10_seed46 round 15
+[22:23:25]   local clients → 4/10 for epp_clean_n10_seed46 round 15
+[22:23:34]   local clients → 6/10 for epp_clean_n10_seed46 round 15
+[22:23:45]   local clients → 8/10 for epp_clean_n10_seed46 round 15
+[22:23:55]   local clients → 10/10 for epp_clean_n10_seed46 round 15
+[22:23:56]   ★ NEW BEST → round=15 val_acc=0.7992 val_loss=0.5732
+[22:23:56] EPP ROUND DONE → epp_clean_n10_seed46 | 15/50 | val_acc=0.7992 | val_f1=0.7985 | best=0.7992@15 | no_improve=0 | round=51.9s | ETA≈30.4 min
+[22:23:56] EPP ROUND START → epp_clean_n10_seed46 | 16/50 | lr=0.039517
+[22:24:01]   local clients → 1/10 for epp_clean_n10_seed46 round 16
+[22:24:06]   local clients → 2/10 for epp_clean_n10_seed46 round 16
+[22:24:17]   local clients → 4/10 for epp_clean_n10_seed46 round 16
+[22:24:27]   local clients → 6/10 for epp_clean_n10_seed46 round 16
+[22:24:37]   local clients → 8/10 for epp_clean_n10_seed46 round 16
+[22:24:47]   local clients → 10/10 for epp_clean_n10_seed46 round 16
+[22:24:48]   ★ NEW BEST → round=16 val_acc=0.8024 val_loss=0.5623
+[22:24:48] EPP ROUND DONE → epp_clean_n10_seed46 | 16/50 | val_acc=0.8024 | val_f1=0.8026 | best=0.8024@16 | no_improve=0 | round=51.9s | ETA≈29.5 min
+[22:24:48] EPP ROUND START → epp_clean_n10_seed46 | 17/50 | lr=0.038201
+[22:24:52]   local clients → 1/10 for epp_clean_n10_seed46 round 17
+[22:24:57]   local clients → 2/10 for epp_clean_n10_seed46 round 17
+[22:25:08]   local clients → 4/10 for epp_clean_n10_seed46 round 17
+[22:25:18]   local clients → 6/10 for epp_clean_n10_seed46 round 17
+[22:25:29]   local clients → 8/10 for epp_clean_n10_seed46 round 17
+[22:25:39]   local clients → 10/10 for epp_clean_n10_seed46 round 17
+[22:25:39]   ★ NEW BEST → round=17 val_acc=0.8186 val_loss=0.5181
+[22:25:39] EPP ROUND DONE → epp_clean_n10_seed46 | 17/50 | val_acc=0.8186 | val_f1=0.8171 | best=0.8186@17 | no_improve=0 | round=51.9s | ETA≈28.6 min
+[22:25:40] EPP ROUND START → epp_clean_n10_seed46 | 18/50 | lr=0.036832
+[22:25:45]   local clients → 1/10 for epp_clean_n10_seed46 round 18
+[22:25:50]   local clients → 2/10 for epp_clean_n10_seed46 round 18
+[22:26:00]   local clients → 4/10 for epp_clean_n10_seed46 round 18
+[22:26:10]   local clients → 6/10 for epp_clean_n10_seed46 round 18
+[22:26:20]   local clients → 8/10 for epp_clean_n10_seed46 round 18
+[22:26:31]   local clients → 10/10 for epp_clean_n10_seed46 round 18
+[22:26:31]   ★ NEW BEST → round=18 val_acc=0.8254 val_loss=0.5100
+[22:26:31] EPP ROUND DONE → epp_clean_n10_seed46 | 18/50 | val_acc=0.8254 | val_f1=0.8245 | best=0.8254@18 | no_improve=0 | round=52.0s | ETA≈27.8 min
+[22:26:32] EPP ROUND START → epp_clean_n10_seed46 | 19/50 | lr=0.035417
+[22:26:37]   local clients → 1/10 for epp_clean_n10_seed46 round 19
+[22:26:42]   local clients → 2/10 for epp_clean_n10_seed46 round 19
+[22:26:52]   local clients → 4/10 for epp_clean_n10_seed46 round 19
+[22:27:02]   local clients → 6/10 for epp_clean_n10_seed46 round 19
+[22:27:13]   local clients → 8/10 for epp_clean_n10_seed46 round 19
+[22:27:23]   local clients → 10/10 for epp_clean_n10_seed46 round 19
+[22:27:23]   ★ NEW BEST → round=19 val_acc=0.8338 val_loss=0.4819
+[22:27:23] EPP ROUND DONE → epp_clean_n10_seed46 | 19/50 | val_acc=0.8338 | val_f1=0.8334 | best=0.8338@19 | no_improve=0 | round=52.0s | ETA≈26.9 min
+[22:27:24] EPP ROUND START → epp_clean_n10_seed46 | 20/50 | lr=0.033961
+[22:27:29]   local clients → 1/10 for epp_clean_n10_seed46 round 20
+[22:27:34]   local clients → 2/10 for epp_clean_n10_seed46 round 20
+[22:27:44]   local clients → 4/10 for epp_clean_n10_seed46 round 20
+[22:27:54]   local clients → 6/10 for epp_clean_n10_seed46 round 20
+[22:28:04]   local clients → 8/10 for epp_clean_n10_seed46 round 20
+[22:28:15]   local clients → 10/10 for epp_clean_n10_seed46 round 20
+[22:28:15] EPP ROUND DONE → epp_clean_n10_seed46 | 20/50 | val_acc=0.8306 | val_f1=0.8308 | best=0.8338@19 | no_improve=1 | round=51.9s | ETA≈26.0 min
+[22:28:17] RESUME SNAPSHOT → ~/Desktop/LSB_overnight/results/cifar_epp_matched/EPP_BCFL_REPRO_V4_Resume.zip | 58.6 MB
+[22:28:17] EPP ROUND START → epp_clean_n10_seed46 | 21/50 | lr=0.032471
+[22:28:22]   local clients → 1/10 for epp_clean_n10_seed46 round 21
+[22:28:27]   local clients → 2/10 for epp_clean_n10_seed46 round 21
+[22:28:38]   local clients → 4/10 for epp_clean_n10_seed46 round 21
+[22:28:48]   local clients → 6/10 for epp_clean_n10_seed46 round 21
+[22:28:58]   local clients → 8/10 for epp_clean_n10_seed46 round 21
+[22:29:08]   local clients → 10/10 for epp_clean_n10_seed46 round 21
+[22:29:09]   ★ NEW BEST → round=21 val_acc=0.8450 val_loss=0.4480
+[22:29:09] EPP ROUND DONE → epp_clean_n10_seed46 | 21/50 | val_acc=0.8450 | val_f1=0.8447 | best=0.8450@21 | no_improve=0 | round=52.0s | ETA≈25.2 min
+[22:29:09] EPP ROUND START → epp_clean_n10_seed46 | 22/50 | lr=0.030952
+[22:29:14]   local clients → 1/10 for epp_clean_n10_seed46 round 22
+[22:29:19]   local clients → 2/10 for epp_clean_n10_seed46 round 22
+[22:29:29]   local clients → 4/10 for epp_clean_n10_seed46 round 22
+[22:29:40]   local clients → 6/10 for epp_clean_n10_seed46 round 22
+[22:29:50]   local clients → 8/10 for epp_clean_n10_seed46 round 22
+[22:30:00]   local clients → 10/10 for epp_clean_n10_seed46 round 22
+[22:30:01] EPP ROUND DONE → epp_clean_n10_seed46 | 22/50 | val_acc=0.8408 | val_f1=0.8410 | best=0.8450@21 | no_improve=1 | round=52.3s | ETA≈24.3 min
+[22:30:01] EPP ROUND START → epp_clean_n10_seed46 | 23/50 | lr=0.029410
+[22:30:07]   local clients → 1/10 for epp_clean_n10_seed46 round 23
+[22:30:12]   local clients → 2/10 for epp_clean_n10_seed46 round 23
+[22:30:22]   local clients → 4/10 for epp_clean_n10_seed46 round 23
+[22:30:33]   local clients → 6/10 for epp_clean_n10_seed46 round 23
+[22:30:43]   local clients → 8/10 for epp_clean_n10_seed46 round 23
+[22:30:53]   local clients → 10/10 for epp_clean_n10_seed46 round 23
+[22:30:53]   ★ NEW BEST → round=23 val_acc=0.8476 val_loss=0.4364
+[22:30:53] EPP ROUND DONE → epp_clean_n10_seed46 | 23/50 | val_acc=0.8476 | val_f1=0.8463 | best=0.8476@23 | no_improve=0 | round=52.2s | ETA≈23.4 min
+[22:30:53] EPP ROUND START → epp_clean_n10_seed46 | 24/50 | lr=0.027853
+[22:30:59]   local clients → 1/10 for epp_clean_n10_seed46 round 24
+[22:31:04]   local clients → 2/10 for epp_clean_n10_seed46 round 24
+[22:31:14]   local clients → 4/10 for epp_clean_n10_seed46 round 24
+[22:31:24]   local clients → 6/10 for epp_clean_n10_seed46 round 24
+[22:31:34]   local clients → 8/10 for epp_clean_n10_seed46 round 24
+[22:31:45]   local clients → 10/10 for epp_clean_n10_seed46 round 24
+[22:31:45]   ★ NEW BEST → round=24 val_acc=0.8544 val_loss=0.4264
+[22:31:45] EPP ROUND DONE → epp_clean_n10_seed46 | 24/50 | val_acc=0.8544 | val_f1=0.8535 | best=0.8544@24 | no_improve=0 | round=51.9s | ETA≈22.6 min
+[22:31:45] EPP ROUND START → epp_clean_n10_seed46 | 25/50 | lr=0.026285
+[22:31:50]   local clients → 1/10 for epp_clean_n10_seed46 round 25
+[22:31:56]   local clients → 2/10 for epp_clean_n10_seed46 round 25
+[22:32:06]   local clients → 4/10 for epp_clean_n10_seed46 round 25
+[22:32:16]   local clients → 6/10 for epp_clean_n10_seed46 round 25
+[22:32:27]   local clients → 8/10 for epp_clean_n10_seed46 round 25
+[22:32:37]   local clients → 10/10 for epp_clean_n10_seed46 round 25
+[22:32:37] EPP ROUND DONE → epp_clean_n10_seed46 | 25/50 | val_acc=0.8506 | val_f1=0.8503 | best=0.8544@24 | no_improve=1 | round=51.9s | ETA≈21.7 min
+[22:32:37] EPP ROUND START → epp_clean_n10_seed46 | 26/50 | lr=0.024715
+[22:32:42]   local clients → 1/10 for epp_clean_n10_seed46 round 26
+[22:32:48]   local clients → 2/10 for epp_clean_n10_seed46 round 26
+[22:32:58]   local clients → 4/10 for epp_clean_n10_seed46 round 26
+[22:33:08]   local clients → 6/10 for epp_clean_n10_seed46 round 26
+[22:33:18]   local clients → 8/10 for epp_clean_n10_seed46 round 26
+[22:33:29]   local clients → 10/10 for epp_clean_n10_seed46 round 26
+[22:33:30]   ★ NEW BEST → round=26 val_acc=0.8562 val_loss=0.4215
+[22:33:30] EPP ROUND DONE → epp_clean_n10_seed46 | 26/50 | val_acc=0.8562 | val_f1=0.8556 | best=0.8562@26 | no_improve=0 | round=52.4s | ETA≈20.8 min
+[22:33:30] EPP ROUND START → epp_clean_n10_seed46 | 27/50 | lr=0.023147
+[22:33:35]   local clients → 1/10 for epp_clean_n10_seed46 round 27
+[22:33:40]   local clients → 2/10 for epp_clean_n10_seed46 round 27
+[22:33:50]   local clients → 4/10 for epp_clean_n10_seed46 round 27
+[22:34:01]   local clients → 6/10 for epp_clean_n10_seed46 round 27
+[22:34:11]   local clients → 8/10 for epp_clean_n10_seed46 round 27
+[22:34:21]   local clients → 10/10 for epp_clean_n10_seed46 round 27
+[22:34:22]   ★ NEW BEST → round=27 val_acc=0.8674 val_loss=0.3883
+[22:34:22] EPP ROUND DONE → epp_clean_n10_seed46 | 27/50 | val_acc=0.8674 | val_f1=0.8678 | best=0.8674@27 | no_improve=0 | round=51.9s | ETA≈20.0 min
+[22:34:22] EPP ROUND START → epp_clean_n10_seed46 | 28/50 | lr=0.021590
+[22:34:27]   local clients → 1/10 for epp_clean_n10_seed46 round 28
+[22:34:32]   local clients → 2/10 for epp_clean_n10_seed46 round 28
+[22:34:42]   local clients → 4/10 for epp_clean_n10_seed46 round 28
+[22:34:52]   local clients → 6/10 for epp_clean_n10_seed46 round 28
+[22:35:03]   local clients → 8/10 for epp_clean_n10_seed46 round 28
+[22:35:13]   local clients → 10/10 for epp_clean_n10_seed46 round 28
+[22:35:14] EPP ROUND DONE → epp_clean_n10_seed46 | 28/50 | val_acc=0.8668 | val_f1=0.8660 | best=0.8674@27 | no_improve=1 | round=52.2s | ETA≈19.1 min
+[22:35:14] EPP ROUND START → epp_clean_n10_seed46 | 29/50 | lr=0.020048
+[22:35:19]   local clients → 1/10 for epp_clean_n10_seed46 round 29
+[22:35:24]   local clients → 2/10 for epp_clean_n10_seed46 round 29
+[22:35:34]   local clients → 4/10 for epp_clean_n10_seed46 round 29
+[22:35:45]   local clients → 6/10 for epp_clean_n10_seed46 round 29
+[22:35:55]   local clients → 8/10 for epp_clean_n10_seed46 round 29
+[22:36:05]   local clients → 10/10 for epp_clean_n10_seed46 round 29
+[22:36:06] EPP ROUND DONE → epp_clean_n10_seed46 | 29/50 | val_acc=0.8606 | val_f1=0.8604 | best=0.8674@27 | no_improve=2 | round=52.0s | ETA≈18.2 min
+[22:36:06] EPP ROUND START → epp_clean_n10_seed46 | 30/50 | lr=0.018529
+[22:36:11]   local clients → 1/10 for epp_clean_n10_seed46 round 30
+[22:36:16]   local clients → 2/10 for epp_clean_n10_seed46 round 30
+[22:36:26]   local clients → 4/10 for epp_clean_n10_seed46 round 30
+[22:36:36]   local clients → 6/10 for epp_clean_n10_seed46 round 30
+[22:36:47]   local clients → 8/10 for epp_clean_n10_seed46 round 30
+[22:36:57]   local clients → 10/10 for epp_clean_n10_seed46 round 30
+[22:36:58]   ★ NEW BEST → round=30 val_acc=0.8684 val_loss=0.3889
+[22:36:58] EPP ROUND DONE → epp_clean_n10_seed46 | 30/50 | val_acc=0.8684 | val_f1=0.8683 | best=0.8684@30 | no_improve=0 | round=52.2s | ETA≈17.4 min
+[22:36:59] RESUME SNAPSHOT → ~/Desktop/LSB_overnight/results/cifar_epp_matched/EPP_BCFL_REPRO_V4_Resume.zip | 58.6 MB
+[22:36:59] EPP ROUND START → epp_clean_n10_seed46 | 31/50 | lr=0.017039
+[22:37:05]   local clients → 1/10 for epp_clean_n10_seed46 round 31
+[22:37:10]   local clients → 2/10 for epp_clean_n10_seed46 round 31
+[22:37:21]   local clients → 4/10 for epp_clean_n10_seed46 round 31
+[22:37:31]   local clients → 6/10 for epp_clean_n10_seed46 round 31
+[22:37:41]   local clients → 8/10 for epp_clean_n10_seed46 round 31
+[22:37:51]   local clients → 10/10 for epp_clean_n10_seed46 round 31
+[22:37:52]   ★ NEW BEST → round=31 val_acc=0.8734 val_loss=0.3700
+[22:37:52] EPP ROUND DONE → epp_clean_n10_seed46 | 31/50 | val_acc=0.8734 | val_f1=0.8733 | best=0.8734@31 | no_improve=0 | round=52.3s | ETA≈16.5 min
+[22:37:52] EPP ROUND START → epp_clean_n10_seed46 | 32/50 | lr=0.015583
+[22:37:57]   local clients → 1/10 for epp_clean_n10_seed46 round 32
+[22:38:02]   local clients → 2/10 for epp_clean_n10_seed46 round 32
+[22:38:13]   local clients → 4/10 for epp_clean_n10_seed46 round 32
+[22:38:23]   local clients → 6/10 for epp_clean_n10_seed46 round 32
+[22:38:33]   local clients → 8/10 for epp_clean_n10_seed46 round 32
+[22:38:43]   local clients → 10/10 for epp_clean_n10_seed46 round 32
+[22:38:44]   ★ NEW BEST → round=32 val_acc=0.8764 val_loss=0.3583
+[22:38:44] EPP ROUND DONE → epp_clean_n10_seed46 | 32/50 | val_acc=0.8764 | val_f1=0.8763 | best=0.8764@32 | no_improve=0 | round=52.1s | ETA≈15.6 min
+[22:38:44] EPP ROUND START → epp_clean_n10_seed46 | 33/50 | lr=0.014168
+[22:38:49]   local clients → 1/10 for epp_clean_n10_seed46 round 33
+[22:38:54]   local clients → 2/10 for epp_clean_n10_seed46 round 33
+[22:39:04]   local clients → 4/10 for epp_clean_n10_seed46 round 33
+[22:39:15]   local clients → 6/10 for epp_clean_n10_seed46 round 33
+[22:39:25]   local clients → 8/10 for epp_clean_n10_seed46 round 33
+[22:39:35]   local clients → 10/10 for epp_clean_n10_seed46 round 33
+[22:39:36]   ★ NEW BEST → round=33 val_acc=0.8800 val_loss=0.3634
+[22:39:36] EPP ROUND DONE → epp_clean_n10_seed46 | 33/50 | val_acc=0.8800 | val_f1=0.8795 | best=0.8800@33 | no_improve=0 | round=52.1s | ETA≈14.8 min
+[22:39:36] EPP ROUND START → epp_clean_n10_seed46 | 34/50 | lr=0.012799
+[22:39:41]   local clients → 1/10 for epp_clean_n10_seed46 round 34
+[22:39:46]   local clients → 2/10 for epp_clean_n10_seed46 round 34
+[22:39:57]   local clients → 4/10 for epp_clean_n10_seed46 round 34
+[22:40:07]   local clients → 6/10 for epp_clean_n10_seed46 round 34
+[22:40:18]   local clients → 8/10 for epp_clean_n10_seed46 round 34
+[22:40:27]   local clients → 10/10 for epp_clean_n10_seed46 round 34
+[22:40:28] EPP ROUND DONE → epp_clean_n10_seed46 | 34/50 | val_acc=0.8766 | val_f1=0.8762 | best=0.8800@33 | no_improve=1 | round=52.1s | ETA≈13.9 min
+[22:40:28] EPP ROUND START → epp_clean_n10_seed46 | 35/50 | lr=0.011483
+[22:40:33]   local clients → 1/10 for epp_clean_n10_seed46 round 35
+[22:40:38]   local clients → 2/10 for epp_clean_n10_seed46 round 35
+[22:40:48]   local clients → 4/10 for epp_clean_n10_seed46 round 35
+[22:40:58]   local clients → 6/10 for epp_clean_n10_seed46 round 35
+[22:41:09]   local clients → 8/10 for epp_clean_n10_seed46 round 35
+[22:41:19]   local clients → 10/10 for epp_clean_n10_seed46 round 35
+[22:41:20]   ★ NEW BEST → round=35 val_acc=0.8806 val_loss=0.3625
+[22:41:20] EPP ROUND DONE → epp_clean_n10_seed46 | 35/50 | val_acc=0.8806 | val_f1=0.8805 | best=0.8806@35 | no_improve=0 | round=51.9s | ETA≈13.0 min
+[22:41:20] EPP ROUND START → epp_clean_n10_seed46 | 36/50 | lr=0.010224
+[22:41:25]   local clients → 1/10 for epp_clean_n10_seed46 round 36
+[22:41:31]   local clients → 2/10 for epp_clean_n10_seed46 round 36
+[22:41:41]   local clients → 4/10 for epp_clean_n10_seed46 round 36
+[22:41:51]   local clients → 6/10 for epp_clean_n10_seed46 round 36
+[22:42:01]   local clients → 8/10 for epp_clean_n10_seed46 round 36
+[22:42:11]   local clients → 10/10 for epp_clean_n10_seed46 round 36
+[22:42:12]   ★ NEW BEST → round=36 val_acc=0.8830 val_loss=0.3599
+[22:42:12] EPP ROUND DONE → epp_clean_n10_seed46 | 36/50 | val_acc=0.8830 | val_f1=0.8831 | best=0.8830@36 | no_improve=0 | round=52.1s | ETA≈12.2 min
+[22:42:12] EPP ROUND START → epp_clean_n10_seed46 | 37/50 | lr=0.009029
+[22:42:17]   local clients → 1/10 for epp_clean_n10_seed46 round 37
+[22:42:23]   local clients → 2/10 for epp_clean_n10_seed46 round 37
+[22:42:33]   local clients → 4/10 for epp_clean_n10_seed46 round 37
+[22:42:43]   local clients → 6/10 for epp_clean_n10_seed46 round 37
+[22:42:54]   local clients → 8/10 for epp_clean_n10_seed46 round 37
+[22:43:04]   local clients → 10/10 for epp_clean_n10_seed46 round 37
+[22:43:04]   ★ NEW BEST → round=37 val_acc=0.8874 val_loss=0.3502
+[22:43:04] EPP ROUND DONE → epp_clean_n10_seed46 | 37/50 | val_acc=0.8874 | val_f1=0.8873 | best=0.8874@37 | no_improve=0 | round=52.1s | ETA≈11.3 min
+[22:43:04] EPP ROUND START → epp_clean_n10_seed46 | 38/50 | lr=0.007900
+[22:43:09]   local clients → 1/10 for epp_clean_n10_seed46 round 38
+[22:43:15]   local clients → 2/10 for epp_clean_n10_seed46 round 38
+[22:43:25]   local clients → 4/10 for epp_clean_n10_seed46 round 38
+[22:43:36]   local clients → 6/10 for epp_clean_n10_seed46 round 38
+[22:43:46]   local clients → 8/10 for epp_clean_n10_seed46 round 38
+[22:43:56]   local clients → 10/10 for epp_clean_n10_seed46 round 38
+[22:43:56] EPP ROUND DONE → epp_clean_n10_seed46 | 38/50 | val_acc=0.8846 | val_f1=0.8849 | best=0.8874@37 | no_improve=1 | round=52.1s | ETA≈10.4 min
+[22:43:56] EPP ROUND START → epp_clean_n10_seed46 | 39/50 | lr=0.006845
+[22:44:01]   local clients → 1/10 for epp_clean_n10_seed46 round 39
+[22:44:06]   local clients → 2/10 for epp_clean_n10_seed46 round 39
+[22:44:17]   local clients → 4/10 for epp_clean_n10_seed46 round 39
+[22:44:27]   local clients → 6/10 for epp_clean_n10_seed46 round 39
+[22:44:37]   local clients → 8/10 for epp_clean_n10_seed46 round 39
+[22:44:48]   local clients → 10/10 for epp_clean_n10_seed46 round 39
+[22:44:48] EPP ROUND DONE → epp_clean_n10_seed46 | 39/50 | val_acc=0.8852 | val_f1=0.8854 | best=0.8874@37 | no_improve=2 | round=51.8s | ETA≈9.5 min
+[22:44:48] EPP ROUND START → epp_clean_n10_seed46 | 40/50 | lr=0.005865
+[22:44:53]   local clients → 1/10 for epp_clean_n10_seed46 round 40
+[22:44:58]   local clients → 2/10 for epp_clean_n10_seed46 round 40
+[22:45:09]   local clients → 4/10 for epp_clean_n10_seed46 round 40
+[22:45:19]   local clients → 6/10 for epp_clean_n10_seed46 round 40
+[22:45:29]   local clients → 8/10 for epp_clean_n10_seed46 round 40
+[22:45:39]   local clients → 10/10 for epp_clean_n10_seed46 round 40
+[22:45:40] EPP ROUND DONE → epp_clean_n10_seed46 | 40/50 | val_acc=0.8840 | val_f1=0.8845 | best=0.8874@37 | no_improve=3 | round=51.8s | ETA≈8.7 min
+[22:45:41] RESUME SNAPSHOT → ~/Desktop/LSB_overnight/results/cifar_epp_matched/EPP_BCFL_REPRO_V4_Resume.zip | 58.6 MB
+[22:45:41] EPP ROUND START → epp_clean_n10_seed46 | 41/50 | lr=0.004967
+[22:45:47]   local clients → 1/10 for epp_clean_n10_seed46 round 41
+[22:45:52]   local clients → 2/10 for epp_clean_n10_seed46 round 41
+[22:46:02]   local clients → 4/10 for epp_clean_n10_seed46 round 41
+[22:46:13]   local clients → 6/10 for epp_clean_n10_seed46 round 41
+[22:46:23]   local clients → 8/10 for epp_clean_n10_seed46 round 41
+[22:46:33]   local clients → 10/10 for epp_clean_n10_seed46 round 41
+[22:46:33] EPP ROUND DONE → epp_clean_n10_seed46 | 41/50 | val_acc=0.8846 | val_f1=0.8848 | best=0.8874@37 | no_improve=4 | round=52.0s | ETA≈7.8 min
+[22:46:33] EPP ROUND START → epp_clean_n10_seed46 | 42/50 | lr=0.004153
+[22:46:39]   local clients → 1/10 for epp_clean_n10_seed46 round 42
+[22:46:44]   local clients → 2/10 for epp_clean_n10_seed46 round 42
+[22:46:54]   local clients → 4/10 for epp_clean_n10_seed46 round 42
+[22:47:04]   local clients → 6/10 for epp_clean_n10_seed46 round 42
+[22:47:14]   local clients → 8/10 for epp_clean_n10_seed46 round 42
+[22:47:25]   local clients → 10/10 for epp_clean_n10_seed46 round 42
+[22:47:25]   ★ NEW BEST → round=42 val_acc=0.8900 val_loss=0.3633
+[22:47:25] EPP ROUND DONE → epp_clean_n10_seed46 | 42/50 | val_acc=0.8900 | val_f1=0.8903 | best=0.8900@42 | no_improve=0 | round=52.0s | ETA≈6.9 min
+[22:47:25] EPP ROUND START → epp_clean_n10_seed46 | 43/50 | lr=0.003426
+[22:47:31]   local clients → 1/10 for epp_clean_n10_seed46 round 43
+[22:47:36]   local clients → 2/10 for epp_clean_n10_seed46 round 43
+[22:47:46]   local clients → 4/10 for epp_clean_n10_seed46 round 43
+[22:47:56]   local clients → 6/10 for epp_clean_n10_seed46 round 43
+[22:48:06]   local clients → 8/10 for epp_clean_n10_seed46 round 43
+[22:48:17]   local clients → 10/10 for epp_clean_n10_seed46 round 43
+[22:48:17] EPP ROUND DONE → epp_clean_n10_seed46 | 43/50 | val_acc=0.8864 | val_f1=0.8869 | best=0.8900@42 | no_improve=1 | round=52.0s | ETA≈6.1 min
+[22:48:18] EPP ROUND START → epp_clean_n10_seed46 | 44/50 | lr=0.002791
+[22:48:23]   local clients → 1/10 for epp_clean_n10_seed46 round 44
+[22:48:28]   local clients → 2/10 for epp_clean_n10_seed46 round 44
+[22:48:38]   local clients → 4/10 for epp_clean_n10_seed46 round 44
+[22:48:48]   local clients → 6/10 for epp_clean_n10_seed46 round 44
+[22:48:59]   local clients → 8/10 for epp_clean_n10_seed46 round 44
+[22:49:09]   local clients → 10/10 for epp_clean_n10_seed46 round 44
+[22:49:09] EPP ROUND DONE → epp_clean_n10_seed46 | 44/50 | val_acc=0.8864 | val_f1=0.8868 | best=0.8900@42 | no_improve=2 | round=52.0s | ETA≈5.2 min
+[22:49:10] EPP ROUND START → epp_clean_n10_seed46 | 45/50 | lr=0.002248
+[22:49:15]   local clients → 1/10 for epp_clean_n10_seed46 round 45
+[22:49:20]   local clients → 2/10 for epp_clean_n10_seed46 round 45
+[22:49:30]   local clients → 4/10 for epp_clean_n10_seed46 round 45
+[22:49:40]   local clients → 6/10 for epp_clean_n10_seed46 round 45
+[22:49:51]   local clients → 8/10 for epp_clean_n10_seed46 round 45
+[22:50:01]   local clients → 10/10 for epp_clean_n10_seed46 round 45
+[22:50:01] EPP ROUND DONE → epp_clean_n10_seed46 | 45/50 | val_acc=0.8882 | val_f1=0.8888 | best=0.8900@42 | no_improve=3 | round=51.8s | ETA≈4.3 min
+[22:50:01] EPP ROUND START → epp_clean_n10_seed46 | 46/50 | lr=0.001801
+[22:50:07]   local clients → 1/10 for epp_clean_n10_seed46 round 46
+[22:50:12]   local clients → 2/10 for epp_clean_n10_seed46 round 46
+[22:50:22]   local clients → 4/10 for epp_clean_n10_seed46 round 46
+[22:50:32]   local clients → 6/10 for epp_clean_n10_seed46 round 46
+[22:50:43]   local clients → 8/10 for epp_clean_n10_seed46 round 46
+[22:50:53]   local clients → 10/10 for epp_clean_n10_seed46 round 46
+[22:50:53] EPP ROUND DONE → epp_clean_n10_seed46 | 46/50 | val_acc=0.8888 | val_f1=0.8893 | best=0.8900@42 | no_improve=4 | round=52.0s | ETA≈3.5 min
+[22:50:53] EPP ROUND START → epp_clean_n10_seed46 | 47/50 | lr=0.001452
+[22:50:59]   local clients → 1/10 for epp_clean_n10_seed46 round 47
+[22:51:03]   local clients → 2/10 for epp_clean_n10_seed46 round 47
+[22:51:14]   local clients → 4/10 for epp_clean_n10_seed46 round 47
+[22:51:24]   local clients → 6/10 for epp_clean_n10_seed46 round 47
+[22:51:35]   local clients → 8/10 for epp_clean_n10_seed46 round 47
+[22:51:45]   local clients → 10/10 for epp_clean_n10_seed46 round 47
+[22:51:45] EPP ROUND DONE → epp_clean_n10_seed46 | 47/50 | val_acc=0.8888 | val_f1=0.8892 | best=0.8900@42 | no_improve=5 | round=52.0s | ETA≈2.6 min
+[22:51:45] EPP ROUND START → epp_clean_n10_seed46 | 48/50 | lr=0.001201
+[22:51:50]   local clients → 1/10 for epp_clean_n10_seed46 round 48
+[22:51:55]   local clients → 2/10 for epp_clean_n10_seed46 round 48
+[22:52:06]   local clients → 4/10 for epp_clean_n10_seed46 round 48
+[22:52:16]   local clients → 6/10 for epp_clean_n10_seed46 round 48
+[22:52:27]   local clients → 8/10 for epp_clean_n10_seed46 round 48
+[22:52:37]   local clients → 10/10 for epp_clean_n10_seed46 round 48
+[22:52:38] EPP ROUND DONE → epp_clean_n10_seed46 | 48/50 | val_acc=0.8886 | val_f1=0.8889 | best=0.8900@42 | no_improve=6 | round=52.1s | ETA≈1.7 min
+[22:52:38] EPP ROUND START → epp_clean_n10_seed46 | 49/50 | lr=0.001050
+[22:52:43]   local clients → 1/10 for epp_clean_n10_seed46 round 49
+[22:52:48]   local clients → 2/10 for epp_clean_n10_seed46 round 49
+[22:52:58]   local clients → 4/10 for epp_clean_n10_seed46 round 49
+[22:53:09]   local clients → 6/10 for epp_clean_n10_seed46 round 49
+[22:53:19]   local clients → 8/10 for epp_clean_n10_seed46 round 49
+[22:53:29]   local clients → 10/10 for epp_clean_n10_seed46 round 49
+[22:53:30] EPP ROUND DONE → epp_clean_n10_seed46 | 49/50 | val_acc=0.8876 | val_f1=0.8881 | best=0.8900@42 | no_improve=7 | round=52.4s | ETA≈0.9 min
+[22:53:30] EPP ROUND START → epp_clean_n10_seed46 | 50/50 | lr=0.001000
+[22:53:35]   local clients → 1/10 for epp_clean_n10_seed46 round 50
+[22:53:40]   local clients → 2/10 for epp_clean_n10_seed46 round 50
+[22:53:51]   local clients → 4/10 for epp_clean_n10_seed46 round 50
+[22:54:01]   local clients → 6/10 for epp_clean_n10_seed46 round 50
+[22:54:11]   local clients → 8/10 for epp_clean_n10_seed46 round 50
+[22:54:21]   local clients → 10/10 for epp_clean_n10_seed46 round 50
+[22:54:22] EPP ROUND DONE → epp_clean_n10_seed46 | 50/50 | val_acc=0.8894 | val_f1=0.8899 | best=0.8900@42 | no_improve=8 | round=52.1s | ETA≈0.0 min
+[22:54:23] RESUME SNAPSHOT → ~/Desktop/LSB_overnight/results/cifar_epp_matched/EPP_BCFL_REPRO_V4_Resume.zip | 58.6 MB
+[22:54:23] EPP RUN COMPLETE → epp_clean_n10_seed46 | BEST round=42 val_acc=0.8900
+RESULT epp_clean_n10_seed46 {'test_accuracy': 0.8826, 'test_f1': 0.8824609369704941}
+DONE: matched EPP CIFAR-10 -> ~/Desktop/LSB_overnight/results/cifar_epp_matched/EPP_BCFL_MATCHED_V1/metrics

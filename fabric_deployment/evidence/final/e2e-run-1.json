@@ -1,0 +1,11 @@
+{
+  "puf_enroll_success": true,
+  "puf_success": true,
+  "puf_latency_ms": 6.059169769287109,
+  "storage_success": true,
+  "storage_latency_ms": 30.397415161132812,
+  "consensus_success": true,
+  "consensus_latency_ms": 212.42380142211914,
+  "total_latency_ms": 248.88038635253906,
+  "overall_success": true
+}

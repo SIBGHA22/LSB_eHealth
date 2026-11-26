@@ -1,0 +1,5 @@
+.git
+*.log
+*.pid
+coverage*
+energy-vrf-pbft

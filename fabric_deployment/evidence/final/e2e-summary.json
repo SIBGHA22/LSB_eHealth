@@ -1,0 +1,38 @@
+{
+  "total_runs": 25,
+  "warmup_discarded": 5,
+  "measured_runs": 20,
+  "all_successful": true,
+  "puf_latency_ms": {
+    "mean": 3.75,
+    "median": 3.38,
+    "p95": 6.57,
+    "min": 2.01,
+    "max": 10.49,
+    "stdev": 1.84
+  },
+  "storage_latency_ms": {
+    "mean": 3.99,
+    "median": 3.46,
+    "p95": 6.17,
+    "min": 2.55,
+    "max": 6.91,
+    "stdev": 1.3
+  },
+  "consensus_latency_ms": {
+    "mean": 32.96,
+    "median": 32.06,
+    "p95": 43.97,
+    "min": 18.69,
+    "max": 62.34,
+    "stdev": 10.12
+  },
+  "total_latency_ms": {
+    "mean": 40.7,
+    "median": 40.35,
+    "p95": 58.5,
+    "min": 24.91,
+    "max": 75.82,
+    "stdev": 12.16
+  }
+}

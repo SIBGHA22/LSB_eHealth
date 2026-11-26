@@ -1,0 +1,101 @@
+MASTER ROOT: ~/Desktop/LSB_overnight/results/dbh_matched | smoke test: False
+DBH ROOT: ~/Desktop/LSB_overnight/results/dbh_matched/DBH_CHAIN_REPRO_V1
+DBH experiment fingerprint: 92ff6911ad08557b
+                                  item                                    value                     status
+0                  IoT Blockchain Data     palwashakhanzadi/iot-blockchain-data            PAPER_SUPPORTED
+1          Hospital Management Dataset  kanakbaghel/hospital-management-dataset            PAPER_SUPPORTED
+2                 CMS Hospital Dataset                               UNRESOLVED          UNRESOLVED_SOURCE
+3  HealthData Hospital Service Dataset                               UNRESOLVED          UNRESOLVED_SOURCE
+4            Kaggle Healthcare Dataset              prasad22/healthcare-dataset            PAPER_SUPPORTED
+5              MMPS/service parameters       paper omits exact values used here  DOCUMENTED_RECONSTRUCTION
+                                  name                                   source      status                                                                                        path                                                                                                                      error
+0                  iot-blockchain-data     palwashakhanzadi/iot-blockchain-data       READY     ~/.cache/kagglehub/datasets/palwashakhanzadi/iot-blockchain-data/versions/1                                                                                                                           
+1          hospital-management-dataset  kanakbaghel/hospital-management-dataset       READY  ~/.cache/kagglehub/datasets/kanakbaghel/hospital-management-dataset/versions/1                                                                                                                           
+2                   healthcare-dataset              prasad22/healthcare-dataset       READY              ~/.cache/kagglehub/datasets/prasad22/healthcare-dataset/versions/2                                                                                                                           
+3                 CMS Hospital Dataset                                           UNRESOLVED                                                                                              The paper does not identify an exact file. Supply a verified direct URL or attach the exact file and set its Kaggle path.
+4  HealthData Hospital Service Dataset                                           UNRESOLVED                                                                                              The paper does not identify an exact file. Supply a verified direct URL or attach the exact file and set its Kaggle path.
+                                    source                   table  rows_before  rows_after  columns  duplicates_removed  missing_cells_before  missing_cells_after  all_missing_rows_removed                      missing_value_policy
+0     palwashakhanzadi/iot-blockchain-data             account.csv          780         276        5                 503                   575                    0                       115  preserved_and_logged_no_blind_imputation
+1     palwashakhanzadi/iot-blockchain-data               order.csv          665         133        6                 532                     0                    0                         0  preserved_and_logged_no_blind_imputation
+2     palwashakhanzadi/iot-blockchain-data         transaction.csv          278         278        8                   0                     0                    0                         0  preserved_and_logged_no_blind_imputation
+3  kanakbaghel/hospital-management-dataset        appointments.csv          200         200        7                   0                     0                    0                         0  preserved_and_logged_no_blind_imputation
+4  kanakbaghel/hospital-management-dataset             billing.csv          200         200        7                   0                     0                    0                         0  preserved_and_logged_no_blind_imputation
+5  kanakbaghel/hospital-management-dataset             doctors.csv           10          10        8                   0                     0                    0                         0  preserved_and_logged_no_blind_imputation
+6  kanakbaghel/hospital-management-dataset            patients.csv           50          50       11                   0                     0                    0                         0  preserved_and_logged_no_blind_imputation
+7  kanakbaghel/hospital-management-dataset          treatments.csv          200         200        6                   0                     0                    0                         0  preserved_and_logged_no_blind_imputation
+8              prasad22/healthcare-dataset  healthcare_dataset.csv        55500       54966       15                 534                     0                    0                         0  preserved_and_logged_no_blind_imputation
+task templates: 6347
+seed=42 nodes=20 LSB shards=1 per_task per_shard: thr=4.19 delay=471.6 miss=92.2% sched=31.8%
+seed=42 nodes=20 LSB shards=1 per_resource_unit per_shard: thr=4.19 delay=899.6 miss=100.0% sched=31.8%
+seed=42 nodes=20 LSB shards=4 per_task per_shard: thr=13.17 delay=633.0 miss=88.7% sched=100.0%
+seed=42 nodes=20 LSB shards=4 per_task split_total: thr=3.98 delay=161.5 miss=16.5% sched=30.2%
+seed=42 nodes=20 LSB shards=4 per_resource_unit per_shard: thr=13.17 delay=1121.4 miss=100.0% sched=100.0%
+seed=42 nodes=20 LSB shards=4 per_resource_unit split_total: thr=3.98 delay=598.8 miss=100.0% sched=30.2%
+seed=42 nodes=100 LSB shards=1 per_task per_shard: thr=4.19 delay=473.5 miss=93.7% sched=31.8%
+seed=42 nodes=100 LSB shards=1 per_resource_unit per_shard: thr=4.19 delay=901.5 miss=100.0% sched=31.8%
+seed=42 nodes=100 LSB shards=4 per_task per_shard: thr=13.17 delay=635.0 miss=90.7% sched=100.0%
+seed=42 nodes=100 LSB shards=4 per_task split_total: thr=3.98 delay=163.4 miss=16.6% sched=30.2%
+seed=42 nodes=100 LSB shards=4 per_resource_unit per_shard: thr=13.17 delay=1123.3 miss=100.0% sched=100.0%
+seed=42 nodes=100 LSB shards=4 per_resource_unit split_total: thr=3.98 delay=600.7 miss=100.0% sched=30.2%
+seed=42 nodes=1000 LSB shards=1 per_task per_shard: thr=4.19 delay=476.2 miss=95.2% sched=31.8%
+seed=42 nodes=1000 LSB shards=1 per_resource_unit per_shard: thr=4.19 delay=904.2 miss=100.0% sched=31.8%
+seed=42 nodes=1000 LSB shards=4 per_task per_shard: thr=13.17 delay=637.7 miss=93.1% sched=100.0%
+seed=42 nodes=1000 LSB shards=4 per_task split_total: thr=3.98 delay=166.1 miss=16.7% sched=30.2%
+seed=42 nodes=1000 LSB shards=4 per_resource_unit per_shard: thr=13.17 delay=1126.1 miss=100.0% sched=100.0%
+seed=42 nodes=1000 LSB shards=4 per_resource_unit split_total: thr=3.98 delay=603.4 miss=100.0% sched=30.2%
+seed=43 nodes=20 LSB shards=1 per_task per_shard: thr=4.21 delay=459.9 miss=92.3% sched=31.7%
+seed=43 nodes=20 LSB shards=1 per_resource_unit per_shard: thr=4.21 delay=888.8 miss=100.0% sched=31.7%
+seed=43 nodes=20 LSB shards=4 per_task per_shard: thr=13.28 delay=629.8 miss=88.7% sched=100.0%
+seed=43 nodes=20 LSB shards=4 per_task split_total: thr=4.00 delay=151.5 miss=16.3% sched=30.1%
+seed=43 nodes=20 LSB shards=4 per_resource_unit per_shard: thr=13.28 delay=1118.8 miss=100.0% sched=100.0%
+seed=43 nodes=20 LSB shards=4 per_resource_unit split_total: thr=4.00 delay=589.7 miss=100.0% sched=30.1%
+seed=43 nodes=100 LSB shards=1 per_task per_shard: thr=4.21 delay=461.8 miss=93.7% sched=31.7%
+seed=43 nodes=100 LSB shards=1 per_resource_unit per_shard: thr=4.21 delay=890.7 miss=100.0% sched=31.7%
+seed=43 nodes=100 LSB shards=4 per_task per_shard: thr=13.28 delay=631.7 miss=90.7% sched=100.0%
+seed=43 nodes=100 LSB shards=4 per_task split_total: thr=4.00 delay=153.5 miss=16.4% sched=30.1%
+seed=43 nodes=100 LSB shards=4 per_resource_unit per_shard: thr=13.28 delay=1120.7 miss=100.0% sched=100.0%
+seed=43 nodes=100 LSB shards=4 per_resource_unit split_total: thr=4.00 delay=591.6 miss=100.0% sched=30.1%
+seed=43 nodes=1000 LSB shards=1 per_task per_shard: thr=4.21 delay=464.5 miss=95.3% sched=31.7%
+seed=43 nodes=1000 LSB shards=1 per_resource_unit per_shard: thr=4.21 delay=893.4 miss=100.0% sched=31.7%
+seed=43 nodes=1000 LSB shards=4 per_task per_shard: thr=13.28 delay=634.4 miss=93.0% sched=100.0%
+seed=43 nodes=1000 LSB shards=4 per_task split_total: thr=4.00 delay=156.2 miss=16.5% sched=30.1%
+seed=43 nodes=1000 LSB shards=4 per_resource_unit per_shard: thr=13.28 delay=1123.4 miss=100.0% sched=100.0%
+seed=43 nodes=1000 LSB shards=4 per_resource_unit split_total: thr=4.00 delay=594.3 miss=100.0% sched=30.1%
+seed=44 nodes=20 LSB shards=1 per_task per_shard: thr=4.13 delay=475.9 miss=92.2% sched=31.9%
+seed=44 nodes=20 LSB shards=1 per_resource_unit per_shard: thr=4.12 delay=901.8 miss=100.0% sched=31.9%
+seed=44 nodes=20 LSB shards=4 per_task per_shard: thr=12.91 delay=643.6 miss=88.8% sched=100.0%
+seed=44 nodes=20 LSB shards=4 per_task split_total: thr=3.92 delay=162.1 miss=17.0% sched=30.4%
+seed=44 nodes=20 LSB shards=4 per_resource_unit per_shard: thr=12.91 delay=1130.4 miss=100.0% sched=100.0%
+seed=44 nodes=20 LSB shards=4 per_resource_unit split_total: thr=3.92 delay=597.3 miss=100.0% sched=30.4%
+seed=44 nodes=100 LSB shards=1 per_task per_shard: thr=4.13 delay=477.8 miss=93.5% sched=31.9%
+seed=44 nodes=100 LSB shards=1 per_resource_unit per_shard: thr=4.12 delay=903.7 miss=100.0% sched=31.9%
+seed=44 nodes=100 LSB shards=4 per_task per_shard: thr=12.91 delay=645.5 miss=90.7% sched=100.0%
+seed=44 nodes=100 LSB shards=4 per_task split_total: thr=3.92 delay=164.0 miss=17.1% sched=30.4%
+seed=44 nodes=100 LSB shards=4 per_resource_unit per_shard: thr=12.91 delay=1132.3 miss=100.0% sched=100.0%
+seed=44 nodes=100 LSB shards=4 per_resource_unit split_total: thr=3.92 delay=599.2 miss=100.0% sched=30.4%
+seed=44 nodes=1000 LSB shards=1 per_task per_shard: thr=4.13 delay=480.5 miss=95.2% sched=31.9%
+seed=44 nodes=1000 LSB shards=1 per_resource_unit per_shard: thr=4.12 delay=906.4 miss=100.0% sched=31.9%
+seed=44 nodes=1000 LSB shards=4 per_task per_shard: thr=12.91 delay=648.2 miss=93.0% sched=100.0%
+seed=44 nodes=1000 LSB shards=4 per_task split_total: thr=3.92 delay=166.7 miss=17.1% sched=30.4%
+seed=44 nodes=1000 LSB shards=4 per_resource_unit per_shard: thr=12.91 delay=1135.1 miss=100.0% sched=100.0%
+seed=44 nodes=1000 LSB shards=4 per_resource_unit split_total: thr=3.92 delay=602.0 miss=100.0% sched=30.4%
+        service_model  shards capacity_policy                  system  throughput_tx_s  mean_hybrid_delay_ms  p95_hybrid_delay_ms  deadline_miss_pct  scheduling_efficiency_pct  energy_per_committed_task_j  mean_consensus_messages
+0   per_resource_unit       1       per_shard  DBH_POV_RECONSTRUCTION           4.1726              888.2517            1382.4965           100.0000                    31.8080                       0.0101                   2.8807
+1   per_resource_unit       1       per_shard     LSB_ENERGY_VRF_PBFT           4.1726              906.3489            1400.8624           100.0000                    31.8080                       0.0415                 159.7488
+2   per_resource_unit       1       per_shard                  LSB_K7           4.1726              898.9194            1393.0832           100.0000                    31.8080                       0.0129                  16.4986
+3   per_resource_unit       4       per_shard  DBH_POV_RECONSTRUCTION          13.1174             1115.0091            2188.2927           100.0000                   100.0000                       0.0115                   3.6671
+4   per_resource_unit       4       per_shard     LSB_ENERGY_VRF_PBFT          13.1174             1133.0537            2207.0698           100.0000                   100.0000                       0.0515                 203.3581
+5   per_resource_unit       4       per_shard                  LSB_K7          13.1174             1125.7216            2198.8906           100.0000                   100.0000                       0.0150                  21.0026
+6   per_resource_unit       4     split_total  DBH_POV_RECONSTRUCTION           3.9667              586.8056             727.2434           100.0000                    30.2375                       0.0122                  12.1247
+7   per_resource_unit       4     split_total     LSB_ENERGY_VRF_PBFT           3.9667              604.8976             746.0466           100.0000                    30.2375                       0.1445                 672.3680
+8   per_resource_unit       4     split_total                  LSB_K7           3.9667              597.4422             738.1039           100.0000                    30.2375                       0.0238                  69.4413
+9            per_task       1       per_shard  DBH_POV_RECONSTRUCTION           4.1729              460.6178            1099.5808            84.8921                    31.8080                       0.0015                   2.8807
+10           per_task       1       per_shard     LSB_ENERGY_VRF_PBFT           4.1729              478.7179            1118.2009            98.9377                    31.8080                       0.0330                 159.7488
+11           per_task       1       per_shard                  LSB_K7           4.1729              471.2878            1110.4750            93.6972                    31.8080                       0.0043                  16.4986
+12           per_task       4       per_shard  DBH_POV_RECONSTRUCTION          13.1193              626.9286            1681.2403            79.2108                   100.0000                       0.0017                   3.6671
+13           per_task       4       per_shard     LSB_ENERGY_VRF_PBFT          13.1193              644.9739            1699.0302            98.3011                   100.0000                       0.0418                 203.3581
+14           per_task       4       per_shard                  LSB_K7          13.1193              637.6418            1691.8834            90.8211                   100.0000                       0.0052                  21.0026
+15           per_task       4     split_total  DBH_POV_RECONSTRUCTION           3.9669              149.9126             536.1569            16.2081                    30.2375                       0.0035                  12.1247
+16           per_task       4     split_total     LSB_ENERGY_VRF_PBFT           3.9669              168.0046             554.0492            16.9666                    30.2375                       0.1358                 672.3680
+17           per_task       4     split_total                  LSB_K7           3.9669              160.5492             547.0866            16.6861                    30.2375                       0.0151                  69.4413
+DONE: matched transaction factorial -> ~/Desktop/LSB_overnight/results/dbh_matched/DBH_CHAIN_REPRO_V1/metrics

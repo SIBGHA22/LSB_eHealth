@@ -1,0 +1,27 @@
+__pycache__/
+*.pyc
+*.pid
+*.log
+.env
+.env.*
+*.key
+*.pem
+
+# run outputs, downloads and builds (never commit)
+experiments/results/
+experiments/results_smoke/
+experiments/results_additional/
+experiments/additional_results.zip
+experiments/run_additional.out
+experiments/run_all.out
+consensus_testbed/bin/
+consensus_testbed/results/
+paper_figures/out/
+data_cache/
+*.pt
+*.pth
+*.zip
+!results/logs/*.log
+fabric_deployment/src/ledger-chaincode/lsb-ledger
+__pycache__/
+*.pyc

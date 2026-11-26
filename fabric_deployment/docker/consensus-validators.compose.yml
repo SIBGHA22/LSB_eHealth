@@ -1,0 +1,120 @@
+services:
+
+  validator-01:
+    build:
+      context: ../src/consensus/energy-vrf-pbft
+      dockerfile: Dockerfile.validator
+    image: lsb-ehealth-validator:1.0
+    container_name: lsb-validator-01
+    environment:
+      LSB_VALIDATOR_ID: validator-01
+      LSB_VALIDATOR_ADDR: 0.0.0.0:8080
+      LSB_VALIDATOR_BATTERY: "0.92"
+      LSB_VALIDATOR_TRUST: "0.96"
+    ports:
+      - "18101:8080"
+    networks:
+      - lsb_internal
+    restart: unless-stopped
+
+  validator-02:
+    image: lsb-ehealth-validator:1.0
+    container_name: lsb-validator-02
+    environment:
+      LSB_VALIDATOR_ID: validator-02
+      LSB_VALIDATOR_ADDR: 0.0.0.0:8080
+      LSB_VALIDATOR_BATTERY: "0.87"
+      LSB_VALIDATOR_TRUST: "0.94"
+    ports:
+      - "18102:8080"
+    networks:
+      - lsb_internal
+    restart: unless-stopped
+    depends_on:
+      - validator-01
+
+  validator-03:
+    image: lsb-ehealth-validator:1.0
+    container_name: lsb-validator-03
+    environment:
+      LSB_VALIDATOR_ID: validator-03
+      LSB_VALIDATOR_ADDR: 0.0.0.0:8080
+      LSB_VALIDATOR_BATTERY: "0.81"
+      LSB_VALIDATOR_TRUST: "0.93"
+    ports:
+      - "18103:8080"
+    networks:
+      - lsb_internal
+    restart: unless-stopped
+    depends_on:
+      - validator-01
+
+  validator-04:
+    image: lsb-ehealth-validator:1.0
+    container_name: lsb-validator-04
+    environment:
+      LSB_VALIDATOR_ID: validator-04
+      LSB_VALIDATOR_ADDR: 0.0.0.0:8080
+      LSB_VALIDATOR_BATTERY: "0.74"
+      LSB_VALIDATOR_TRUST: "0.91"
+    ports:
+      - "18104:8080"
+    networks:
+      - lsb_internal
+    restart: unless-stopped
+    depends_on:
+      - validator-01
+
+  validator-05:
+    image: lsb-ehealth-validator:1.0
+    container_name: lsb-validator-05
+    environment:
+      LSB_VALIDATOR_ID: validator-05
+      LSB_VALIDATOR_ADDR: 0.0.0.0:8080
+      LSB_VALIDATOR_BATTERY: "0.68"
+      LSB_VALIDATOR_TRUST: "0.90"
+    ports:
+      - "18105:8080"
+    networks:
+      - lsb_internal
+    restart: unless-stopped
+    depends_on:
+      - validator-01
+
+  validator-06:
+    image: lsb-ehealth-validator:1.0
+    container_name: lsb-validator-06
+    environment:
+      LSB_VALIDATOR_ID: validator-06
+      LSB_VALIDATOR_ADDR: 0.0.0.0:8080
+      LSB_VALIDATOR_BATTERY: "0.56"
+      LSB_VALIDATOR_TRUST: "0.88"
+    ports:
+      - "18106:8080"
+    networks:
+      - lsb_internal
+    restart: unless-stopped
+    depends_on:
+      - validator-01
+
+  validator-07:
+    image: lsb-ehealth-validator:1.0
+    container_name: lsb-validator-07
+    environment:
+      LSB_VALIDATOR_ID: validator-07
+      LSB_VALIDATOR_ADDR: 0.0.0.0:8080
+      LSB_VALIDATOR_BATTERY: "0.44"
+      LSB_VALIDATOR_TRUST: "0.86"
+    ports:
+      - "18107:8080"
+    networks:
+      - lsb_internal
+    restart: unless-stopped
+    depends_on:
+      - validator-01
+
+
+networks:
+  lsb_internal:
+    name: lsb_internal
+    driver: bridge

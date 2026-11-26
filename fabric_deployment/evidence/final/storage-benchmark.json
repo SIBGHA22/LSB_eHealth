@@ -1,0 +1,13 @@
+{
+  "payload_bytes": 1048576,
+  "encode_ms": 8.268,
+  "restore_ms": 1.424,
+  "original_size": 1048576,
+  "compressed_size": 376,
+  "ciphertext_size": 392,
+  "total_fragments": 10,
+  "recovered_fragments": 10,
+  "recovery_successful": true,
+  "compression_ratio": 0.00035858154296875,
+  "erasure_overhead": 1.4285714285714286
+}

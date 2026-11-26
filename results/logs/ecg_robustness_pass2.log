@@ -1,0 +1,90 @@
+GPU: NVIDIA RTX 4000 Ada Generation
+cached: (8528, 6000)
+classes: {'non-AF': 5450, 'AF': 521}
+class weights: [0.74, 2.394]
+train 5971 | test 1705
+test tensor: (8525, 1, 1000) | val tensor: (4260, 1, 1000)
+adversaries=2/10 | ALIE z=0.253 | IPM eps=0.5
+FLTrust root set: 200 records, 19 AF
+36 runs planned, 0 already saved
+[1/36] SIGNFLIP6         seed42 LSB_V2       acc=0.9085 F1=0.7216 advExcl=1.0 (30s)
+[2/36] SIGNFLIP6         seed43 LSB_V2       acc=0.9437 F1=0.8144 advExcl=0.9875 (29s)
+[3/36] SIGNFLIP6         seed44 LSB_V2       acc=0.9566 F1=0.8560 advExcl=1.0 (29s)
+[4/36] SIGNFLIP6         seed45 LSB_V2       acc=0.9290 F1=0.7884 advExcl=1.0 (29s)
+[5/36] SIGNFLIP6         seed46 LSB_V2       acc=0.9589 F1=0.8638 advExcl=1.0 (29s)
+[6/36] SIGNFLIP6         seed47 LSB_V2       acc=0.9361 F1=0.7873 advExcl=1.0 (29s)
+[7/36] NORM_MATCHED_FLIP seed42 LSB_V2       acc=0.8804 F1=0.6107 advExcl=0.775 (29s)
+[8/36] NORM_MATCHED_FLIP seed43 LSB_V2       acc=0.6522 F1=0.4917 advExcl=0.25 (30s)
+[9/36] NORM_MATCHED_FLIP seed44 LSB_V2       acc=0.9290 F1=0.7919 advExcl=0.7 (29s)
+[10/36] NORM_MATCHED_FLIP seed45 LSB_V2       acc=0.9191 F1=0.4789 advExcl=0.375 (29s)
+[11/36] NORM_MATCHED_FLIP seed46 LSB_V2       acc=0.8762 F1=0.6966 advExcl=0.3 (29s)
+[12/36] NORM_MATCHED_FLIP seed47 LSB_V2       acc=0.9449 F1=0.8097 advExcl=0.65 (30s)
+[13/36] ALIE              seed42 LSB_V2       acc=0.9273 F1=0.7720 advExcl=0.0 (29s)
+[14/36] ALIE              seed43 LSB_V2       acc=0.9443 F1=0.8181 advExcl=0.0 (30s)
+[15/36] ALIE              seed44 LSB_V2       acc=0.9308 F1=0.8021 advExcl=0.0 (29s)
+[16/36] ALIE              seed45 LSB_V2       acc=0.9408 F1=0.8213 advExcl=0.0 (30s)
+[17/36] ALIE              seed46 LSB_V2       acc=0.9584 F1=0.8623 advExcl=0.0 (30s)
+[18/36] ALIE              seed47 LSB_V2       acc=0.9531 F1=0.8234 advExcl=0.0 (30s)
+[19/36] NONE              seed42 LSB_V2       acc=0.9073 F1=0.7260 advExcl=None (29s)
+[20/36] NONE              seed43 LSB_V2       acc=0.9372 F1=0.7977 advExcl=None (30s)
+[21/36] NONE              seed44 LSB_V2       acc=0.9507 F1=0.8437 advExcl=None (29s)
+[22/36] NONE              seed45 LSB_V2       acc=0.9507 F1=0.8276 advExcl=None (29s)
+[23/36] NONE              seed46 LSB_V2       acc=0.9408 F1=0.8016 advExcl=None (29s)
+[24/36] NONE              seed47 LSB_V2       acc=0.9290 F1=0.7919 advExcl=None (30s)
+[25/36] IPM               seed42 LSB_V2       acc=0.9238 F1=0.7215 advExcl=1.0 (30s)
+[26/36] IPM               seed43 LSB_V2       acc=0.9208 F1=0.7789 advExcl=0.95 (30s)
+[27/36] IPM               seed44 LSB_V2       acc=0.9584 F1=0.8495 advExcl=1.0 (29s)
+[28/36] IPM               seed45 LSB_V2       acc=0.8504 F1=0.5971 advExcl=0.325 (29s)
+[29/36] IPM               seed46 LSB_V2       acc=0.9601 F1=0.8554 advExcl=1.0 (30s)
+[30/36] IPM               seed47 LSB_V2       acc=0.9326 F1=0.7930 advExcl=0.95 (29s)
+[31/36] LABEL_FLIP30      seed42 LSB_V2       acc=0.8833 F1=0.6480 advExcl=0.125 (29s)
+[32/36] LABEL_FLIP30      seed43 LSB_V2       acc=0.9466 F1=0.8138 advExcl=0.425 (30s)
+[33/36] LABEL_FLIP30      seed44 LSB_V2       acc=0.8645 F1=0.6618 advExcl=0.25 (30s)
+[34/36] LABEL_FLIP30      seed45 LSB_V2       acc=0.9361 F1=0.7927 advExcl=0.5125 (29s)
+[35/36] LABEL_FLIP30      seed46 LSB_V2       acc=0.9537 F1=0.8384 advExcl=0.25 (30s)
+[36/36] LABEL_FLIP30      seed47 LSB_V2       acc=0.9279 F1=0.7931 advExcl=0.0125 (30s)
+               attack           arm  seeds         macro_f1         accuracy  worst_F1  worst_acc  adv_excluded  honest_excluded  LSB_V2_minus_arm_F1  LSB_V2_wins  p_wilcoxon
+0                ALIE   FEDAVG_CLIP      6  0.7977 ± 0.0599  0.9401 ± 0.0213    0.7292     0.9056           NaN              NaN               0.0189          5.0      0.3125
+1                ALIE       FLTRUST      6  0.7527 ± 0.1002  0.9151 ± 0.0447    0.5796     0.8381         0.246            0.365               0.0639          4.0      0.1562
+2                ALIE           LSB      6  0.7841 ± 0.0490  0.9305 ± 0.0173    0.7237     0.9062         0.000            0.126               0.0324          5.0      0.0625
+3                ALIE        LSB_V2      6  0.8165 ± 0.0310  0.9425 ± 0.0128    0.7720     0.9273         0.000            0.168                  NaN          NaN         NaN
+4                ALIE        MEDIAN      6  0.8008 ± 0.0360  0.9386 ± 0.0113    0.7495     0.9243           NaN              NaN               0.0157          4.0      0.2188
+5                ALIE    MULTI_KRUM      6  0.7824 ± 0.0340  0.9237 ± 0.0200    0.7320     0.8985         0.000            0.250               0.0341          5.0      0.0625
+6                ALIE  TRIMMED_MEAN      6  0.8100 ± 0.0413  0.9413 ± 0.0161    0.7489     0.9155           NaN              NaN               0.0065          4.0      0.6875
+7                 IPM   FEDAVG_CLIP      6  0.7421 ± 0.0936  0.9152 ± 0.0450    0.6509     0.8446           NaN              NaN               0.0238          4.0      0.6875
+8                 IPM       FLTRUST      6  0.7014 ± 0.0925  0.8891 ± 0.0493    0.5754     0.8000         0.821            0.351               0.0645          5.0      0.3125
+9                 IPM           LSB      6  0.7051 ± 0.0595  0.8951 ± 0.0332    0.6526     0.8457         0.192            0.071               0.0608          5.0      0.2188
+10                IPM        LSB_V2      6  0.7659 ± 0.1011  0.9244 ± 0.0419    0.5971     0.8504         0.871            0.151                  NaN          NaN         NaN
+11                IPM        MEDIAN      6  0.7087 ± 0.0684  0.8928 ± 0.0405    0.5913     0.8170           NaN              NaN               0.0573          5.0      0.3125
+12                IPM    MULTI_KRUM      6  0.6924 ± 0.0624  0.8839 ± 0.0400    0.6208     0.8276         0.000            0.250               0.0735          5.0      0.3125
+13                IPM  TRIMMED_MEAN      6  0.7169 ± 0.0591  0.9108 ± 0.0210    0.6240     0.8868           NaN              NaN               0.0490          5.0      0.3125
+14       LABEL_FLIP30   FEDAVG_CLIP      6  0.7654 ± 0.1047  0.9233 ± 0.0371    0.6068     0.8704           NaN              NaN              -0.0074          2.0      0.6875
+15       LABEL_FLIP30       FLTRUST      6  0.7032 ± 0.1004  0.8796 ± 0.0658    0.5721     0.7830         0.571            0.356               0.0548          5.0      0.3125
+16       LABEL_FLIP30           LSB      6  0.7567 ± 0.0825  0.9190 ± 0.0344    0.6402     0.8628         0.227            0.053               0.0012          2.0      0.8438
+17       LABEL_FLIP30        LSB_V2      6  0.7580 ± 0.0857  0.9187 ± 0.0381    0.6480     0.8645         0.262            0.139                  NaN          NaN         NaN
+18       LABEL_FLIP30        MEDIAN      6  0.7807 ± 0.0653  0.9313 ± 0.0225    0.6864     0.9009           NaN              NaN              -0.0228          2.0      0.8438
+19       LABEL_FLIP30    MULTI_KRUM      6  0.7472 ± 0.0470  0.9166 ± 0.0171    0.6789     0.9032         0.379            0.155               0.0108          4.0      0.5625
+20       LABEL_FLIP30  TRIMMED_MEAN      6  0.7657 ± 0.0601  0.9176 ± 0.0265    0.6783     0.8827           NaN              NaN              -0.0078          4.0      0.7500
+21               NONE   FEDAVG_CLIP      6  0.7992 ± 0.0603  0.9382 ± 0.0187    0.6984     0.9097           NaN              NaN              -0.0011          3.0      1.0000
+22               NONE       FLTRUST      6  0.7284 ± 0.0753  0.9067 ± 0.0325    0.5930     0.8504           NaN            0.351               0.0696          6.0      0.0312
+23               NONE           LSB      6  0.7641 ± 0.0928  0.9348 ± 0.0182    0.6169     0.9202           NaN            0.000               0.0340          4.0      0.4375
+24               NONE        LSB_V2      6  0.7981 ± 0.0425  0.9360 ± 0.0171    0.7260     0.9073           NaN            0.141                  NaN          NaN         NaN
+25               NONE        MEDIAN      6  0.8248 ± 0.0313  0.9461 ± 0.0122    0.7751     0.9261           NaN              NaN              -0.0268          1.0      0.0938
+26               NONE    MULTI_KRUM      6  0.7665 ± 0.0499  0.9166 ± 0.0268    0.6919     0.8768           NaN            0.200               0.0316          5.0      0.0938
+27               NONE  TRIMMED_MEAN      6  0.8058 ± 0.0292  0.9392 ± 0.0099    0.7675     0.9279           NaN              NaN              -0.0077          2.0      0.6875
+28  NORM_MATCHED_FLIP   FEDAVG_CLIP      6  0.6446 ± 0.1658  0.9203 ± 0.0260    0.4788     0.8915           NaN              NaN               0.0020          2.0      1.0000
+29  NORM_MATCHED_FLIP       FLTRUST      6  0.6743 ± 0.1167  0.8710 ± 0.0602    0.5322     0.8000         0.742            0.383              -0.0277          3.0      0.6875
+30  NORM_MATCHED_FLIP           LSB      6  0.5106 ± 0.2556  0.7550 ± 0.3497    0.0749     0.0809         0.000            0.061               0.1360          4.0      0.2188
+31  NORM_MATCHED_FLIP        LSB_V2      6  0.6466 ± 0.1511  0.8670 ± 0.1140    0.4789     0.6522         0.508            0.228                  NaN          NaN         NaN
+32  NORM_MATCHED_FLIP        MEDIAN      6  0.7050 ± 0.0599  0.8973 ± 0.0316    0.6165     0.8405           NaN              NaN              -0.0584          3.0      0.8438
+33  NORM_MATCHED_FLIP    MULTI_KRUM      6  0.5040 ± 0.0547  0.7968 ± 0.1594    0.4397     0.5472         0.056            0.236               0.1426          5.0      0.0625
+34  NORM_MATCHED_FLIP  TRIMMED_MEAN      6  0.6840 ± 0.0640  0.8963 ± 0.0190    0.5773     0.8680           NaN              NaN              -0.0374          3.0      0.8438
+35          SIGNFLIP6   FEDAVG_CLIP      6  0.4708 ± 0.2242  0.7660 ± 0.3538    0.0749     0.0809           NaN              NaN               0.3344          6.0      0.0312
+36          SIGNFLIP6       FLTRUST      6  0.6977 ± 0.0910  0.8855 ± 0.0422    0.5940     0.8411         0.717            0.376               0.1076          6.0      0.0312
+37          SIGNFLIP6           LSB      6  0.7572 ± 0.1348  0.9366 ± 0.0198    0.5132     0.9109         0.983            0.039               0.0481          5.0      0.3125
+38          SIGNFLIP6        LSB_V2      6  0.8053 ± 0.0549  0.9388 ± 0.0197    0.7216     0.9085         0.998            0.084                  NaN          NaN         NaN
+39          SIGNFLIP6        MEDIAN      6  0.7461 ± 0.0770  0.9128 ± 0.0361    0.6543     0.8575           NaN              NaN               0.0591          6.0      0.0312
+40          SIGNFLIP6    MULTI_KRUM      6  0.7734 ± 0.0563  0.9232 ± 0.0299    0.6954     0.8774         0.821            0.045               0.0319          5.0      0.0625
+41          SIGNFLIP6  TRIMMED_MEAN      6  0.7309 ± 0.0761  0.9040 ± 0.0358    0.6495     0.8487           NaN              NaN               0.0743          6.0      0.0312
+With six paired seeds the smallest attainable two-sided Wilcoxon p is 0.031; report wins/6 and worst-case alongside p.
+DONE: ECG robust baselines -> ~/Desktop/LSB_overnight/results/ecg_robust/LSB_EHEALTH_ECG_ROBUST_BASELINES

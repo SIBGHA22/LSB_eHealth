@@ -1,0 +1,15 @@
+# Python 3.11+ (results were produced with Python 3.14 on Ubuntu).
+# 1) Install PyTorch with CUDA for your GPU first, from https://pytorch.org/get-started/locally/
+#    e.g.  pip install torch torchvision --index-url https://download.pytorch.org/whl/cu128
+# 2) Then:  pip install -r requirements.txt
+numpy
+pandas
+scipy
+scikit-learn
+kagglehub        # downloads the DBH-Chain workload datasets
+openpyxl
+pyarrow
+pillow
+matplotlib       # paper_assets/ figure scripts only
+reedsolo         # LSB CIFAR-10 script
+cryptography     # LSB CIFAR-10 script

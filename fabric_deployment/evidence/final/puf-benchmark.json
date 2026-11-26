@@ -1,0 +1,17 @@
+{
+  "implementation": "software_puf_emulation",
+  "physical_puf_claimed": false,
+  "devices": 500,
+  "repeated_reads_per_device": 20,
+  "authentication_attempts": 10000,
+  "authentication_successes": 10000,
+  "authentication_success_rate": 1.0,
+  "response_collisions": 0,
+  "derived_key_collisions": 0,
+  "mean_inter_device_hamming_fraction": 0.5004340277777778,
+  "mean_puf_read_ms": 0.005736812,
+  "mean_hash_ms": 0.00091531,
+  "mean_hkdf_ms": 0.006133778,
+  "mean_total_key_derivation_ms": 0.014868888,
+  "max_total_key_derivation_ms": 0.436134
+}
